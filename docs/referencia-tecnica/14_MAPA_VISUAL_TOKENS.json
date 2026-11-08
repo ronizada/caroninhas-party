@@ -1,0 +1,73 @@
+{
+  "source": "public/style.css",
+  "stylesheet_lines": 6181,
+  "global_tokens": {
+    "--bg": "#ead7e2",
+    "--grid": "rgba(116, 84, 92, 0.10)",
+    "--cream": "#f7f1df",
+    "--cream-2": "#fff9e9",
+    "--cream-3": "#eadfbe",
+    "--ink": "#2e2524",
+    "--muted": "#786a65",
+    "--line": "#2f2927",
+    "--pink": "#f3a6b9",
+    "--pink-deep": "#df7f9a",
+    "--orange": "#ef9c63",
+    "--lime": "#d8e87e",
+    "--yellow": "#f2d36f",
+    "--mint": "#91c9b6",
+    "--shadow": "#2e2524",
+    "--soft-shadow": "rgba(46, 37, 36, 0.15)"
+  },
+  "media_queries": [
+    "max-width: 430px",
+    "max-width: 470px",
+    "max-width: 520px",
+    "max-width: 560px",
+    "max-width: 600px",
+    "max-width: 620px",
+    "max-width: 700px",
+    "max-width: 720px",
+    "max-width: 820px",
+    "max-width: 900px",
+    "max-width:380px",
+    "max-width:700px",
+    "max-width:720px",
+    "max-width:980px",
+    "min-width: 721px",
+    "min-width:721px",
+    "prefers-reduced-motion:reduce"
+  ],
+  "font_mentions": [
+    "Chakra Petch",
+    "Nunito"
+  ],
+  "svg_symbols": [
+    "icon-eye",
+    "icon-eye-off",
+    "icon-question",
+    "icon-bomb",
+    "icon-person",
+    "icon-vote",
+    "icon-dice",
+    "icon-pencil",
+    "icon-search",
+    "icon-hourglass",
+    "icon-star",
+    "icon-warning",
+    "icon-folder"
+  ],
+  "image_assets": [
+    "public/avatars/bear.png",
+    "public/avatars/cat.png",
+    "public/avatars/dog.png",
+    "public/avatars/fox.png",
+    "public/avatars/frog.png",
+    "public/avatars/owl.png",
+    "public/avatars/panda.png",
+    "public/avatars/penguin.png",
+    "public/avatars/pig.png",
+    "public/avatars/tiger.png",
+    "public/caroninhas-party-banner.png"
+  ]
+}

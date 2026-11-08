@@ -1,0 +1,49 @@
+# Segredos em TODAS as pastas
+.env
+.env.*
+!.env.example
+!**/.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+id_rsa*
+
+# Dependencias, cache e logs
+node_modules/
+**/node_modules/
+.npm/
+.cache/
+coverage/
+.nyc_output/
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Bancos, dumps e arquivos locais
+*.dump
+*.backup
+*.sql.gz
+*.sqlite
+*.sqlite3
+*.db
+*.zip
+*.7z
+*.rar
+*.tar.gz
+backups/
+tmp/
+temp/
+
+# Manifestos locais de deploy: exemplos sim, arquivos reais nao
+**/discloud.config
+!**/discloud.config.example
+
+# Arquivos de perfil/privados exportados
+uploads/
+private/
+secrets/

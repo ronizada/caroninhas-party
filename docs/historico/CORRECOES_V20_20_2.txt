@@ -1,0 +1,17 @@
+Caroninhas Party V20.20.2 — correções visuais e de identidade
+
+- Tela da Corrida agora reaproveita os componentes de nome e avatar dos jogos Impostor e Quem Sou Eu.
+- Usuários autenticados têm o nickname preenchido automaticamente e usam seu avatar/foto de perfil.
+- Visitantes podem escolher entre os mesmos avatares dos demais jogos.
+- Layout em duas colunas no desktop; modo responsivo no celular.
+- Fontes Pixelify Sans e Nunito e paleta rosa/creme do site.
+- Tela tem rolagem interna de segurança somente quando a viewport for pequena; outras aplicações não foram alteradas.
+- Código da corrida e dos outros jogos preservado. Arquivos de banco não alterados.
+
+PUBLICAÇÃO
+1. Guarde o backup da V20.19.
+2. Preserve o .env atual (não incluído aqui) e configure TRIVIA_API_KEY se necessário.
+3. Publique o ZIP completo, mantendo a identificação da sua aplicação discloud.config.
+4. Reinicie, faça Ctrl+F5 e confira nickname, avatar, tags, criação e entrada.
+
+NÃO cole suas chaves/senhas em mensagens ou capturas de tela.

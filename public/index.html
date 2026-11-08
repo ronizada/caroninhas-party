@@ -1,0 +1,1650 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caroninhas Party</title>
+  <meta name="description" content="Minigames online para jogar com os amigos. Crie uma sala, compartilhe o código e divirta-se no Caroninhas Party." />
+
+  <!-- Prévia ao compartilhar o link (Discord, WhatsApp, redes sociais) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Caroninhas Party" />
+  <meta property="og:title" content="Caroninhas Party — Minigames Online" />
+  <meta property="og:description" content="Minigames online para jogar com os amigos. Crie uma sala e chame a galera!" />
+  <meta property="og:url" content="https://caroninhas-party.discloud.dev/" />
+  <meta property="og:image" content="https://caroninhas-party.discloud.dev/caroninhas-party-banner.png" />
+  <meta property="og:image:secure_url" content="https://caroninhas-party.discloud.dev/caroninhas-party-banner.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Banner do Caroninhas Party, minigames online para jogar com os amigos" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Caroninhas Party — Minigames Online" />
+  <meta name="twitter:description" content="Minigames online para jogar com os amigos. Crie uma sala e chame a galera!" />
+  <meta name="twitter:image" content="https://caroninhas-party.discloud.dev/caroninhas-party-banner.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css?v=20.20.4" />
+</head>
+
+<body>
+
+  <svg class="retro-icon-sprite" aria-hidden="true">
+    <symbol id="icon-eye" viewBox="0 0 24 24">
+      <path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6S2.5 12 2.5 12Z"/>
+      <circle cx="12" cy="12" r="2.6"/>
+    </symbol>
+    <symbol id="icon-eye-off" viewBox="0 0 24 24">
+      <path d="M3 5 21 19"/>
+      <path d="M5.4 8.2C3.6 9.8 2.5 12 2.5 12s3.5 6 9.5 6c1.5 0 2.9-.4 4.1-1"/>
+      <path d="M9.2 6.4c.9-.3 1.8-.4 2.8-.4 6 0 9.5 6 9.5 6s-.8 1.4-2.2 2.8"/>
+    </symbol>
+    <symbol id="icon-question" viewBox="0 0 24 24">
+      <path d="M8.5 8.2a3.8 3.8 0 0 1 7.1 1.7c0 2.8-3.6 3.1-3.6 5.3"/>
+      <path d="M12 19h.01"/>
+    </symbol>
+    <symbol id="icon-bomb" viewBox="0 0 24 24">
+      <circle cx="10.5" cy="13.5" r="6.5"/>
+      <path d="M15 8l2.4-2.4M17 5l2 2M19 3l1.5-1.5"/>
+    </symbol>
+    <symbol id="icon-person" viewBox="0 0 24 24">
+      <circle cx="12" cy="8" r="3.2"/>
+      <path d="M5.5 20c.6-4.2 2.8-6.3 6.5-6.3s5.9 2.1 6.5 6.3"/>
+    </symbol>
+    <symbol id="icon-vote" viewBox="0 0 24 24">
+      <circle cx="8.5" cy="7" r="2.7"/>
+      <path d="M3.5 16c.6-3.4 2.3-5.1 5-5.1 2 0 3.5.7 4.4 2.1"/>
+      <path d="m14 16 2.2 2.2L21 13.5"/>
+    </symbol>
+    <symbol id="icon-dice" viewBox="0 0 24 24">
+      <rect x="4" y="4" width="16" height="16" rx="2"/>
+      <circle cx="8" cy="8" r="1"/>
+      <circle cx="16" cy="8" r="1"/>
+      <circle cx="12" cy="12" r="1"/>
+      <circle cx="8" cy="16" r="1"/>
+      <circle cx="16" cy="16" r="1"/>
+    </symbol>
+    <symbol id="icon-pencil" viewBox="0 0 24 24">
+      <path d="m5 18 1-4 9.5-9.5 4 4L10 18l-5 1Z"/>
+      <path d="m13.8 6.2 4 4"/>
+    </symbol>
+    <symbol id="icon-search" viewBox="0 0 24 24">
+      <circle cx="10.5" cy="10.5" r="5.5"/>
+      <path d="m15 15 5 5"/>
+    </symbol>
+    <symbol id="icon-hourglass" viewBox="0 0 24 24">
+      <path d="M7 4h10M7 20h10M8 4c0 4 1.4 5.3 4 8-2.6 2.7-4 4-4 8M16 4c0 4-1.4 5.3-4 8 2.6 2.7 4 4 4 8"/>
+    </symbol>
+    <symbol id="icon-star" viewBox="0 0 24 24">
+      <path d="m12 3 2.4 5.8 6.1.5-4.7 4 1.5 6-5.3-3.2-5.3 3.2 1.5-6-4.7-4 6.1-.5L12 3Z"/>
+    </symbol>
+    <symbol id="icon-warning" viewBox="0 0 24 24">
+      <path d="M12 3 21 20H3L12 3Z"/>
+      <path d="M12 9v5M12 17h.01"/>
+    </symbol>
+    <symbol id="icon-folder" viewBox="0 0 24 24">
+      <path d="M3 7h7l2-2h9v14H3V7Z"/>
+    </symbol>
+  </svg>
+
+  <div class="bg-decoration deco-star">✦</div>
+  <div class="bg-decoration deco-heart">♥</div>
+  <div class="bg-decoration deco-spark">✧</div>
+
+  <main class="app">
+
+    <!-- ================= MENU PRINCIPAL ================= -->
+    <section id="menu-screen" class="screen">
+      <header class="site-header">
+        <div class="brand">
+          <div class="brand-kicker">MINIGAMES ONLINE</div>
+          <h1>CARONINHAS<br><span>PARTY</span></h1>
+          <p>Escolha um jogo, crie uma sala e chame a galera.</p>
+        </div>
+
+        <div class="header-side">
+          <div class="server-online-mini" title="Servidor online" aria-label="Servidor online">
+            <span class="online-dot"></span>
+            <strong>Online</strong>
+          </div>
+
+          <div id="account-guest-controls" class="account-guest-controls">
+            <span class="account-guest-chip">Visitante</span>
+            <button id="account-login-button" class="account-mini-button" type="button">Entrar</button>
+            <button id="account-register-button" class="account-mini-button accent" type="button">Criar conta</button>
+          </div>
+
+          <div id="account-user-controls" class="account-user-controls hidden">
+            <button id="account-profile-button" class="account-profile-button" type="button" aria-expanded="false">
+              <img id="account-header-avatar" src="/avatars/dog.png" alt="Seu avatar" />
+              <span id="account-header-nickname">Jogador</span>
+              <span>▾</span>
+            </button>
+            <div id="account-dropdown" class="account-dropdown hidden">
+              <button id="account-open-profile" type="button">Meu perfil</button>
+              <button id="account-open-stats" type="button">Estatísticas</button>
+              <button id="account-logout-button" type="button" class="danger-text">Sair</button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="library-window retro-window">
+        <div class="window-bar">
+          <div class="window-dots">
+            <span class="dot pink"></span>
+            <span class="dot orange"></span>
+            <span class="dot lime"></span>
+          </div>
+
+          <span class="window-title">biblioteca_de_jogos.exe</span>
+
+          <div class="window-actions">
+            <span>—</span>
+            <span>□</span>
+            <span>×</span>
+          </div>
+        </div>
+
+        <div class="library-toolbar">
+          <div>
+            <span class="toolbar-label">PASTA</span>
+            <h2>Joguinhos</h2>
+          </div>
+
+          <div class="toolbar-search">
+            <svg class="site-icon toolbar-icon" aria-hidden="true"><use href="#icon-search"></use></svg>
+            <span>encontre um jogo...</span>
+          </div>
+        </div>
+
+        <div id="games-grid" class="games-grid"></div>
+
+        <div class="library-footer">
+          <span id="games-counter"></span>
+          <span>feito para jogar com os amigos ♡</span>
+        </div>
+      </section>
+
+      <p id="menu-message" class="toast-message"></p>
+    </section>
+
+    <!-- ================= IMPOSTOR - ENTRADA ================= -->
+    <section id="impostor-home-screen" class="screen hidden">
+      <div class="game-page-shell">
+        <button class="nav-back" data-back-menu>
+          ← voltar para a biblioteca
+        </button>
+
+        <section class="retro-window game-window">
+          <div class="window-bar impostor-bar">
+            <div class="window-dots">
+              <span class="dot pink"></span>
+              <span class="dot orange"></span>
+              <span class="dot lime"></span>
+            </div>
+
+            <span class="window-title">impostor.exe</span>
+
+            <div class="window-actions">
+              <span>—</span>
+              <span>□</span>
+              <span>×</span>
+            </div>
+          </div>
+
+          <div class="game-intro">
+            <div class="game-icon-large"><svg class="site-icon hero-icon" aria-hidden="true"><use href="#icon-eye"></use></svg></div>
+
+            <div>
+              <span class="tiny-label">JOGO 01</span>
+              <h2>IMPOSTOR</h2>
+              <p>Todos conhecem a palavra. Menos um.</p>
+            </div>
+          </div>
+
+          <div class="mini-rule-card">
+            <span>★</span>
+            <p>
+              Entre com seus amigos. Um jogador será escolhido como impostor
+              e deverá fingir que conhece a palavra secreta.
+            </p>
+          </div>
+
+          <div class="form-area">
+            <div class="guest-identity-field">
+              <div class="guest-identity-heading">
+                <label for="name">Seu nome e avatar</label>
+                <span>VISITANTE</span>
+              </div>
+
+              <div class="guest-name-row">
+                <button
+                  id="avatar-preview-button-impostor"
+                  class="guest-avatar-preview"
+                  type="button"
+                  aria-label="Trocar avatar"
+                  title="Clique para trocar o avatar"
+                >
+                  <img id="avatar-preview-impostor" src="/avatars/dog.png" alt="Avatar escolhido" />
+                  <span class="avatar-change-badge">Trocar</span>
+                </button>
+
+                <div class="retro-input-wrap guest-name-input">
+                  <svg class="site-icon input-icon" aria-hidden="true"><use href="#icon-person"></use></svg>
+                  <input
+                    id="name"
+                    maxlength="20"
+                    autocomplete="off"
+                    placeholder="Ex.: Roni"
+                  />
+                </div>
+              </div>
+
+              <p class="avatar-help">Clique no avatar para escolher outro animal.</p>
+            </div>
+
+            <div class="room-settings">
+              <div class="setting-field">
+                <label for="create-category">categoria</label>
+                <select id="create-category" class="retro-select">
+                  <option value="all">Todas</option>
+                </select>
+              </div>
+
+              <div class="setting-field">
+                <label for="create-difficulty">dificuldade</label>
+                <select id="create-difficulty" class="retro-select">
+                  <option value="all">Aleatória</option>
+                </select>
+              </div>
+            </div>
+
+            <div id="word-bank-status" class="word-bank-status">
+              carregando banco de palavras...
+            </div>
+
+            <div class="room-extra-settings room-extra-settings-single">
+              <div class="setting-check-field">
+                <span class="room-option-title">privacidade</span>
+                <label class="retro-check-option" for="impostor-private">
+                  <input type="checkbox" id="impostor-private" />
+                  <span>Sala privada</span>
+                </label>
+                <small class="room-option-help">Exige senha para novos participantes.</small>
+                <div id="impostor-private-fields" class="room-privacy-fields hidden">
+                  <label for="impostor-create-password">Senha da sala (4–64 caracteres)</label>
+                  <input id="impostor-create-password" type="password" minlength="4" maxlength="64" autocomplete="new-password" placeholder="Defina a senha da sala" />
+                  <small>A senha não será salva nas suas preferências.</small>
+                </div>
+              </div>
+            </div>
+            <button id="create-room" class="retro-button primary">
+              <span>＋</span>
+              criar sala
+            </button>
+
+            <div class="separator">
+              <span>ou entre em uma sala</span>
+            </div>
+
+            <label for="room-code">código da sala</label>
+            <div class="retro-input-wrap">
+              <span>⌨</span>
+              <input
+                id="room-code"
+                maxlength="4"
+                autocomplete="off"
+                placeholder="ABCD"
+              />
+            </div>
+
+            <div class="room-join-password">
+              <label for="impostor-join-password">senha da sala (se for privada)</label>
+              <input id="impostor-join-password" type="password" autocomplete="off" maxlength="64" placeholder="Deixe vazio para salas públicas" />
+            </div>
+            <p class="room-direct-link-notice hidden" id="impostor-direct-notice"></p>
+            <button id="join-room" class="retro-button secondary">
+              <span>→</span>
+              entrar na sala
+            </button>
+
+            <p id="home-error" class="error"></p>
+
+            <section class="open-rooms-section">
+              <div class="open-rooms-heading">
+                <div>
+                  <span class="tiny-label">MULTIPLAYER</span>
+                  <h3>Salas criadas</h3>
+                </div>
+
+                <button id="refresh-rooms" class="refresh-rooms" type="button">
+                  ↻ atualizar
+                </button>
+              </div>
+
+              <div id="open-rooms-list" class="open-rooms-list">
+                <div class="empty-rooms">
+                  procurando salas...
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- ================= LOBBY ================= -->
+    <section id="lobby-screen" class="screen hidden">
+      <div class="game-page-shell">
+        <button class="nav-back" data-back-menu>
+          ← sair para a biblioteca
+        </button>
+
+        <section class="retro-window lobby-window">
+          <div class="window-bar">
+            <div class="window-dots">
+              <span class="dot pink"></span>
+              <span class="dot orange"></span>
+              <span class="dot lime"></span>
+            </div>
+
+            <span class="window-title">sala_do_impostor.exe</span>
+
+            <div class="window-actions">
+              <span>—</span>
+              <span>□</span>
+              <span>×</span>
+            </div>
+          </div>
+
+          <div class="lobby-content">
+            <div class="room-code-panel">
+              <div>
+                <span class="tiny-label">CÓDIGO DA SALA</span>
+                <h2 id="lobby-code">----</h2>
+              </div>
+
+              <button id="copy-code" class="mini-button">
+                copiar
+              </button>
+            </div>
+
+            <div class="lobby-settings-summary">
+              <div>
+                <span class="tiny-label">CATEGORIA</span>
+                <strong id="lobby-category">Todas</strong>
+              </div>
+
+              <div>
+                <span class="tiny-label">DIFICULDADE</span>
+                <strong id="lobby-difficulty">Aleatória</strong>
+              </div>
+            </div>
+
+            <div class="players-panel">
+              <div class="panel-title">
+                <div>
+                  <span class="tiny-label">CONECTADOS</span>
+                  <h3>Jogadores</h3>
+                </div>
+
+                <span id="player-count" class="count-badge">0</span>
+              </div>
+
+              <ul id="players"></ul>
+
+              <div class="ready-summary">
+                <span>CONFIRMAÇÃO</span>
+                <strong id="ready-count">0/0 prontos</strong>
+              </div>
+            </div>
+
+            <button id="ready-toggle" class="retro-button ready-button">
+              ✓ estou pronto
+            </button>
+
+            <button id="start-game" class="retro-button primary hidden" disabled>
+              ▶ aguardando todos ficarem prontos
+            </button>
+
+            <div id="waiting-host" class="waiting-box">
+              <span class="hourglass"><svg class="site-icon" aria-hidden="true"><use href="#icon-hourglass"></use></svg></span>
+              <div>
+                <strong>aguardando o host...</strong>
+                <small>a partida começa quando ele clicar em iniciar</small>
+              </div>
+            </div>
+
+            <p id="lobby-error" class="error"></p>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- ================= PARTIDA ================= -->
+    <section id="game-screen" class="screen hidden">
+      <div class="game-page-shell">
+        <section class="retro-window role-window">
+          <div class="window-bar">
+            <div class="window-dots">
+              <span class="dot pink"></span>
+              <span class="dot orange"></span>
+              <span class="dot lime"></span>
+            </div>
+
+            <span class="window-title">segredo.txt</span>
+
+            <div class="window-actions">
+              <span>—</span>
+              <span>□</span>
+              <span>×</span>
+            </div>
+          </div>
+
+          <div class="role-content">
+            <div id="civil-view" class="hidden">
+              <div class="secret-stamp">NÃO MOSTRE PARA NINGUÉM</div>
+              <div class="role-icon"><svg class="site-icon role-svg" aria-hidden="true"><use href="#icon-star"></use></svg></div>
+              <p class="role-caption">sua palavra é</p>
+              <h2 id="secret-word" class="secret-word"></h2>
+              <p class="role-description">
+                Dê pistas sem deixar o impostor descobrir a palavra.
+              </p>
+            </div>
+
+            <div id="impostor-view" class="hidden">
+              <div class="secret-stamp danger">MODO SECRETO</div>
+              <div class="role-icon"><svg class="site-icon role-svg" aria-hidden="true"><use href="#icon-eye"></use></svg></div>
+              <p class="role-caption danger-text">você é</p>
+              <h2 class="impostor-title">O IMPOSTOR</h2>
+              <div class="impostor-hint-box">
+                <span class="hint-label">SUA DICA</span>
+                <strong id="impostor-hint">...</strong>
+              </div>
+
+              <p class="role-description">
+                Use a dica para se misturar aos outros sem revelar que você é o impostor.
+              </p>
+            </div>
+
+            <div id="impostor-phase-banner" class="impostor-phase-banner hidden">
+              <span class="tiny-label">DESEMPATE</span>
+              <strong>Somente os empatados falam nesta rodada.</strong>
+              <small>Depois o host abre uma nova votação só entre eles.</small>
+            </div>
+
+            <div class="speaking-order-panel impostor-speaking-panel">
+              <div class="speaking-order-heading">
+                <span class="tiny-label">ORDEM SORTEADA</span>
+                <strong id="impostor-speaking-title">Quem fala primeiro?</strong>
+              </div>
+              <div id="impostor-speaking-order" class="speaking-order-list"></div>
+            </div>
+
+            <button id="start-impostor-vote" class="retro-button primary hidden">
+              ✓ iniciar votação
+            </button>
+
+            <div id="impostor-vote-waiting" class="waiting-box centered hidden">
+              <span class="hourglass"><svg class="site-icon" aria-hidden="true"><use href="#icon-hourglass"></use></svg></span>
+              <div>
+                <strong>rodada de discussão</strong>
+                <small>o host inicia a votação quando todos terminarem de falar</small>
+              </div>
+            </div>
+
+            <button id="new-round" class="retro-button primary hidden">
+              ↻ nova rodada
+            </button>
+
+            <div id="round-waiting" class="waiting-box centered hidden">
+              <span class="hourglass"><svg class="site-icon" aria-hidden="true"><use href="#icon-hourglass"></use></svg></span>
+              <div>
+                <strong>aguarde o host</strong>
+                <small>ele poderá iniciar uma nova rodada</small>
+              </div>
+            </div>
+
+            <button class="text-button" data-back-menu>
+              voltar ao menu principal
+            </button>
+
+            <p id="game-error" class="error"></p>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- ================= IMPOSTOR - VOTAÇÃO ================= -->
+    <section id="impostor-vote-screen" class="screen hidden">
+      <div class="game-page-shell impostor-vote-shell">
+        <section class="retro-window impostor-vote-window">
+          <div class="window-bar">
+            <div class="window-dots">
+              <span class="dot pink"></span>
+              <span class="dot orange"></span>
+              <span class="dot lime"></span>
+            </div>
+            <span class="window-title">votacao.exe</span>
+            <div class="window-actions"><span>—</span><span>□</span><span>×</span></div>
+          </div>
+
+          <div class="impostor-vote-content">
+            <div class="impostor-vote-heading">
+              <div>
+                <span id="impostor-vote-round-label" class="tiny-label">VOTAÇÃO</span>
+                <h2>Quem é o impostor?</h2>
+                <p>Escolha um jogador. Seu voto fica escondido até todo mundo terminar.</p>
+              </div>
+              <div class="vote-progress-box">
+                <span>VOTARAM</span>
+                <strong id="impostor-vote-progress">0/0</strong>
+              </div>
+            </div>
+
+            <div id="impostor-vote-candidates" class="impostor-vote-candidates"></div>
+            <p id="impostor-vote-feedback" class="impostor-vote-feedback"></p>
+
+            <button class="text-button" data-back-menu>
+              ← voltar ao menu principal
+            </button>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- ================= IMPOSTOR - RESULTADO ================= -->
+    <section id="impostor-result-screen" class="screen hidden">
+      <div class="game-page-shell impostor-result-shell">
+        <section class="retro-window impostor-result-window">
+          <div class="window-bar">
+            <div class="window-dots">
+              <span class="dot pink"></span>
+              <span class="dot orange"></span>
+              <span class="dot lime"></span>
+            </div>
+            <span class="window-title">resultado_votacao.exe</span>
+            <div class="window-actions"><span>—</span><span>□</span><span>×</span></div>
+          </div>
+
+          <div class="impostor-result-content">
+            <div id="impostor-result-symbol" class="impostor-result-symbol">?</div>
+            <span class="tiny-label">RESULTADO DA VOTAÇÃO</span>
+            <h2 id="impostor-result-title">...</h2>
+            <p id="impostor-result-subtitle">...</p>
+
+            <div class="impostor-result-reveal-grid">
+              <article class="impostor-result-card selected-card">
+                <span class="tiny-label">MAIS VOTADO</span>
+                <div id="impostor-selected-avatar" class="impostor-result-avatar"></div>
+                <strong id="impostor-selected-name">...</strong>
+              </article>
+
+              <article class="impostor-result-card impostor-card">
+                <span class="tiny-label">O IMPOSTOR ERA</span>
+                <div id="impostor-real-avatar" class="impostor-result-avatar"></div>
+                <strong id="impostor-real-name">...</strong>
+              </article>
+            </div>
+
+            <div class="impostor-word-reveal impostor-final-secret-grid">
+              <div>
+                <span>PALAVRA DA RODADA</span>
+                <strong id="impostor-result-word">...</strong>
+              </div>
+              <div>
+                <span>DICA DO IMPOSTOR</span>
+                <strong id="impostor-result-hint">...</strong>
+              </div>
+            </div>
+
+            <div class="impostor-vote-count-panel">
+              <span class="tiny-label">CONTAGEM FINAL</span>
+              <div id="impostor-result-counts" class="impostor-result-counts"></div>
+            </div>
+
+            <div class="impostor-result-actions">
+              <button id="impostor-result-new-round" class="retro-button primary hidden">
+                ↻ nova rodada
+              </button>
+              <div id="impostor-result-waiting" class="waiting-box centered hidden">
+                <span class="hourglass"><svg class="site-icon" aria-hidden="true"><use href="#icon-hourglass"></use></svg></span>
+                <div>
+                  <strong>aguarde o host</strong>
+                  <small>ele pode levar todos de volta para o lobby</small>
+                </div>
+              </div>
+              <button class="text-button" data-back-menu>← voltar ao menu principal</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+
+    <!-- ================= QUEM SOU EU - ENTRADA ================= -->
+    <section id="whoami-home-screen" class="screen hidden">
+      <div class="game-page-shell">
+        <button class="nav-back" data-back-menu>
+          ← voltar para a biblioteca
+        </button>
+
+        <section class="retro-window game-window">
+          <div class="window-bar whoami-bar">
+            <div class="window-dots">
+              <span class="dot pink"></span>
+              <span class="dot orange"></span>
+              <span class="dot lime"></span>
+            </div>
+
+            <span class="window-title">quem_sou_eu.exe</span>
+
+            <div class="window-actions">
+              <span>—</span>
+              <span>□</span>
+              <span>×</span>
+            </div>
+          </div>
+
+          <div class="game-intro">
+            <div class="game-icon-large whoami-icon"><svg class="site-icon hero-icon" aria-hidden="true"><use href="#icon-question"></use></svg></div>
+
+            <div>
+              <span class="tiny-label">JOGO 02</span>
+              <h2>QUEM SOU EU?</h2>
+              <p>Todo mundo sabe quem você é. Menos você.</p>
+            </div>
+          </div>
+
+          <div class="mini-rule-card whoami-rule">
+            <span>?</span>
+            <p>
+              Cada jogador recebe um personagem secreto. Você vê os personagens
+              dos outros, mas não o seu. Faça perguntas de sim ou não até descobrir
+              quem você é.
+            </p>
+          </div>
+
+          <div class="form-area">
+            <div class="guest-identity-field">
+              <div class="guest-identity-heading">
+                <label for="whoami-name">Seu nome e avatar</label>
+                <span>VISITANTE</span>
+              </div>
+
+              <div class="guest-name-row">
+                <button
+                  id="avatar-preview-button-whoami"
+                  class="guest-avatar-preview"
+                  type="button"
+                  aria-label="Trocar avatar"
+                  title="Clique para trocar o avatar"
+                >
+                  <img id="avatar-preview-whoami" src="/avatars/dog.png" alt="Avatar escolhido" />
+                  <span class="avatar-change-badge">Trocar</span>
+                </button>
+
+                <div class="retro-input-wrap guest-name-input">
+                  <svg class="site-icon input-icon" aria-hidden="true"><use href="#icon-person"></use></svg>
+                  <input
+                    id="whoami-name"
+                    maxlength="20"
+                    autocomplete="off"
+                    placeholder="Ex.: Roni"
+                  />
+                </div>
+              </div>
+
+              <p class="avatar-help">Clique no avatar para escolher outro animal.</p>
+            </div>
+
+            <div class="room-settings">
+              <div class="setting-field">
+                <label for="whoami-category">categoria</label>
+                <select id="whoami-category" class="retro-select">
+                  <option value="all">Todas</option>
+                </select>
+              </div>
+
+              <div class="setting-field">
+                <label for="whoami-difficulty">dificuldade</label>
+                <select id="whoami-difficulty" class="retro-select">
+                  <option value="all">Aleatória</option>
+                </select>
+              </div>
+            </div>
+
+            <div id="whoami-bank-status" class="word-bank-status">
+              carregando personagens...
+            </div>
+
+            <div class="room-extra-settings">
+              <div class="setting-check-field">
+                <span class="room-option-title">modo de partida</span>
+                <label class="retro-check-option" for="whoami-all-finish">
+                  <input type="checkbox" id="whoami-all-finish" />
+                  <span>Todos até o fim</span>
+                </label>
+                <small class="room-option-help">Continua até todos acertarem, desistirem ou esgotarem as 3 tentativas.</small>
+              </div>
+              <div class="setting-check-field">
+                <span class="room-option-title">privacidade</span>
+                <label class="retro-check-option" for="whoami-private">
+                  <input type="checkbox" id="whoami-private" />
+                  <span>Sala privada</span>
+                </label>
+                <small class="room-option-help">Exige senha para novos participantes.</small>
+                <div id="whoami-private-fields" class="room-privacy-fields hidden">
+                  <label for="whoami-create-password">Senha da sala (4–64 caracteres)</label>
+                  <input id="whoami-create-password" type="password" minlength="4" maxlength="64" autocomplete="new-password" placeholder="Defina a senha da sala" />
+                  <small>A senha não será salva nas suas preferências.</small>
+                </div>
+              </div>
+            </div>
+            <button id="create-whoami-room" class="retro-button primary">
+              <span>＋</span>
+              criar sala
+            </button>
+
+            <div class="separator">
+              <span>ou entre em uma sala</span>
+            </div>
+
+            <label for="whoami-room-code">código da sala</label>
+            <div class="retro-input-wrap">
+              <span>⌨</span>
+              <input
+                id="whoami-room-code"
+                maxlength="4"
+                autocomplete="off"
+                placeholder="ABCD"
+              />
+            </div>
+
+            <div class="room-join-password">
+              <label for="whoami-join-password">senha da sala (se for privada)</label>
+              <input id="whoami-join-password" type="password" autocomplete="off" maxlength="64" placeholder="Deixe vazio para salas públicas" />
+            </div>
+            <p class="room-direct-link-notice hidden" id="whoami-direct-notice"></p>
+            <button id="join-whoami-room" class="retro-button secondary">
+              <span>→</span>
+              entrar na sala
+            </button>
+
+            <p id="whoami-home-error" class="error"></p>
+
+            <section class="open-rooms-section">
+              <div class="open-rooms-heading">
+                <div>
+                  <span class="tiny-label">MULTIPLAYER</span>
+                  <h3>Salas de Quem Sou Eu</h3>
+                </div>
+
+                <button id="refresh-whoami-rooms" class="refresh-rooms" type="button">
+                  ↻ atualizar
+                </button>
+              </div>
+
+              <div id="whoami-open-rooms-list" class="open-rooms-list">
+                <div class="empty-rooms">
+                  procurando salas...
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- ================= QUEM SOU EU - LOBBY ================= -->
+    <section id="whoami-lobby-screen" class="screen hidden">
+      <div class="game-page-shell">
+        <button class="nav-back" data-back-menu>
+          ← sair para a biblioteca
+        </button>
+
+        <section class="retro-window lobby-window">
+          <div class="window-bar whoami-bar">
+            <div class="window-dots">
+              <span class="dot pink"></span>
+              <span class="dot orange"></span>
+              <span class="dot lime"></span>
+            </div>
+
+            <span class="window-title">sala_quem_sou_eu.exe</span>
+
+            <div class="window-actions">
+              <span>—</span>
+              <span>□</span>
+              <span>×</span>
+            </div>
+          </div>
+
+          <div class="lobby-content">
+            <div class="room-code-panel whoami-code-panel">
+              <div>
+                <span class="tiny-label">CÓDIGO DA SALA</span>
+                <h2 id="whoami-lobby-code">----</h2>
+              </div>
+
+              <button id="whoami-copy-code" class="mini-button">
+                copiar
+              </button>
+            </div>
+
+            <div class="lobby-settings-summary">
+              <div>
+                <span class="tiny-label">CATEGORIA</span>
+                <strong id="whoami-lobby-category">Todas</strong>
+              </div>
+
+              <div>
+                <span class="tiny-label">DIFICULDADE</span>
+                <strong id="whoami-lobby-difficulty">Aleatória</strong>
+              </div>
+            </div>
+
+            <div class="whoami-lobby-mode-line">
+              <span class="tiny-label">MODO DE PARTIDA</span>
+              <strong id="whoami-lobby-mode">Primeiro a acertar</strong>
+            </div>
+
+            <div class="players-panel">
+              <div class="panel-title">
+                <div>
+                  <span class="tiny-label">CONECTADOS</span>
+                  <h3>Jogadores</h3>
+                </div>
+
+                <span id="whoami-player-count" class="count-badge">0</span>
+              </div>
+
+              <ul id="whoami-players"></ul>
+
+              <div class="ready-summary">
+                <span>CONFIRMAÇÃO</span>
+                <strong id="whoami-ready-count">0/0 prontos</strong>
+              </div>
+            </div>
+
+            <button id="whoami-ready-toggle" class="retro-button ready-button">
+              ✓ estou pronto
+            </button>
+
+            <button id="start-whoami-game" class="retro-button primary hidden" disabled>
+              ▶ aguardando todos ficarem prontos
+            </button>
+
+            <div id="whoami-waiting-host" class="waiting-box">
+              <span class="hourglass"><svg class="site-icon" aria-hidden="true"><use href="#icon-hourglass"></use></svg></span>
+              <div>
+                <strong>aguardando o host...</strong>
+                <small>a partida começa quando todos estiverem prontos</small>
+              </div>
+            </div>
+
+            <p id="whoami-lobby-error" class="error"></p>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- ================= QUEM SOU EU - CONFERÊNCIA ================= -->
+    <section id="whoami-review-screen" class="screen hidden">
+      <div class="game-page-shell review-page-shell">
+        <section class="retro-window whoami-review-window">
+          <div class="window-bar whoami-bar">
+            <div class="window-dots">
+              <span class="dot pink"></span>
+              <span class="dot orange"></span>
+              <span class="dot lime"></span>
+            </div>
+
+            <span class="window-title">conferencia_de_personagens.exe</span>
+
+            <div class="window-actions">
+              <span>—</span>
+              <span>□</span>
+              <span>×</span>
+            </div>
+          </div>
+
+          <div class="whoami-review-content">
+            <div id="whoami-draw-animation" class="whoami-draw-animation">
+              <span class="tiny-label">SORTEANDO PERSONAGENS</span>
+              <h2>embaralhando...</h2>
+
+              <div class="draw-card-row" aria-hidden="true">
+                <div class="draw-card">?</div>
+                <div class="draw-card">?</div>
+                <div class="draw-card">?</div>
+              </div>
+
+              <p>separando um personagem para cada jogador</p>
+            </div>
+
+            <div id="whoami-review-main" class="whoami-review-main hidden">
+              <div class="review-header">
+                <div>
+                  <span class="tiny-label">CONFERÊNCIA</span>
+                  <h2>Os personagens ficaram bons?</h2>
+                  <p>
+                    Confira somente os personagens dos seus amigos.
+                    Seu próprio personagem continua escondido.
+                  </p>
+                </div>
+
+                <div class="review-progress-box">
+                  <span>APROVADOS</span>
+                  <strong id="whoami-review-progress">0/0</strong>
+                </div>
+              </div>
+
+              <div id="whoami-self-review-status" class="self-review-status">
+                seus amigos estão avaliando o seu personagem...
+              </div>
+
+              <div id="whoami-review-grid" class="whoami-review-grid"></div>
+
+              <div class="review-rule-note">
+                <strong>Como funciona:</strong>
+                para trocar o personagem de alguém, todos os outros jogadores
+                precisam escolher “quero outro”. O dono nunca vê nem vota no
+                próprio personagem.
+              </div>
+
+              <p id="whoami-review-error" class="error"></p>
+            </div>
+
+            <div id="whoami-launch-overlay" class="whoami-launch-overlay hidden">
+              <span class="tiny-label">TUDO APROVADO</span>
+              <h2>valendo!</h2>
+              <strong id="whoami-launch-count">3</strong>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- ================= QUEM SOU EU - PARTIDA ================= -->
+    <section id="whoami-game-screen" class="screen hidden">
+      <div class="game-page-shell whoami-game-shell">
+        <section class="retro-window role-window whoami-play-window">
+          <div class="window-bar whoami-bar">
+            <div class="window-dots">
+              <span class="dot pink"></span>
+              <span class="dot orange"></span>
+              <span class="dot lime"></span>
+            </div>
+
+            <span class="window-title">quem_sou_eu.txt</span>
+
+            <div class="window-actions">
+              <span>—</span>
+              <span>□</span>
+              <span>×</span>
+            </div>
+          </div>
+
+          <div class="role-content whoami-game-content">
+            <div class="whoami-game-topline">
+              <div class="secret-stamp whoami-stamp">
+                NÃO OLHE SEU PERSONAGEM
+              </div>
+
+              <div class="whoami-mode-chip">
+                <svg class="site-icon chip-icon" aria-hidden="true"><use href="#icon-question"></use></svg>
+                <span id="whoami-current-mode">3 tentativas para acertar</span>
+              </div>
+            </div>
+
+            <div class="whoami-play-grid whoami-play-grid-v17">
+              <div class="whoami-left-pane">
+                <div class="whoami-self-card">
+                  <span class="tiny-label">VOCÊ É...</span>
+                  <div class="whoami-question">
+                    <svg class="site-icon question-svg" aria-hidden="true"><use href="#icon-question"></use></svg>
+                  </div>
+                  <h2>QUEM SOU EU?</h2>
+                  <p>Faça perguntas, anote as respostas e tente descobrir antes de todo mundo.</p>
+                </div>
+
+                <div class="whoami-guess-panel">
+                  <div class="panel-title compact-title">
+                    <div>
+                      <span class="tiny-label">SEU PALPITE</span>
+                      <h3>Quem eu acho que sou?</h3>
+                    </div>
+                    <div id="whoami-attempts" class="whoami-attempts" aria-label="Tentativas restantes">● ● ●</div>
+                  </div>
+
+                  <div class="whoami-guess-row">
+                    <input
+                      id="whoami-guess-input"
+                      class="retro-input"
+                      type="text"
+                      maxlength="120"
+                      autocomplete="off"
+                      placeholder="digite o nome..."
+                    />
+                    <button id="whoami-guess-button" class="retro-button primary compact-button" type="button">
+                      tentar
+                    </button>
+                  </div>
+                  <p id="whoami-guess-feedback" class="whoami-guess-feedback"></p>
+                </div>
+
+                <div id="whoami-progress-board" class="whoami-progress-board hidden" aria-live="polite"></div>
+
+                <div class="whoami-notes-panel">
+                  <div class="panel-title compact-title">
+                    <div>
+                      <span class="tiny-label">BLOCO DE NOTAS</span>
+                      <h3>Respostas que recebi</h3>
+                    </div>
+                    <svg class="site-icon notes-icon" aria-hidden="true"><use href="#icon-pencil"></use></svg>
+                  </div>
+                  <textarea
+                    id="whoami-notes"
+                    class="whoami-notes"
+                    maxlength="1200"
+                    placeholder="Ex.: sou real; não sou brasileiro; tenho poderes..."
+                  ></textarea>
+                  <small>Fica salvo nesta aba durante a rodada.</small>
+                </div>
+
+                <button id="whoami-reveal-self" class="retro-button reveal-button">
+                  ? desistir e revelar quem sou
+                </button>
+
+                <div id="whoami-self-reveal" class="whoami-reveal-box hidden">
+                  <span class="tiny-label">VOCÊ ERA</span>
+                  <div id="whoami-self-image-wrap" class="character-photo-wrap small hidden">
+                    <img id="whoami-self-image" class="character-photo" alt="Seu personagem" />
+                  </div>
+                  <strong id="whoami-self-character">...</strong>
+                  <small>Você está fora desta rodada, mas pode continuar assistindo.</small>
+                </div>
+              </div>
+
+              <div class="whoami-right-pane">
+                <div class="speaking-order-panel whoami-speaking-panel">
+                  <div class="speaking-order-heading">
+                    <span class="tiny-label">ORDEM SORTEADA</span>
+                    <strong>Ordem de fala</strong>
+                  </div>
+                  <div id="whoami-speaking-order" class="speaking-order-list"></div>
+                </div>
+
+                <div class="whoami-others-section">
+                  <div class="panel-title whoami-others-title">
+                    <div>
+                      <span class="tiny-label">VOCÊ PODE VER</span>
+                      <h3>Personagens dos outros</h3>
+                    </div>
+
+                    <div class="whoami-visibility-icon">
+                      <svg class="site-icon" aria-hidden="true"><use href="#icon-eye"></use></svg>
+                    </div>
+                  </div>
+
+                  <div id="whoami-other-characters" class="whoami-character-grid"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="whoami-bottom-actions">
+              <button class="text-button whoami-menu-button" data-back-menu>
+                ← voltar ao menu principal
+              </button>
+            </div>
+
+            <p id="whoami-game-error" class="error whoami-game-error"></p>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section id="whoami-winner-screen" class="screen hidden">
+      <div class="game-page-shell whoami-winner-shell">
+        <section class="retro-window whoami-winner-window">
+          <div class="window-bar whoami-bar">
+            <div class="window-dots">
+              <span class="dot pink"></span>
+              <span class="dot orange"></span>
+              <span class="dot lime"></span>
+            </div>
+            <span class="window-title">resultado_final.exe</span>
+            <div class="window-actions"><span>—</span><span>□</span><span>×</span></div>
+          </div>
+
+          <div class="whoami-winner-content">
+            <div id="whoami-classic-result">
+            <div class="winner-sparkles">✦ ★ ✦</div>
+            <span class="tiny-label">TEMOS UM VENCEDOR</span>
+            <div id="whoami-winner-avatar" class="winner-avatar-slot"></div>
+            <h2 id="whoami-winner-name">...</h2>
+            <p>descobriu quem era primeiro!</p>
+
+            <div class="winner-character-card">
+              <div id="whoami-winner-image-wrap" class="character-photo-wrap winner-photo hidden">
+                <img id="whoami-winner-image" class="character-photo" alt="Personagem vencedor" />
+              </div>
+              <span>ERA</span>
+              <strong id="whoami-winner-character">...</strong>
+            </div>
+
+            </div>
+            <section id="whoami-all-finish-result" class="whoami-all-finish-result hidden">
+              <span class="tiny-label">PLACAR DA RODADA</span>
+              <h2>🏆 Classificação final</h2>
+              <p>Todos tiveram sua vez! Veja a ordem dos acertos.</p>
+              <div id="whoami-ranking" class="whoami-ranking"></div>
+            </section>
+
+            <div class="winner-roster-panel">
+              <div class="panel-title compact-title">
+                <div>
+                  <span class="tiny-label">REVELAÇÃO FINAL</span>
+                  <h3>Personagens da rodada</h3>
+                </div>
+              </div>
+              <div id="whoami-final-results" class="whoami-final-results"></div>
+            </div>
+
+            <div class="whoami-winner-actions">
+              <button id="whoami-new-round" class="retro-button primary hidden">
+                ↻ nova rodada
+              </button>
+              <div id="whoami-round-waiting" class="waiting-box centered compact-waiting">
+                <span class="hourglass"><svg class="site-icon" aria-hidden="true"><use href="#icon-hourglass"></use></svg></span>
+                <div>
+                  <strong>aguarde o host</strong>
+                  <small>ele pode levar todos de volta para o lobby</small>
+                </div>
+              </div>
+              <button class="text-button whoami-menu-button" data-back-menu>
+                ← voltar ao menu principal
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- Corrida do Conhecimento: mesma identidade e componentes visuais dos outros jogos -->
+    <section id="trivia-home-screen" class="screen hidden">
+      <div class="game-page-shell trivia-home-shell">
+        <button class="nav-back" data-back-menu>← voltar para a biblioteca</button>
+        <section class="retro-window game-window trivia-window">
+          <div class="window-bar trivia-bar"><div class="window-dots"><span class="dot pink"></span><span class="dot orange"></span><span class="dot lime"></span></div><span class="window-title">corrida_do_conhecimento.exe</span><div class="window-actions"><span>—</span><span>□</span><span>×</span></div></div>
+          <div class="game-intro trivia-intro">
+            <div class="game-icon-large trivia-icon"><svg class="site-icon hero-icon" aria-hidden="true"><use href="#icon-question"></use></svg></div>
+            <div><span class="tiny-label">JOGO 03 · MULTIPLAYER</span><h2>Corrida do <span>Conhecimento</span></h2><p>Responda, suba sua torre e chegue primeiro ao nível 10.</p></div>
+          </div>
+          <div class="trivia-home-content">
+            <div class="guest-identity-field trivia-identity">
+              <div class="guest-identity-heading"><label for="trivia-name">Seu nome e avatar</label><span>VISITANTE</span></div>
+              <div class="guest-name-row">
+                <button id="avatar-preview-button-trivia" class="guest-avatar-preview" type="button" aria-label="Trocar avatar" title="Clique para trocar o avatar"><img id="avatar-preview-trivia" src="/avatars/dog.png" alt="Avatar escolhido" /><span class="avatar-change-badge">Trocar</span></button>
+                <div class="retro-input-wrap guest-name-input"><svg class="site-icon input-icon" aria-hidden="true"><use href="#icon-person"></use></svg><input id="trivia-name" type="text" maxlength="20" autocomplete="off" placeholder="Ex.: Roni" /></div>
+              </div>
+              <p class="avatar-help">Clique no avatar para escolher outro animal.</p>
+            </div>
+            <div class="trivia-config">
+              <div class="trivia-main-settings">
+                <section class="trivia-categories-card" aria-label="Áreas do conhecimento">
+                  <div class="trivia-settings-heading"><strong>Áreas do conhecimento</strong><span id="trivia-selected-count" class="tiny-label">carregando...</span></div>
+                  <p class="trivia-help">Clique nas tags para incluir ou remover assuntos.</p>
+                  <div id="trivia-category-tags" class="trivia-tags" role="group" aria-label="Categorias selecionáveis"></div>
+                  <div class="trivia-inline-actions"><button type="button" id="trivia-select-all" class="mini-button">Selecionar todas</button><button type="button" id="trivia-clear-all" class="mini-button">Limpar</button></div>
+                </section>
+                <section class="trivia-join-section">
+                  <div class="trivia-section-heading"><span class="tiny-label">MULTIPLAYER</span><h3>Entrar em uma corrida</h3></div>
+                  <div class="trivia-join-grid"><div class="retro-input-wrap"><input id="trivia-room-code" type="text" maxlength="4" autocomplete="off" placeholder="Código (ABCD)" aria-label="Código da sala" /></div><div class="retro-input-wrap"><input id="trivia-join-password" type="password" placeholder="Senha (se privada)" aria-label="Senha da sala, se privada" /></div><button type="button" id="trivia-join-room" class="retro-button secondary">Entrar</button></div>
+                </section>
+              </div>
+              <aside class="trivia-side-settings">
+                <section class="trivia-create-settings">
+                  <span class="tiny-label">CONFIGURAR A CORRIDA</span>
+                  <div class="trivia-options-grid">
+                    <div class="setting-field"><label for="trivia-difficulty">Dificuldade</label><select id="trivia-difficulty" class="retro-select"><option value="random">Aleatória</option><option value="easy">Fácil</option><option value="medium">Média</option><option value="hard">Difícil</option></select></div>
+                    <div class="setting-field"><label for="trivia-seconds">Tempo por pergunta</label><div class="trivia-time" role="group" aria-label="Tempo por pergunta"><button type="button" id="trivia-time-minus" class="trivia-time-step" aria-label="Diminuir 1 segundo">−</button><input id="trivia-seconds" class="trivia-duration-input" type="number" inputmode="numeric" min="0" max="30" step="1" value="15" aria-label="Duração da pergunta em segundos" /><button type="button" id="trivia-time-plus" class="trivia-time-step" aria-label="Aumentar 1 segundo">+</button><span>segundos</span></div><small>0 = sem cronômetro • até 30 segundos</small></div>
+                  </div>
+                  <div class="trivia-privacy setting-check-field"><label class="retro-check-option" for="trivia-private"><input type="checkbox" id="trivia-private" /><span>Sala privada (senha)</span></label><div id="trivia-private-fields" class="hidden"><input id="trivia-create-password" class="retro-select" type="password" minlength="4" maxlength="64" placeholder="Senha da sala" /></div></div>
+                  <button type="button" id="trivia-create-room" class="retro-button primary">＋ Criar corrida</button>
+                  <p id="trivia-home-error" class="error" role="alert"></p>
+                </section>
+                <section class="open-rooms-section trivia-open-rooms"><div class="open-rooms-heading"><div><span class="tiny-label">MULTIPLAYER</span><h3>Corridas abertas</h3></div><button id="trivia-refresh-rooms" type="button" class="refresh-rooms">↻ atualizar</button></div><div id="trivia-rooms" class="open-rooms-list"></div></section>
+              </aside>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+    <section id="trivia-lobby-screen" class="screen hidden">
+      <div class="game-page-shell"><button class="nav-back" data-back-menu>← sair da sala</button>
+      <section class="retro-window lobby-window trivia-window"><div class="window-bar"><div class="window-dots"><span class="dot pink"></span><span class="dot orange"></span><span class="dot lime"></span></div><span class="window-title">sala_da_corrida.exe</span><div class="window-actions"><span>—</span><span>□</span><span>×</span></div></div>
+        <div class="lobby-content"><div class="room-code-panel"><div><span class="tiny-label">CÓDIGO DA SALA</span><h2 id="trivia-lobby-code">----</h2></div><button id="trivia-copy-code" class="mini-button">Copiar</button></div>
+          <div class="trivia-room-summary" id="trivia-lobby-settings"></div><div class="players-panel"><div class="panel-title"><h3>Jogadores</h3><span id="trivia-player-count" class="count-badge">0</span></div><ul id="trivia-players" class="trivia-lobby-players"></ul><div class="ready-summary"><span>CONFIRMAÇÃO</span><strong id="trivia-ready-count">0/0 prontos</strong></div></div>
+          <button id="trivia-ready" class="retro-button ready-button">✓ Estou pronto</button><button id="trivia-start" class="retro-button primary hidden" disabled>▶ Iniciar corrida</button><p id="trivia-lobby-error" class="error" role="alert"></p><div id="trivia-wait-host" class="waiting-box"><span>⌛</span><div><strong>Aguardando o anfitrião</strong><small>Todos precisam confirmar presença.</small></div></div>
+        </div></section></div>
+    </section>
+    <section id="trivia-game-screen" class="screen hidden">
+      <div class="game-page-shell trivia-playing"><button class="nav-back" data-back-menu>← sair da corrida</button>
+      <section class="retro-window trivia-window"><div class="window-bar"><div class="window-dots"><span class="dot pink"></span><span class="dot orange"></span><span class="dot lime"></span></div><span class="window-title">corrida_em_andamento.exe</span><div class="window-actions"><span>—</span><span>□</span><span>×</span></div></div>
+        <div class="trivia-play-header"><div><span class="tiny-label">CORRIDA DO CONHECIMENTO</span><h2 id="trivia-round">Rodada 1</h2></div><div id="trivia-timer" class="trivia-timer" aria-live="off">15s</div></div>
+        <div class="trivia-play-grid">
+          <div class="trivia-question-panel"><div class="trivia-question-meta"><span id="trivia-question-category">Preparando...</span><span id="trivia-question-difficulty"></span></div><h3 id="trivia-question-text">Aguardando a pergunta...</h3><div id="trivia-answers" class="trivia-answers"></div><div id="trivia-result" class="trivia-result" aria-live="polite"></div><div id="trivia-progress-message" class="trivia-play-hint"></div></div>
+          <div class="trivia-towers-panel"><div class="trivia-towers-heading"><h3>Corrida até 10</h3><span id="trivia-answer-count" class="tiny-label">0 respostas</span></div><div id="trivia-towers" class="trivia-towers"></div></div>
+        </div>
+        <p id="trivia-game-error" class="error" role="alert"></p>
+        <button type="button" id="trivia-return-lobby" class="retro-button secondary hidden" style="margin:0 22px 24px;width:calc(100% - 44px)">↻ Voltar ao lobby para outra corrida</button>
+      </section></div>
+    </section>
+
+    <!-- V20.20.3: tela final da Corrida no mesmo estilo da tela de vencedor do Quem Sou Eu -->
+    <section id="trivia-winner-screen" class="screen hidden">
+      <div class="game-page-shell trivia-winner-shell">
+        <section class="retro-window trivia-window trivia-winner-window">
+          <div class="window-bar">
+            <div class="window-dots"><span class="dot pink"></span><span class="dot orange"></span><span class="dot lime"></span></div>
+            <span class="window-title">campeao_da_corrida.exe</span>
+            <div class="window-actions"><span>—</span><span>□</span><span>×</span></div>
+          </div>
+          <div class="trivia-winner-content">
+            <div class="trivia-winner-heading">
+              <span class="winner-sparkles" aria-hidden="true">✦ ★ ✦</span>
+              <span class="tiny-label">CORRIDA DO CONHECIMENTO · RESULTADO FINAL</span>
+              <h2>Temos um campeão!</h2>
+            </div>
+            <div class="trivia-winner-hero">
+              <div class="trivia-winner-avatar-frame">
+                <span class="trivia-winner-crown" aria-hidden="true">♛</span>
+                <img id="trivia-winner-avatar" src="/avatars/dog.png" alt="Avatar do campeão" />
+              </div>
+              <div class="trivia-winner-details">
+                <span class="tiny-label">1º LUGAR · CAMPEÃO</span>
+                <h3 id="trivia-winner-name">Campeão</h3>
+                <p>Chegou ao nível 10 e conquistou a vitória!</p>
+                <div class="trivia-winner-stats">
+                  <span id="trivia-winner-rounds">Rodadas: —</span>
+                  <span id="trivia-winner-tiebreak" class="hidden">Vitória no desempate</span>
+                </div>
+              </div>
+            </div>
+            <div class="trivia-ranking-panel">
+              <div class="trivia-ranking-heading"><span class="tiny-label">PLACAR DA PARTIDA</span><h3>Classificação final</h3></div>
+              <ol id="trivia-final-ranking" class="trivia-final-ranking" aria-label="Classificação final da Corrida"></ol>
+            </div>
+            <div class="trivia-winner-actions">
+              <button type="button" id="trivia-winner-replay" class="retro-button primary hidden">↻ Jogar novamente</button>
+              <div id="trivia-winner-wait-host" class="waiting-box centered compact-waiting hidden"><span>⌛</span><div><strong>Aguardando o anfitrião</strong><small>Ele pode levar todos de volta para o lobby.</small></div></div>
+              <button type="button" class="retro-button secondary" data-back-menu>← Voltar à biblioteca</button>
+              <p id="trivia-winner-error" class="error" role="alert"></p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <footer class="site-credit" aria-label="Créditos do site">
+      desenvolvido por <span>@ronizada</span>
+      <div class="image-sources-credit">
+        <span>imagens: <a href="https://anilist.co/" target="_blank" rel="noopener noreferrer">AniList</a> ·
+        <a href="https://www.tvmaze.com/" target="_blank" rel="noopener noreferrer">TVmaze</a> ·
+        <a href="https://www.wikipedia.org/" target="_blank" rel="noopener noreferrer">Wikipédia</a> ·
+        <a href="https://www.themoviedb.org/" target="_blank" rel="noopener noreferrer">TMDB</a></span>
+        <a href="https://www.themoviedb.org/about/logos-attribution" target="_blank" rel="noopener noreferrer" aria-label="TMDB: logotipo e atribuição oficial">
+          <img class="tmdb-credit-logo" src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_1-5bdc75aaebeb75dc7ae79426ddd9be3b2be1e342510f8202baf6bffa71d7f5c4.svg" alt="TMDB" loading="lazy" />
+        </a>
+        <small>This product uses the TMDB API but is not endorsed or certified by TMDB.</small>
+      </div>
+    </footer>
+
+
+  </main>
+
+
+
+  <!-- ================= CONTA / LOGIN ================= -->
+  <div id="auth-modal" class="account-modal hidden" aria-hidden="true">
+    <section class="retro-window account-modal-window" role="dialog" aria-modal="true" aria-labelledby="auth-modal-title">
+      <div class="window-bar">
+        <div class="window-dots"><span class="dot pink"></span><span class="dot orange"></span><span class="dot lime"></span></div>
+        <span class="window-title">conta.exe</span>
+        <button id="auth-modal-close" class="window-close-button" type="button" aria-label="Fechar">×</button>
+      </div>
+      <div class="account-modal-content">
+        <div class="account-tabs">
+          <button class="account-tab active" data-auth-tab="login" type="button">Entrar</button>
+          <button class="account-tab" data-auth-tab="register" type="button">Criar conta</button>
+          <button class="account-tab" data-auth-tab="recover" type="button">Recuperar senha</button>
+        </div>
+
+        <section id="auth-login-panel" class="auth-panel">
+          <span class="tiny-label">BEM-VINDO DE VOLTA</span>
+          <h2 id="auth-modal-title">Entrar na conta</h2>
+          <label for="auth-login-nickname">Nickname</label>
+          <input id="auth-login-nickname" class="account-input" maxlength="20" autocomplete="username" placeholder="ronizada" />
+          <label for="auth-login-password">Senha</label>
+          <input id="auth-login-password" class="account-input" type="password" maxlength="72" autocomplete="current-password" placeholder="••••••••" />
+          <button id="auth-login-submit" class="retro-button primary" type="button">Entrar</button>
+        </section>
+
+        <section id="auth-register-panel" class="auth-panel hidden">
+          <span class="tiny-label">NOVA CONTA</span>
+          <h2>Criar conta</h2>
+          <label for="auth-register-nickname">Nickname</label>
+          <input id="auth-register-nickname" class="account-input" maxlength="20" autocomplete="username" placeholder="seu_nick" />
+          <small class="account-help">3–20 caracteres • letras, números, ponto e underline.</small>
+          <label for="auth-register-birth">Data de nascimento</label>
+          <input id="auth-register-birth" class="account-input" type="date" autocomplete="bday" />
+          <label for="auth-register-password">Senha</label>
+          <input id="auth-register-password" class="account-input" type="password" maxlength="72" autocomplete="new-password" />
+          <label for="auth-register-confirm">Confirmar senha</label>
+          <input id="auth-register-confirm" class="account-input" type="password" maxlength="72" autocomplete="new-password" />
+          <button id="auth-register-submit" class="retro-button primary" type="button">Criar conta</button>
+        </section>
+
+        <section id="auth-recover-panel" class="auth-panel hidden">
+          <span class="tiny-label">RECUPERAÇÃO</span>
+          <h2>Esqueci minha senha</h2>
+          <div id="recover-step-one">
+            <p class="account-help">Confirme seu nickname e sua data de nascimento.</p>
+            <label for="auth-recover-nickname">Nickname</label>
+            <input id="auth-recover-nickname" class="account-input" maxlength="20" />
+            <label for="auth-recover-birth">Data de nascimento</label>
+            <input id="auth-recover-birth" class="account-input" type="date" />
+            <button id="auth-recover-verify" class="retro-button primary" type="button">Continuar</button>
+          </div>
+          <div id="recover-step-two" class="hidden">
+            <div class="account-success-note">✓ Dados confirmados.</div>
+            <label for="auth-recover-password">Nova senha</label>
+            <input id="auth-recover-password" class="account-input" type="password" maxlength="72" />
+            <label for="auth-recover-confirm">Confirmar nova senha</label>
+            <input id="auth-recover-confirm" class="account-input" type="password" maxlength="72" />
+            <button id="auth-recover-reset" class="retro-button primary" type="button">Alterar senha</button>
+          </div>
+        </section>
+
+        <p id="auth-message" class="account-message"></p>
+      </div>
+    </section>
+  </div>
+
+  <!-- ================= PERFIL ================= -->
+  <div id="profile-modal" class="account-modal hidden" aria-hidden="true">
+    <section class="retro-window profile-modal-window" role="dialog" aria-modal="true" aria-labelledby="profile-title">
+      <div class="window-bar">
+        <div class="window-dots"><span class="dot pink"></span><span class="dot orange"></span><span class="dot lime"></span></div>
+        <span class="window-title">perfil.exe</span>
+        <button id="profile-modal-close" class="window-close-button" type="button" aria-label="Fechar">×</button>
+      </div>
+      <div class="profile-modal-content">
+        <div class="account-tabs profile-tabs">
+          <button class="account-tab active" data-profile-tab="profile" type="button">Perfil</button>
+          <button class="account-tab" data-profile-tab="stats" type="button">Estatísticas</button>
+        </div>
+
+        <section id="profile-main-panel" class="profile-panel">
+          <div class="profile-hero">
+            <button id="profile-change-avatar" class="profile-avatar-button" type="button" title="Alterar avatar">
+              <img id="profile-avatar" src="/avatars/dog.png" alt="Avatar" />
+              <span>Trocar</span>
+            </button>
+            <div>
+              <span class="tiny-label">MEU PERFIL</span>
+              <h2 id="profile-title">@jogador</h2>
+              <p>Membro desde <strong id="profile-member-since">—</strong></p>
+            </div>
+          </div>
+
+          <div class="profile-settings-grid">
+            <form id="profile-nickname-form" class="profile-setting-card">
+              <span class="tiny-label">LOGIN / NICKNAME</span>
+              <h3>Alterar nickname</h3>
+              <input id="profile-nickname-input" class="account-input" maxlength="20" />
+              <small>Seu próximo login passa a usar o novo nickname.</small>
+              <button class="retro-button secondary" type="submit">Salvar nickname</button>
+            </form>
+
+            <form id="profile-password-form" class="profile-setting-card">
+              <span class="tiny-label">SEGURANÇA</span>
+              <h3>Alterar senha</h3>
+              <input id="profile-current-password" class="account-input" type="password" maxlength="72" placeholder="senha atual" />
+              <input id="profile-new-password" class="account-input" type="password" maxlength="72" placeholder="nova senha" />
+              <input id="profile-confirm-password" class="account-input" type="password" maxlength="72" placeholder="confirmar nova senha" />
+              <button class="retro-button secondary" type="submit">Alterar senha</button>
+            </form>
+          </div>
+          <p id="profile-message" class="account-message"></p>
+        </section>
+
+        <section id="profile-stats-panel" class="profile-panel hidden">
+          <span class="tiny-label">SEU HISTÓRICO</span>
+          <h2>Estatísticas</h2>
+          <div class="stats-summary-grid">
+            <article><strong id="stat-total-games">0</strong><span>Partidas</span></article>
+            <article><strong id="stat-total-wins">0</strong><span>Vitórias</span></article>
+            <article><strong id="stat-total-losses">0</strong><span>Derrotas</span></article>
+            <article><strong id="stat-win-rate">0%</strong><span>Win rate</span></article>
+          </div>
+          <div class="stats-games-grid">
+            <article class="stats-game-card pink-card">
+              <span class="tiny-label">IMPOSTOR</span>
+              <h3 id="stat-impostor-wins">0 vitórias</h3>
+              <p><span>Partidas</span><strong id="stat-impostor-games">0</strong></p>
+              <p><span>Vezes como impostor</span><strong id="stat-times-impostor">0</strong></p>
+              <p><span>Vitórias como impostor</span><strong id="stat-wins-as-impostor">0</strong></p>
+              <p><span>Vitórias como investigador</span><strong id="stat-wins-as-investigator">0</strong></p>
+            </article>
+            <article class="stats-game-card lime-card">
+              <span class="tiny-label">QUEM SOU EU</span>
+              <h3 id="stat-whoami-wins">0 vitórias</h3>
+              <p><span>Partidas</span><strong id="stat-whoami-games">0</strong></p>
+              <p><span>Acertos</span><strong id="stat-whoami-correct">0</strong></p>
+              <p><span>Eliminações</span><strong id="stat-whoami-eliminations">0</strong></p>
+              <p><span>Média de erros até vencer</span><strong id="stat-whoami-average">0</strong></p>
+            </article>
+          </div>
+        </section>
+      </div>
+    </section>
+  </div>
+
+  <!-- ================= ESCOLHA DE AVATAR ================= -->
+  <div id="avatar-modal" class="avatar-modal hidden" aria-hidden="true">
+    <section class="retro-window avatar-modal-window" role="dialog" aria-modal="true" aria-labelledby="avatar-modal-title">
+      <div class="window-bar avatar-modal-bar">
+        <div class="window-dots">
+          <span class="dot pink"></span>
+          <span class="dot orange"></span>
+          <span class="dot lime"></span>
+        </div>
+
+        <span class="window-title">avatar.exe</span>
+
+        <button
+          id="avatar-modal-close-x"
+          class="window-close-button"
+          type="button"
+          aria-label="Fechar"
+        >
+          ×
+        </button>
+      </div>
+
+      <div class="avatar-modal-content">
+        <span id="avatar-modal-kicker" class="tiny-label">VISITANTE</span>
+        <h2 id="avatar-modal-title">Escolha seu avatar</h2>
+        <p id="avatar-modal-description">Escolha um animal para representar você nas salas.</p>
+
+        <div id="avatar-modal-grid" class="avatar-modal-grid"></div>
+
+        <div id="avatar-account-upload" class="avatar-account-upload hidden">
+          <div class="avatar-upload-divider"><span>ou</span></div>
+          <input id="avatar-photo-input" type="file" accept="image/jpeg,image/png,image/webp" class="hidden" />
+          <button id="avatar-photo-button" class="retro-button secondary" type="button">
+            ↑ carregar minha foto
+          </button>
+          <small>JPG, PNG ou WEBP • máximo 2 MB</small>
+        </div>
+
+        <button id="avatar-modal-close" class="text-button avatar-modal-cancel" type="button">
+          Fechar
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <!-- AVISOS PÚBLICOS DE PALPITES: fila compartilhada com todos da sala -->
+  <div id="whoami-guess-notices" class="whoami-guess-notices" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- AVISOS GLOBAIS -->
+  <div id="global-toast" class="global-toast hidden" role="status">
+    <div id="global-toast-icon" class="global-toast-icon"><svg class="site-icon" aria-hidden="true"><use href="#icon-star"></use></svg></div>
+    <div>
+      <strong id="global-toast-title">Aviso</strong>
+      <span id="global-toast-message"></span>
+    </div>
+  </div>
+
+  <!-- SAÍDA DO HOST -->
+  <div id="host-exit-overlay" class="host-exit-overlay hidden">
+    <div class="host-exit-window retro-window">
+      <div class="window-bar">
+        <div class="window-dots">
+          <span class="dot pink"></span>
+          <span class="dot orange"></span>
+          <span class="dot lime"></span>
+        </div>
+        <span class="window-title">controle_da_sala.exe</span>
+        <div class="window-actions"><span>—</span><span>□</span><span>×</span></div>
+      </div>
+
+      <div class="host-exit-content">
+        <span class="tiny-label">VOCÊ É O HOST</span>
+        <h2>O que fazemos com a sala?</h2>
+        <p>
+          Você pode sair e deixar a galera continuar, ou encerrar a sala para todo mundo.
+        </p>
+
+        <button id="host-leave-transfer" class="retro-button primary">
+          deixar a sala com a galera
+          <small>outro jogador assume como host</small>
+        </button>
+
+        <button id="host-close-room" class="retro-button secondary">
+          encerrar a sala
+          <small>todos voltam para a tela do jogo</small>
+        </button>
+
+        <button id="host-exit-cancel" class="text-button">
+          cancelar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODO ESPECTADOR: apenas informações públicas, sem ações de jogo -->
+  <section id="spectator-screen" class="screen hidden">
+    <div class="game-page-shell spectator-shell">
+      <button class="nav-back" id="spectator-leave" type="button">← sair da sala</button>
+      <section class="retro-window spectator-window">
+        <div class="window-bar">
+          <div class="window-dots"><span class="dot pink"></span><span class="dot orange"></span><span class="dot lime"></span></div>
+          <span class="window-title">espectador.exe</span>
+          <span class="spectator-badge">👁 ASSISTINDO</span>
+        </div>
+        <div class="spectator-content">
+          <div class="spectator-intro">
+            <div><span class="tiny-label">MODO ESPECTADOR</span><h2 id="spectator-game-title">Acompanhe a partida</h2>
+            <p>Esta partida já começou. Você pode assistir agora e participar quando o host voltar ao lobby.</p></div>
+            <strong id="spectator-room-code">SALA —</strong>
+          </div>
+          <div class="spectator-metrics">
+            <div><span class="tiny-label">FASE ATUAL</span><strong id="spectator-phase">AGUARDANDO</strong></div>
+            <div><span class="tiny-label">PARTICIPANTES</span><strong id="spectator-players-count">0</strong></div>
+            <div><span class="tiny-label">ESPECTADORES</span><strong id="spectator-viewers-count">0</strong></div>
+          </div>
+          <div id="spectator-game-info" class="spectator-game-info"></div>
+          <div class="spectator-roster"><span class="tiny-label">JOGADORES NA PARTIDA</span><div id="spectator-roster-list"></div></div>
+          <p class="spectator-waiting-message">⌛ Você poderá confirmar presença na próxima partida. Seu lugar ainda depende das vagas disponíveis.</p>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- ESTADO DA CONEXÃO -->
+  <div id="connection-overlay" class="connection-overlay hidden">
+    <div class="connection-window retro-window">
+      <div class="window-bar">
+        <div class="window-dots">
+          <span class="dot pink"></span>
+          <span class="dot orange"></span>
+          <span class="dot lime"></span>
+        </div>
+
+        <span class="window-title">conexao.exe</span>
+
+        <div class="window-actions">
+          <span>—</span>
+          <span>□</span>
+          <span>×</span>
+        </div>
+      </div>
+
+      <div class="connection-content">
+        <div id="connection-icon" class="connection-icon"><svg class="site-icon" aria-hidden="true"><use href="#icon-warning"></use></svg></div>
+
+        <span id="connection-kicker" class="tiny-label">
+          CONEXÃO
+        </span>
+
+        <h2 id="connection-title">
+          Conexão perdida
+        </h2>
+
+        <p id="connection-message">
+          Tentando reconectar ao servidor...
+        </p>
+
+        <div id="connection-loader" class="connection-loader">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div id="connection-countdown" class="connection-countdown hidden">
+          tentando por <strong id="connection-seconds">10</strong>s...
+        </div>
+
+        <div id="connection-actions" class="connection-actions hidden">
+          <button
+            id="connection-primary"
+            class="retro-button primary"
+            type="button"
+          >
+            voltar para a sala
+          </button>
+
+          <button
+            id="connection-secondary"
+            class="retro-button secondary"
+            type="button"
+          >
+            ir para o menu
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/script.js?v=20.20.3"></script>
+</body>
+</html>

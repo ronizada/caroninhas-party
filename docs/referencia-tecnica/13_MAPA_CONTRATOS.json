@@ -1,0 +1,645 @@
+{
+  "server": {
+    "file": "site/server.js",
+    "items": [
+      {
+        "line": 32,
+        "kind": "rest",
+        "symbol": "get",
+        "source_line": "app.get(/^\\/(impostor|quem-sou-eu|corrida-do-conhecimento)(?:\\/[A-Z0-9]{4})?\\/?$/i,"
+      },
+      {
+        "line": 37,
+        "kind": "rest",
+        "symbol": "get",
+        "source_line": "app.get(/^\\/quiz-e-caos(?:\\/[A-Z0-9]{4})?\\/?$/i, (req, res) => res.redirect(302, \"/\"));"
+      },
+      {
+        "line": 200,
+        "kind": "socket_emit",
+        "symbol": "rooms-list",
+        "source_line": "io.emit(\"rooms-list\", roomsList());"
+      },
+      {
+        "line": 264,
+        "kind": "socket_emit",
+        "symbol": "spectator-promoted",
+        "source_line": "socket.emit(\"spectator-promoted\", { room: publicRoom(room) });"
+      },
+      {
+        "line": 1573,
+        "kind": "rest",
+        "symbol": "get",
+        "source_line": "app.get(\"/api/game-config\", async (req, res) => {"
+      },
+      {
+        "line": 1608,
+        "kind": "rest",
+        "symbol": "get",
+        "source_line": "app.get(\"/api/whoami-config\", async (req, res) => {"
+      },
+      {
+        "line": 1645,
+        "kind": "rest",
+        "symbol": "get",
+        "source_line": "app.get(\"/api/whoami-image\", async (req, res) => {"
+      },
+      {
+        "line": 1683,
+        "kind": "rest",
+        "symbol": "get",
+        "source_line": "app.get(\"/api/rooms\", (req, res) => {"
+      },
+      {
+        "line": 1699,
+        "kind": "socket_emit",
+        "symbol": "rooms-list",
+        "source_line": "socket.emit(\"rooms-list\", roomsList());"
+      },
+      {
+        "line": 1701,
+        "kind": "socket_on",
+        "symbol": "resume-session",
+        "source_line": "socket.on(\"resume-session\", ("
+      },
+      {
+        "line": 1737,
+        "kind": "socket_emit",
+        "symbol": "spectator-state",
+        "source_line": "socket.emit(\"spectator-state\", buildSpectatorState(room));"
+      },
+      {
+        "line": 1743,
+        "kind": "socket_on",
+        "symbol": "abandon-session",
+        "source_line": "socket.on(\"abandon-session\", ("
+      },
+      {
+        "line": 1767,
+        "kind": "socket_on",
+        "symbol": "room-preview",
+        "source_line": "socket.on(\"room-preview\", ({ code, gameType }, callback) => {"
+      },
+      {
+        "line": 1775,
+        "kind": "socket_on",
+        "symbol": "spectator-get-state",
+        "source_line": "socket.on(\"spectator-get-state\", ({ code }, callback) => {"
+      },
+      {
+        "line": 1781,
+        "kind": "socket_on",
+        "symbol": "get-rooms",
+        "source_line": "socket.on(\"get-rooms\", (callback) => {"
+      },
+      {
+        "line": 1790,
+        "kind": "socket_on",
+        "symbol": "create-room",
+        "source_line": "socket.on(\"create-room\", async ("
+      },
+      {
+        "line": 1885,
+        "kind": "socket_on",
+        "symbol": "create-whoami-room",
+        "source_line": "socket.on(\"create-whoami-room\", async ("
+      },
+      {
+        "line": 1981,
+        "kind": "socket_on",
+        "symbol": "join-room",
+        "source_line": "socket.on(\"join-room\", async ("
+      },
+      {
+        "line": 2066,
+        "kind": "socket_emit",
+        "symbol": "spectator-state",
+        "source_line": "socket.emit(\"spectator-state\", buildSpectatorState(room));"
+      },
+      {
+        "line": 2094,
+        "kind": "socket_emit",
+        "symbol": "spectator-state",
+        "source_line": "socket.emit(\"spectator-state\", buildSpectatorState(room));"
+      },
+      {
+        "line": 2146,
+        "kind": "socket_on",
+        "symbol": "set-ready",
+        "source_line": "socket.on(\"set-ready\", ("
+      },
+      {
+        "line": 2193,
+        "kind": "socket_on",
+        "symbol": "start-game",
+        "source_line": "socket.on(\"start-game\", async ("
+      },
+      {
+        "line": 2316,
+        "kind": "socket_on",
+        "symbol": "start-impostor-vote",
+        "source_line": "socket.on(\"start-impostor-vote\", ("
+      },
+      {
+        "line": 2359,
+        "kind": "socket_on",
+        "symbol": "cast-impostor-vote",
+        "source_line": "socket.on(\"cast-impostor-vote\", ("
+      },
+      {
+        "line": 2425,
+        "kind": "socket_on",
+        "symbol": "start-whoami-game",
+        "source_line": "socket.on(\"start-whoami-game\", async ("
+      },
+      {
+        "line": 2562,
+        "kind": "socket_on",
+        "symbol": "whoami-review-vote",
+        "source_line": "socket.on(\"whoami-review-vote\", async ("
+      },
+      {
+        "line": 2697,
+        "kind": "socket_on",
+        "symbol": "whoami-reveal-self",
+        "source_line": "socket.on(\"whoami-reveal-self\", ("
+      },
+      {
+        "line": 2764,
+        "kind": "socket_on",
+        "symbol": "whoami-guess",
+        "source_line": "socket.on(\"whoami-guess\", ("
+      },
+      {
+        "line": 2887,
+        "kind": "socket_on",
+        "symbol": "new-whoami-round",
+        "source_line": "socket.on(\"new-whoami-round\", ("
+      },
+      {
+        "line": 2933,
+        "kind": "socket_on",
+        "symbol": "new-round",
+        "source_line": "socket.on(\"new-round\", ("
+      },
+      {
+        "line": 2979,
+        "kind": "socket_on",
+        "symbol": "close-room",
+        "source_line": "socket.on(\"close-room\", ("
+      },
+      {
+        "line": 3014,
+        "kind": "socket_on",
+        "symbol": "leave-room",
+        "source_line": "socket.on(\"leave-room\", (callback) => {"
+      },
+      {
+        "line": 3022,
+        "kind": "socket_on",
+        "symbol": "disconnect",
+        "source_line": "socket.on(\"disconnect\", () => {"
+      }
+    ]
+  },
+  "auth": {
+    "file": "site/auth.js",
+    "items": [
+      {
+        "line": 335,
+        "kind": "rest",
+        "symbol": "get",
+        "source_line": "app.get(\"/api/auth/me\", async (req, res) => {"
+      },
+      {
+        "line": 349,
+        "kind": "rest",
+        "symbol": "post",
+        "source_line": "app.post(\"/api/auth/register\", async (req, res) => {"
+      },
+      {
+        "line": 380,
+        "kind": "rest",
+        "symbol": "post",
+        "source_line": "app.post(\"/api/auth/login\", async (req, res) => {"
+      },
+      {
+        "line": 411,
+        "kind": "rest",
+        "symbol": "post",
+        "source_line": "app.post(\"/api/auth/logout\", async (req, res) => {"
+      },
+      {
+        "line": 422,
+        "kind": "rest",
+        "symbol": "post",
+        "source_line": "app.post(\"/api/auth/recovery/verify\", async (req, res) => {"
+      },
+      {
+        "line": 460,
+        "kind": "rest",
+        "symbol": "post",
+        "source_line": "app.post(\"/api/auth/recovery/reset\", async (req, res) => {"
+      },
+      {
+        "line": 487,
+        "kind": "rest",
+        "symbol": "patch",
+        "source_line": "app.patch(\"/api/profile/nickname\", async (req, res) => {"
+      },
+      {
+        "line": 515,
+        "kind": "rest",
+        "symbol": "patch",
+        "source_line": "app.patch(\"/api/profile/password\", async (req, res) => {"
+      },
+      {
+        "line": 540,
+        "kind": "rest",
+        "symbol": "patch",
+        "source_line": "app.patch(\"/api/profile/avatar\", async (req, res) => {"
+      },
+      {
+        "line": 568,
+        "kind": "rest",
+        "symbol": "post",
+        "source_line": "app.post(\"/api/profile/photo\", async (req, res) => {"
+      },
+      {
+        "line": 604,
+        "kind": "rest",
+        "symbol": "get",
+        "source_line": "app.get(\"/api/profile/image/:id\", async (req, res) => {"
+      },
+      {
+        "line": 646,
+        "kind": "rest",
+        "symbol": "get",
+        "source_line": "app.get(\"/api/game-preferences/:gameType\", async (req, res) => {"
+      },
+      {
+        "line": 662,
+        "kind": "rest",
+        "symbol": "put",
+        "source_line": "app.put(\"/api/game-preferences/:gameType\", async (req, res) => {"
+      },
+      {
+        "line": 683,
+        "kind": "rest",
+        "symbol": "get",
+        "source_line": "app.get(\"/api/profile/stats\", async (req, res) => {"
+      }
+    ]
+  },
+  "trivia_race": {
+    "file": "site/trivia-race.js",
+    "items": [
+      {
+        "line": 65,
+        "kind": "rest",
+        "symbol": "get",
+        "source_line": "app.get('/api/trivia/categories', async (req,res) => {"
+      },
+      {
+        "line": 212,
+        "kind": "socket_on",
+        "symbol": "create-trivia-room",
+        "source_line": "socket.on('create-trivia-room', async (request={},callback=()=>{}) => {"
+      },
+      {
+        "line": 236,
+        "kind": "socket_on",
+        "symbol": "start-trivia-game",
+        "source_line": "socket.on('start-trivia-game',async ({code}={},callback=()=>{}) => {"
+      },
+      {
+        "line": 250,
+        "kind": "socket_on",
+        "symbol": "restart-trivia-game",
+        "source_line": "socket.on('restart-trivia-game',({code}={},callback=()=>{})=>{"
+      },
+      {
+        "line": 262,
+        "kind": "socket_on",
+        "symbol": "trivia-answer",
+        "source_line": "socket.on('trivia-answer',async ({code,roundId,optionId}={},callback=()=>{}) => {"
+      }
+    ]
+  },
+  "trivia_api": {
+    "file": "trivia/src/app.js",
+    "items": [
+      {
+        "line": 25,
+        "kind": "rest",
+        "symbol": "get",
+        "source_line": "app.get('/', (req, res) => res.json({ service:'Caroninhas Trivia API', status:'online', version:'1.3.0', docs:'Consulte o README do pacote; acesso à API requer chave privada.' }));"
+      },
+      {
+        "line": 27,
+        "kind": "rest",
+        "symbol": "get",
+        "source_line": "app.get('/health', async (req, res, next) => {"
+      },
+      {
+        "line": 32,
+        "kind": "rest",
+        "symbol": "get",
+        "source_line": "app.get('/api/v1/stats', service, async (req, res) => {"
+      },
+      {
+        "line": 39,
+        "kind": "rest",
+        "symbol": "get",
+        "source_line": "app.get('/api/v1/categories', service, async (req, res) => {"
+      },
+      {
+        "line": 46,
+        "kind": "rest",
+        "symbol": "post",
+        "source_line": "app.post('/api/v1/rounds', service, async (req, res) => {"
+      },
+      {
+        "line": 93,
+        "kind": "rest",
+        "symbol": "get",
+        "source_line": "app.get('/api/v1/rounds/:id', service, async (req, res) => {"
+      },
+      {
+        "line": 115,
+        "kind": "rest",
+        "symbol": "post",
+        "source_line": "app.post('/api/v1/rounds/:id/answers', service, async (req, res) => {"
+      },
+      {
+        "line": 153,
+        "kind": "rest",
+        "symbol": "post",
+        "source_line": "app.post('/api/v1/rounds/:id/finish', service, async (req, res) => {"
+      },
+      {
+        "line": 180,
+        "kind": "rest",
+        "symbol": "get",
+        "source_line": "app.get('/api/v1/admin/questions', admin, async (req, res) => {"
+      },
+      {
+        "line": 192,
+        "kind": "rest",
+        "symbol": "patch",
+        "source_line": "app.patch('/api/v1/admin/questions/:id/status', admin, async (req, res) => {"
+      }
+    ]
+  },
+  "client": {
+    "file": "site/public/script.js",
+    "items": [
+      {
+        "line": 532,
+        "kind": "socket_emit",
+        "symbol": "spectator-get-state",
+        "source_line": "socket.emit(\"spectator-get-state\", { code: room.code }, result => {"
+      },
+      {
+        "line": 2843,
+        "kind": "socket_emit",
+        "symbol": "get-rooms",
+        "source_line": "socket.emit(\"get-rooms\", (response) => {"
+      },
+      {
+        "line": 2857,
+        "kind": "socket_on",
+        "symbol": "rooms-list",
+        "source_line": "socket.on(\"rooms-list\", (rooms) => {"
+      },
+      {
+        "line": 3336,
+        "kind": "socket_on",
+        "symbol": "room-updated",
+        "source_line": "socket.on(\"room-updated\", (room) => {"
+      },
+      {
+        "line": 3353,
+        "kind": "socket_on",
+        "symbol": "spectator-state",
+        "source_line": "socket.on(\"spectator-state\", state => {"
+      },
+      {
+        "line": 3356,
+        "kind": "socket_on",
+        "symbol": "spectator-promoted",
+        "source_line": "socket.on(\"spectator-promoted\", ({ room }) => {"
+      },
+      {
+        "line": 3365,
+        "kind": "socket_emit",
+        "symbol": "leave-room",
+        "source_line": "socket.emit(\"leave-room\", () => {"
+      },
+      {
+        "line": 3372,
+        "kind": "socket_on",
+        "symbol": "host-transferred",
+        "source_line": "socket.on(\"host-transferred\", ({"
+      },
+      {
+        "line": 3392,
+        "kind": "socket_on",
+        "symbol": "room-closed",
+        "source_line": "socket.on(\"room-closed\", ({ gameType, reason }) => {"
+      },
+      {
+        "line": 3414,
+        "kind": "socket_on",
+        "symbol": "game-started",
+        "source_line": "socket.on(\"game-started\", ({ role, word, hint, speakingOrder = [], statuses = [], phase = \"discussion\" }) => {"
+      },
+      {
+        "line": 3435,
+        "kind": "socket_on",
+        "symbol": "impostor-vote-started",
+        "source_line": "socket.on(\"impostor-vote-started\", (payload) => {"
+      },
+      {
+        "line": 3439,
+        "kind": "socket_on",
+        "symbol": "impostor-vote-progress",
+        "source_line": "socket.on(\"impostor-vote-progress\", ({ votedCount = 0, totalVoters = 0 }) => {"
+      },
+      {
+        "line": 3445,
+        "kind": "socket_on",
+        "symbol": "impostor-tiebreak-started",
+        "source_line": "socket.on(\"impostor-tiebreak-started\", (payload) => {"
+      },
+      {
+        "line": 3455,
+        "kind": "socket_on",
+        "symbol": "impostor-player-eliminated",
+        "source_line": "socket.on(\"impostor-player-eliminated\", (payload) => {"
+      },
+      {
+        "line": 3459,
+        "kind": "socket_on",
+        "symbol": "impostor-vote-finished",
+        "source_line": "socket.on(\"impostor-vote-finished\", (payload) => {"
+      },
+      {
+        "line": 3463,
+        "kind": "socket_on",
+        "symbol": "whoami-review-started",
+        "source_line": "socket.on(\"whoami-review-started\", (state) => {"
+      },
+      {
+        "line": 3470,
+        "kind": "socket_on",
+        "symbol": "whoami-review-updated",
+        "source_line": "socket.on(\"whoami-review-updated\", (state) => {"
+      },
+      {
+        "line": 3480,
+        "kind": "socket_on",
+        "symbol": "whoami-character-rerolled",
+        "source_line": "socket.on(\"whoami-character-rerolled\", ({ targetName }) => {"
+      },
+      {
+        "line": 3489,
+        "kind": "socket_on",
+        "symbol": "whoami-review-complete",
+        "source_line": "socket.on(\"whoami-review-complete\", (payload) => {"
+      },
+      {
+        "line": 3493,
+        "kind": "socket_on",
+        "symbol": "whoami-game-started",
+        "source_line": "socket.on(\"whoami-game-started\", (payload) => {"
+      },
+      {
+        "line": 3498,
+        "kind": "socket_on",
+        "symbol": "whoami-guess-announced",
+        "source_line": "socket.on(\"whoami-guess-announced\", queueWhoAmIGuessNotice);"
+      },
+      {
+        "line": 3500,
+        "kind": "socket_on",
+        "symbol": "whoami-status-updated",
+        "source_line": "socket.on(\"whoami-status-updated\", ({ statuses }) => {"
+      },
+      {
+        "line": 3504,
+        "kind": "socket_on",
+        "symbol": "whoami-game-finished",
+        "source_line": "socket.on(\"whoami-game-finished\", (payload) => {"
+      },
+      {
+        "line": 3509,
+        "kind": "socket_on",
+        "symbol": "whoami-back-to-lobby",
+        "source_line": "socket.on(\"whoami-back-to-lobby\", () => {"
+      },
+      {
+        "line": 3531,
+        "kind": "socket_on",
+        "symbol": "back-to-lobby",
+        "source_line": "socket.on(\"back-to-lobby\", () => {"
+      },
+      {
+        "line": 3643,
+        "kind": "socket_emit",
+        "symbol": "leave-room",
+        "source_line": "socket.emit(\"leave-room\", () => {"
+      },
+      {
+        "line": 4014,
+        "kind": "socket_on",
+        "symbol": "disconnect",
+        "source_line": "socket.on(\"disconnect\", (reason) => {"
+      },
+      {
+        "line": 4100,
+        "kind": "socket_on",
+        "symbol": "connect_error",
+        "source_line": "socket.on(\"connect_error\", () => {"
+      },
+      {
+        "line": 4108,
+        "kind": "socket_on",
+        "symbol": "connect",
+        "source_line": "socket.on(\"connect\", () => {"
+      },
+      {
+        "line": 4693,
+        "kind": "socket_emit",
+        "symbol": "room-preview",
+        "source_line": "socket.emit(\"room-preview\", { code: link.code, gameType: ui.gameType }, response => {"
+      },
+      {
+        "line": 4799,
+        "kind": "socket_emit",
+        "symbol": "join-room",
+        "source_line": "socket.emit('join-room',{name:triviaName(),code:String(code||'').toUpperCase(),playerToken,"
+      },
+      {
+        "line": 4816,
+        "kind": "socket_emit",
+        "symbol": "create-trivia-room",
+        "source_line": "socket.emit('create-trivia-room',{"
+      },
+      {
+        "line": 4878,
+        "kind": "socket_emit",
+        "symbol": "set-ready",
+        "source_line": "socket.emit('set-ready',{code:roomCode,ready:!me?.ready},res=>{"
+      },
+      {
+        "line": 4884,
+        "kind": "socket_emit",
+        "symbol": "start-trivia-game",
+        "source_line": "socket.emit('start-trivia-game',{code:roomCode},res=>{"
+      },
+      {
+        "line": 5003,
+        "kind": "socket_emit",
+        "symbol": "trivia-answer",
+        "source_line": "socket.emit('trivia-answer',{code:roomCode,roundId:q.roundId,optionId:option.id},response=>{"
+      },
+      {
+        "line": 5031,
+        "kind": "socket_on",
+        "symbol": "trivia-state",
+        "source_line": "socket.on('trivia-state',state=>triviaRenderState(state));"
+      },
+      {
+        "line": 5032,
+        "kind": "socket_on",
+        "symbol": "trivia-my-state",
+        "source_line": "socket.on('trivia-my-state',({answered,roundId})=>{"
+      },
+      {
+        "line": 5036,
+        "kind": "socket_on",
+        "symbol": "trivia-error",
+        "source_line": "socket.on('trivia-error',({error})=>{if(currentRoom?.gameType==='trivia') triviaEl('game-error').textContent=error;});"
+      },
+      {
+        "line": 5043,
+        "kind": "socket_emit",
+        "symbol": "restart-trivia-game",
+        "source_line": "socket.emit('restart-trivia-game',{code:roomCode},response=>{"
+      },
+      {
+        "line": 5049,
+        "kind": "socket_emit",
+        "symbol": "restart-trivia-game",
+        "source_line": "socket.emit('restart-trivia-game',{code:roomCode},response=>{"
+      },
+      {
+        "line": 5053,
+        "kind": "socket_on",
+        "symbol": "trivia-back-to-lobby",
+        "source_line": "socket.on('trivia-back-to-lobby',()=>{"
+      }
+    ]
+  }
+}

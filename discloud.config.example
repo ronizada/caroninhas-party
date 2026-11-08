@@ -1,0 +1,12 @@
+# Exemplo GitHub: copie para discloud.config APENAS em uma copia de deploy.
+# ATENCAO: substitua ID e HOSTNAME antes de enviar para a Discloud.
+NAME=Caroninhas Party - Teste
+TYPE=site
+MAIN=server.js
+START=npm start
+RAM=512
+VERSION=latest
+AUTORESTART=true
+ID=SEU_APP_DE_TESTE
+VLAN=true
+HOSTNAME=SEU_HOSTNAME_DE_TESTE

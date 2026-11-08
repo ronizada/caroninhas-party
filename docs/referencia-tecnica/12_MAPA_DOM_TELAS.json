@@ -1,0 +1,3389 @@
+{
+  "source": "public/index.html",
+  "version": "V20.20.4",
+  "screens": [
+    {
+      "id": "menu-screen",
+      "tag": "section",
+      "classes": [
+        "screen"
+      ],
+      "first_visible_text": "MINIGAMES ONLINE CARONINHAS PARTY Escolha um jogo, crie uma sala e chame a galera. Online Visitante Entrar Criar conta Jogador ▾ Meu perfil Estatísticas Sair biblioteca_de_jogos.exe — □ × PASTA Joguinhos encontre um jogo... feito para jogar com os amigos ♡",
+      "interactive_elements": [
+        {
+          "tag": "button",
+          "id": "account-login-button",
+          "classes": [
+            "account-mini-button"
+          ],
+          "type": "button",
+          "text": "Entrar",
+          "aria_label": null
+        },
+        {
+          "tag": "button",
+          "id": "account-register-button",
+          "classes": [
+            "account-mini-button",
+            "accent"
+          ],
+          "type": "button",
+          "text": "Criar conta",
+          "aria_label": null
+        },
+        {
+          "tag": "button",
+          "id": "account-profile-button",
+          "classes": [
+            "account-profile-button"
+          ],
+          "type": "button",
+          "text": "Jogador ▾",
+          "aria_label": null
+        },
+        {
+          "tag": "button",
+          "id": "account-open-profile",
+          "classes": null,
+          "type": "button",
+          "text": "Meu perfil",
+          "aria_label": null
+        },
+        {
+          "tag": "button",
+          "id": "account-open-stats",
+          "classes": null,
+          "type": "button",
+          "text": "Estatísticas",
+          "aria_label": null
+        },
+        {
+          "tag": "button",
+          "id": "account-logout-button",
+          "classes": [
+            "danger-text"
+          ],
+          "type": "button",
+          "text": "Sair",
+          "aria_label": null
+        }
+      ],
+      "dom_nodes": [
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "brand"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "brand-kicker"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "header-side"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "server-online-mini"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "account-guest-controls",
+          "classes": [
+            "account-guest-controls"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "account-user-controls",
+          "classes": [
+            "account-user-controls",
+            "hidden"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "account-dropdown",
+          "classes": [
+            "account-dropdown",
+            "hidden"
+          ]
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "classes": [
+            "library-window",
+            "retro-window"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-bar"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-dots"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-actions"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "library-toolbar"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "toolbar-search"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "games-grid",
+          "classes": [
+            "games-grid"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "library-footer"
+          ]
+        },
+        {
+          "tag": "p",
+          "id": "menu-message",
+          "classes": [
+            "toast-message"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "impostor-home-screen",
+      "tag": "section",
+      "classes": [
+        "screen",
+        "hidden"
+      ],
+      "first_visible_text": "← voltar para a biblioteca impostor.exe — □ × JOGO 01 IMPOSTOR Todos conhecem a palavra. Menos um. ★ Entre com seus amigos. Um jogador será escolhido como impostor\n              e deverá fingir que conhece a palavra secreta. Seu nome e avatar VISITANTE Trocar Clique no avatar para escolher outro animal. categoria Todas dificuldade Aleatória carregando banco de palavras... privacidade Sala privada Exige senha para novos participantes. Senha da sala (4–64 caracteres) A senha não será salva nas suas preferências. ＋ criar sala ou entre em uma sala código da sala ⌨ senha da sala (se for privada) → ",
+      "interactive_elements": [
+        {
+          "tag": "button",
+          "id": null,
+          "classes": [
+            "nav-back"
+          ],
+          "type": null,
+          "text": "← voltar para a biblioteca",
+          "aria_label": null
+        },
+        {
+          "tag": "button",
+          "id": "avatar-preview-button-impostor",
+          "classes": [
+            "guest-avatar-preview"
+          ],
+          "type": "button",
+          "text": "Trocar",
+          "aria_label": "Trocar avatar"
+        },
+        {
+          "tag": "input",
+          "id": "name",
+          "classes": null,
+          "type": null,
+          "text": "",
+          "aria_label": null
+        },
+        {
+          "tag": "select",
+          "id": "create-category",
+          "classes": [
+            "retro-select"
+          ],
+          "type": null,
+          "text": "Todas",
+          "aria_label": null
+        },
+        {
+          "tag": "select",
+          "id": "create-difficulty",
+          "classes": [
+            "retro-select"
+          ],
+          "type": null,
+          "text": "Aleatória",
+          "aria_label": null
+        },
+        {
+          "tag": "input",
+          "id": "impostor-private",
+          "classes": null,
+          "type": "checkbox",
+          "text": "",
+          "aria_label": null
+        },
+        {
+          "tag": "input",
+          "id": "impostor-create-password",
+          "classes": null,
+          "type": "password",
+          "text": "",
+          "aria_label": null
+        },
+        {
+          "tag": "button",
+          "id": "create-room",
+          "classes": [
+            "retro-button",
+            "primary"
+          ],
+          "type": null,
+          "text": "＋ criar sala",
+          "aria_label": null
+        },
+        {
+          "tag": "input",
+          "id": "room-code",
+          "classes": null,
+          "type": null,
+          "text": "",
+          "aria_label": null
+        },
+        {
+          "tag": "input",
+          "id": "impostor-join-password",
+          "classes": null,
+          "type": "password",
+          "text": "",
+          "aria_label": null
+        },
+        {
+          "tag": "button",
+          "id": "join-room",
+          "classes": [
+            "retro-button",
+            "secondary"
+          ],
+          "type": null,
+          "text": "→ entrar na sala",
+          "aria_label": null
+        },
+        {
+          "tag": "button",
+          "id": "refresh-rooms",
+          "classes": [
+            "refresh-rooms"
+          ],
+          "type": "button",
+          "text": "↻ atualizar",
+          "aria_label": null
+        }
+      ],
+      "dom_nodes": [
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "game-page-shell"
+          ]
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "classes": [
+            "retro-window",
+            "game-window"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-bar",
+            "impostor-bar"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-dots"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-actions"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "game-intro"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "game-icon-large"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "mini-rule-card"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "form-area"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "guest-identity-field"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "guest-identity-heading"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "guest-name-row"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "retro-input-wrap",
+            "guest-name-input"
+          ]
+        },
+        {
+          "tag": "p",
+          "id": null,
+          "classes": [
+            "avatar-help"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "room-settings"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "setting-field"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "setting-field"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "word-bank-status",
+          "classes": [
+            "word-bank-status"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "room-extra-settings",
+            "room-extra-settings-single"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "setting-check-field"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "impostor-private-fields",
+          "classes": [
+            "room-privacy-fields",
+            "hidden"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "separator"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "retro-input-wrap"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "room-join-password"
+          ]
+        },
+        {
+          "tag": "p",
+          "id": "impostor-direct-notice",
+          "classes": [
+            "room-direct-link-notice",
+            "hidden"
+          ]
+        },
+        {
+          "tag": "p",
+          "id": "home-error",
+          "classes": [
+            "error"
+          ]
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "classes": [
+            "open-rooms-section"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "open-rooms-heading"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "open-rooms-list",
+          "classes": [
+            "open-rooms-list"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "empty-rooms"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lobby-screen",
+      "tag": "section",
+      "classes": [
+        "screen",
+        "hidden"
+      ],
+      "first_visible_text": "← sair para a biblioteca sala_do_impostor.exe — □ × CÓDIGO DA SALA ---- copiar CATEGORIA Todas DIFICULDADE Aleatória CONECTADOS Jogadores 0 CONFIRMAÇÃO 0/0 prontos ✓ estou pronto ▶ aguardando todos ficarem prontos aguardando o host... a partida começa quando ele clicar em iniciar",
+      "interactive_elements": [
+        {
+          "tag": "button",
+          "id": null,
+          "classes": [
+            "nav-back"
+          ],
+          "type": null,
+          "text": "← sair para a biblioteca",
+          "aria_label": null
+        },
+        {
+          "tag": "button",
+          "id": "copy-code",
+          "classes": [
+            "mini-button"
+          ],
+          "type": null,
+          "text": "copiar",
+          "aria_label": null
+        },
+        {
+          "tag": "button",
+          "id": "ready-toggle",
+          "classes": [
+            "retro-button",
+            "ready-button"
+          ],
+          "type": null,
+          "text": "✓ estou pronto",
+          "aria_label": null
+        },
+        {
+          "tag": "button",
+          "id": "start-game",
+          "classes": [
+            "retro-button",
+            "primary",
+            "hidden"
+          ],
+          "type": null,
+          "text": "▶ aguardando todos ficarem prontos",
+          "aria_label": null
+        }
+      ],
+      "dom_nodes": [
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "game-page-shell"
+          ]
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "classes": [
+            "retro-window",
+            "lobby-window"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-bar"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-dots"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-actions"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "lobby-content"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "room-code-panel"
+          ]
+        },
+        {
+          "tag": "h2",
+          "id": "lobby-code",
+          "classes": null
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "lobby-settings-summary"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "players-panel"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "panel-title"
+          ]
+        },
+        {
+          "tag": "ul",
+          "id": "players",
+          "classes": null
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "ready-summary"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "waiting-host",
+          "classes": [
+            "waiting-box"
+          ]
+        },
+        {
+          "tag": "p",
+          "id": "lobby-error",
+          "classes": [
+            "error"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game-screen",
+      "tag": "section",
+      "classes": [
+        "screen",
+        "hidden"
+      ],
+      "first_visible_text": "segredo.txt — □ × NÃO MOSTRE PARA NINGUÉM sua palavra é Dê pistas sem deixar o impostor descobrir a palavra. MODO SECRETO você é O IMPOSTOR SUA DICA ... Use a dica para se misturar aos outros sem revelar que você é o impostor. DESEMPATE Somente os empatados falam nesta rodada. Depois o host abre uma nova votação só entre eles. ORDEM SORTEADA Quem fala primeiro? ✓ iniciar votação rodada de discussão o host inicia a votação quando todos terminarem de falar ↻ nova rodada aguarde o host ele poderá iniciar uma nova rodada voltar ao menu principal",
+      "interactive_elements": [
+        {
+          "tag": "button",
+          "id": "start-impostor-vote",
+          "classes": [
+            "retro-button",
+            "primary",
+            "hidden"
+          ],
+          "type": null,
+          "text": "✓ iniciar votação",
+          "aria_label": null
+        },
+        {
+          "tag": "button",
+          "id": "new-round",
+          "classes": [
+            "retro-button",
+            "primary",
+            "hidden"
+          ],
+          "type": null,
+          "text": "↻ nova rodada",
+          "aria_label": null
+        },
+        {
+          "tag": "button",
+          "id": null,
+          "classes": [
+            "text-button"
+          ],
+          "type": null,
+          "text": "voltar ao menu principal",
+          "aria_label": null
+        }
+      ],
+      "dom_nodes": [
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "game-page-shell"
+          ]
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "classes": [
+            "retro-window",
+            "role-window"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-bar"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-dots"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-actions"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "role-content"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "civil-view",
+          "classes": [
+            "hidden"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "secret-stamp"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "role-icon"
+          ]
+        },
+        {
+          "tag": "p",
+          "id": null,
+          "classes": [
+            "role-caption"
+          ]
+        },
+        {
+          "tag": "h2",
+          "id": "secret-word",
+          "classes": [
+            "secret-word"
+          ]
+        },
+        {
+          "tag": "p",
+          "id": null,
+          "classes": [
+            "role-description"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "impostor-view",
+          "classes": [
+            "hidden"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "secret-stamp",
+            "danger"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "role-icon"
+          ]
+        },
+        {
+          "tag": "p",
+          "id": null,
+          "classes": [
+            "role-caption",
+            "danger-text"
+          ]
+        },
+        {
+          "tag": "h2",
+          "id": null,
+          "classes": [
+            "impostor-title"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "impostor-hint-box"
+          ]
+        },
+        {
+          "tag": "p",
+          "id": null,
+          "classes": [
+            "role-description"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "impostor-phase-banner",
+          "classes": [
+            "impostor-phase-banner",
+            "hidden"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "speaking-order-panel",
+            "impostor-speaking-panel"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "speaking-order-heading"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "impostor-speaking-order",
+          "classes": [
+            "speaking-order-list"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "impostor-vote-waiting",
+          "classes": [
+            "waiting-box",
+            "centered",
+            "hidden"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "round-waiting",
+          "classes": [
+            "waiting-box",
+            "centered",
+            "hidden"
+          ]
+        },
+        {
+          "tag": "p",
+          "id": "game-error",
+          "classes": [
+            "error"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "impostor-vote-screen",
+      "tag": "section",
+      "classes": [
+        "screen",
+        "hidden"
+      ],
+      "first_visible_text": "votacao.exe — □ × VOTAÇÃO Quem é o impostor? Escolha um jogador. Seu voto fica escondido até todo mundo terminar. VOTARAM 0/0 ← voltar ao menu principal",
+      "interactive_elements": [
+        {
+          "tag": "button",
+          "id": null,
+          "classes": [
+            "text-button"
+          ],
+          "type": null,
+          "text": "← voltar ao menu principal",
+          "aria_label": null
+        }
+      ],
+      "dom_nodes": [
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "game-page-shell",
+            "impostor-vote-shell"
+          ]
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "classes": [
+            "retro-window",
+            "impostor-vote-window"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-bar"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-dots"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-actions"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "impostor-vote-content"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "impostor-vote-heading"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "vote-progress-box"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "impostor-vote-candidates",
+          "classes": [
+            "impostor-vote-candidates"
+          ]
+        },
+        {
+          "tag": "p",
+          "id": "impostor-vote-feedback",
+          "classes": [
+            "impostor-vote-feedback"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "impostor-result-screen",
+      "tag": "section",
+      "classes": [
+        "screen",
+        "hidden"
+      ],
+      "first_visible_text": "resultado_votacao.exe — □ × ? RESULTADO DA VOTAÇÃO ... ... MAIS VOTADO ... O IMPOSTOR ERA ... PALAVRA DA RODADA ... DICA DO IMPOSTOR ... CONTAGEM FINAL ↻ nova rodada aguarde o host ele pode levar todos de volta para o lobby ← voltar ao menu principal",
+      "interactive_elements": [
+        {
+          "tag": "button",
+          "id": "impostor-result-new-round",
+          "classes": [
+            "retro-button",
+            "primary",
+            "hidden"
+          ],
+          "type": null,
+          "text": "↻ nova rodada",
+          "aria_label": null
+        },
+        {
+          "tag": "button",
+          "id": null,
+          "classes": [
+            "text-button"
+          ],
+          "type": null,
+          "text": "← voltar ao menu principal",
+          "aria_label": null
+        }
+      ],
+      "dom_nodes": [
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "game-page-shell",
+            "impostor-result-shell"
+          ]
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "classes": [
+            "retro-window",
+            "impostor-result-window"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-bar"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-dots"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-actions"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "impostor-result-content"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "impostor-result-symbol",
+          "classes": [
+            "impostor-result-symbol"
+          ]
+        },
+        {
+          "tag": "h2",
+          "id": "impostor-result-title",
+          "classes": null
+        },
+        {
+          "tag": "p",
+          "id": "impostor-result-subtitle",
+          "classes": null
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "impostor-result-reveal-grid"
+          ]
+        },
+        {
+          "tag": "article",
+          "id": null,
+          "classes": [
+            "impostor-result-card",
+            "selected-card"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "impostor-selected-avatar",
+          "classes": [
+            "impostor-result-avatar"
+          ]
+        },
+        {
+          "tag": "article",
+          "id": null,
+          "classes": [
+            "impostor-result-card",
+            "impostor-card"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "impostor-real-avatar",
+          "classes": [
+            "impostor-result-avatar"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "impostor-word-reveal",
+            "impostor-final-secret-grid"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "impostor-vote-count-panel"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "impostor-result-counts",
+          "classes": [
+            "impostor-result-counts"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "impostor-result-actions"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "impostor-result-waiting",
+          "classes": [
+            "waiting-box",
+            "centered",
+            "hidden"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "whoami-home-screen",
+      "tag": "section",
+      "classes": [
+        "screen",
+        "hidden"
+      ],
+      "first_visible_text": "← voltar para a biblioteca quem_sou_eu.exe — □ × JOGO 02 QUEM SOU EU? Todo mundo sabe quem você é. Menos você. ? Cada jogador recebe um personagem secreto. Você vê os personagens\n              dos outros, mas não o seu. Faça perguntas de sim ou não até descobrir\n              quem você é. Seu nome e avatar VISITANTE Trocar Clique no avatar para escolher outro animal. categoria Todas dificuldade Aleatória carregando personagens... modo de partida Todos até o fim Continua até todos acertarem, desistirem ou esgotarem as 3 tentativas. privacidade Sala privada Exige senha para novos participantes. ",
+      "interactive_elements": [
+        {
+          "tag": "button",
+          "id": null,
+          "classes": [
+            "nav-back"
+          ],
+          "type": null,
+          "text": "← voltar para a biblioteca",
+          "aria_label": null
+        },
+        {
+          "tag": "button",
+          "id": "avatar-preview-button-whoami",
+          "classes": [
+            "guest-avatar-preview"
+          ],
+          "type": "button",
+          "text": "Trocar",
+          "aria_label": "Trocar avatar"
+        },
+        {
+          "tag": "input",
+          "id": "whoami-name",
+          "classes": null,
+          "type": null,
+          "text": "",
+          "aria_label": null
+        },
+        {
+          "tag": "select",
+          "id": "whoami-category",
+          "classes": [
+            "retro-select"
+          ],
+          "type": null,
+          "text": "Todas",
+          "aria_label": null
+        },
+        {
+          "tag": "select",
+          "id": "whoami-difficulty",
+          "classes": [
+            "retro-select"
+          ],
+          "type": null,
+          "text": "Aleatória",
+          "aria_label": null
+        },
+        {
+          "tag": "input",
+          "id": "whoami-all-finish",
+          "classes": null,
+          "type": "checkbox",
+          "text": "",
+          "aria_label": null
+        },
+        {
+          "tag": "input",
+          "id": "whoami-private",
+          "classes": null,
+          "type": "checkbox",
+          "text": "",
+          "aria_label": null
+        },
+        {
+          "tag": "input",
+          "id": "whoami-create-password",
+          "classes": null,
+          "type": "password",
+          "text": "",
+          "aria_label": null
+        },
+        {
+          "tag": "button",
+          "id": "create-whoami-room",
+          "classes": [
+            "retro-button",
+            "primary"
+          ],
+          "type": null,
+          "text": "＋ criar sala",
+          "aria_label": null
+        },
+        {
+          "tag": "input",
+          "id": "whoami-room-code",
+          "classes": null,
+          "type": null,
+          "text": "",
+          "aria_label": null
+        },
+        {
+          "tag": "input",
+          "id": "whoami-join-password",
+          "classes": null,
+          "type": "password",
+          "text": "",
+          "aria_label": null
+        },
+        {
+          "tag": "button",
+          "id": "join-whoami-room",
+          "classes": [
+            "retro-button",
+            "secondary"
+          ],
+          "type": null,
+          "text": "→ entrar na sala",
+          "aria_label": null
+        },
+        {
+          "tag": "button",
+          "id": "refresh-whoami-rooms",
+          "classes": [
+            "refresh-rooms"
+          ],
+          "type": "button",
+          "text": "↻ atualizar",
+          "aria_label": null
+        }
+      ],
+      "dom_nodes": [
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "game-page-shell"
+          ]
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "classes": [
+            "retro-window",
+            "game-window"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-bar",
+            "whoami-bar"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-dots"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-actions"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "game-intro"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "game-icon-large",
+            "whoami-icon"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "mini-rule-card",
+            "whoami-rule"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "form-area"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "guest-identity-field"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "guest-identity-heading"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "guest-name-row"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "retro-input-wrap",
+            "guest-name-input"
+          ]
+        },
+        {
+          "tag": "p",
+          "id": null,
+          "classes": [
+            "avatar-help"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "room-settings"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "setting-field"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "setting-field"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "whoami-bank-status",
+          "classes": [
+            "word-bank-status"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "room-extra-settings"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "setting-check-field"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "setting-check-field"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "whoami-private-fields",
+          "classes": [
+            "room-privacy-fields",
+            "hidden"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "separator"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "retro-input-wrap"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "room-join-password"
+          ]
+        },
+        {
+          "tag": "p",
+          "id": "whoami-direct-notice",
+          "classes": [
+            "room-direct-link-notice",
+            "hidden"
+          ]
+        },
+        {
+          "tag": "p",
+          "id": "whoami-home-error",
+          "classes": [
+            "error"
+          ]
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "classes": [
+            "open-rooms-section"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "open-rooms-heading"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "whoami-open-rooms-list",
+          "classes": [
+            "open-rooms-list"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "empty-rooms"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "whoami-lobby-screen",
+      "tag": "section",
+      "classes": [
+        "screen",
+        "hidden"
+      ],
+      "first_visible_text": "← sair para a biblioteca sala_quem_sou_eu.exe — □ × CÓDIGO DA SALA ---- copiar CATEGORIA Todas DIFICULDADE Aleatória MODO DE PARTIDA Primeiro a acertar CONECTADOS Jogadores 0 CONFIRMAÇÃO 0/0 prontos ✓ estou pronto ▶ aguardando todos ficarem prontos aguardando o host... a partida começa quando todos estiverem prontos",
+      "interactive_elements": [
+        {
+          "tag": "button",
+          "id": null,
+          "classes": [
+            "nav-back"
+          ],
+          "type": null,
+          "text": "← sair para a biblioteca",
+          "aria_label": null
+        },
+        {
+          "tag": "button",
+          "id": "whoami-copy-code",
+          "classes": [
+            "mini-button"
+          ],
+          "type": null,
+          "text": "copiar",
+          "aria_label": null
+        },
+        {
+          "tag": "button",
+          "id": "whoami-ready-toggle",
+          "classes": [
+            "retro-button",
+            "ready-button"
+          ],
+          "type": null,
+          "text": "✓ estou pronto",
+          "aria_label": null
+        },
+        {
+          "tag": "button",
+          "id": "start-whoami-game",
+          "classes": [
+            "retro-button",
+            "primary",
+            "hidden"
+          ],
+          "type": null,
+          "text": "▶ aguardando todos ficarem prontos",
+          "aria_label": null
+        }
+      ],
+      "dom_nodes": [
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "game-page-shell"
+          ]
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "classes": [
+            "retro-window",
+            "lobby-window"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-bar",
+            "whoami-bar"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-dots"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-actions"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "lobby-content"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "room-code-panel",
+            "whoami-code-panel"
+          ]
+        },
+        {
+          "tag": "h2",
+          "id": "whoami-lobby-code",
+          "classes": null
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "lobby-settings-summary"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "whoami-lobby-mode-line"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "players-panel"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "panel-title"
+          ]
+        },
+        {
+          "tag": "ul",
+          "id": "whoami-players",
+          "classes": null
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "ready-summary"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "whoami-waiting-host",
+          "classes": [
+            "waiting-box"
+          ]
+        },
+        {
+          "tag": "p",
+          "id": "whoami-lobby-error",
+          "classes": [
+            "error"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "whoami-review-screen",
+      "tag": "section",
+      "classes": [
+        "screen",
+        "hidden"
+      ],
+      "first_visible_text": "conferencia_de_personagens.exe — □ × SORTEANDO PERSONAGENS embaralhando... ? ? ? separando um personagem para cada jogador CONFERÊNCIA Os personagens ficaram bons? Confira somente os personagens dos seus amigos.\n                    Seu próprio personagem continua escondido. APROVADOS 0/0 seus amigos estão avaliando o seu personagem... Como funciona: para trocar o personagem de alguém, todos os outros jogadores\n                precisam escolher “quero outro”. O dono nunca vê nem vota no\n                próprio personagem. TUDO APROVADO valendo! 3",
+      "interactive_elements": [],
+      "dom_nodes": [
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "game-page-shell",
+            "review-page-shell"
+          ]
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "classes": [
+            "retro-window",
+            "whoami-review-window"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-bar",
+            "whoami-bar"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-dots"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-actions"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "whoami-review-content"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "whoami-draw-animation",
+          "classes": [
+            "whoami-draw-animation"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "draw-card-row"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "draw-card"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "draw-card"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "draw-card"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "whoami-review-main",
+          "classes": [
+            "whoami-review-main",
+            "hidden"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "review-header"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "review-progress-box"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "whoami-self-review-status",
+          "classes": [
+            "self-review-status"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "whoami-review-grid",
+          "classes": [
+            "whoami-review-grid"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "review-rule-note"
+          ]
+        },
+        {
+          "tag": "p",
+          "id": "whoami-review-error",
+          "classes": [
+            "error"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "whoami-launch-overlay",
+          "classes": [
+            "whoami-launch-overlay",
+            "hidden"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "whoami-game-screen",
+      "tag": "section",
+      "classes": [
+        "screen",
+        "hidden"
+      ],
+      "first_visible_text": "quem_sou_eu.txt — □ × NÃO OLHE SEU PERSONAGEM 3 tentativas para acertar VOCÊ É... QUEM SOU EU? Faça perguntas, anote as respostas e tente descobrir antes de todo mundo. SEU PALPITE Quem eu acho que sou? ● ● ● tentar BLOCO DE NOTAS Respostas que recebi Fica salvo nesta aba durante a rodada. ? desistir e revelar quem sou VOCÊ ERA ... Você está fora desta rodada, mas pode continuar assistindo. ORDEM SORTEADA Ordem de fala VOCÊ PODE VER Personagens dos outros ← voltar ao menu principal",
+      "interactive_elements": [
+        {
+          "tag": "input",
+          "id": "whoami-guess-input",
+          "classes": [
+            "retro-input"
+          ],
+          "type": "text",
+          "text": "",
+          "aria_label": null
+        },
+        {
+          "tag": "button",
+          "id": "whoami-guess-button",
+          "classes": [
+            "retro-button",
+            "primary",
+            "compact-button"
+          ],
+          "type": "button",
+          "text": "tentar",
+          "aria_label": null
+        },
+        {
+          "tag": "textarea",
+          "id": "whoami-notes",
+          "classes": [
+            "whoami-notes"
+          ],
+          "type": null,
+          "text": "",
+          "aria_label": null
+        },
+        {
+          "tag": "button",
+          "id": "whoami-reveal-self",
+          "classes": [
+            "retro-button",
+            "reveal-button"
+          ],
+          "type": null,
+          "text": "? desistir e revelar quem sou",
+          "aria_label": null
+        },
+        {
+          "tag": "button",
+          "id": null,
+          "classes": [
+            "text-button",
+            "whoami-menu-button"
+          ],
+          "type": null,
+          "text": "← voltar ao menu principal",
+          "aria_label": null
+        }
+      ],
+      "dom_nodes": [
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "game-page-shell",
+            "whoami-game-shell"
+          ]
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "classes": [
+            "retro-window",
+            "role-window",
+            "whoami-play-window"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-bar",
+            "whoami-bar"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-dots"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-actions"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "role-content",
+            "whoami-game-content"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "whoami-game-topline"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "secret-stamp",
+            "whoami-stamp"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "whoami-mode-chip"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "whoami-play-grid",
+            "whoami-play-grid-v17"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "whoami-left-pane"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "whoami-self-card"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "whoami-question"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "whoami-guess-panel"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "panel-title",
+            "compact-title"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "whoami-attempts",
+          "classes": [
+            "whoami-attempts"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "whoami-guess-row"
+          ]
+        },
+        {
+          "tag": "p",
+          "id": "whoami-guess-feedback",
+          "classes": [
+            "whoami-guess-feedback"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "whoami-progress-board",
+          "classes": [
+            "whoami-progress-board",
+            "hidden"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "whoami-notes-panel"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "panel-title",
+            "compact-title"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "whoami-self-reveal",
+          "classes": [
+            "whoami-reveal-box",
+            "hidden"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "whoami-self-image-wrap",
+          "classes": [
+            "character-photo-wrap",
+            "small",
+            "hidden"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "whoami-right-pane"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "speaking-order-panel",
+            "whoami-speaking-panel"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "speaking-order-heading"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "whoami-speaking-order",
+          "classes": [
+            "speaking-order-list"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "whoami-others-section"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "panel-title",
+            "whoami-others-title"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "whoami-visibility-icon"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "whoami-other-characters",
+          "classes": [
+            "whoami-character-grid"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "whoami-bottom-actions"
+          ]
+        },
+        {
+          "tag": "p",
+          "id": "whoami-game-error",
+          "classes": [
+            "error",
+            "whoami-game-error"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "whoami-winner-screen",
+      "tag": "section",
+      "classes": [
+        "screen",
+        "hidden"
+      ],
+      "first_visible_text": "resultado_final.exe — □ × ✦ ★ ✦ TEMOS UM VENCEDOR ... descobriu quem era primeiro! ERA ... PLACAR DA RODADA 🏆 Classificação final Todos tiveram sua vez! Veja a ordem dos acertos. REVELAÇÃO FINAL Personagens da rodada ↻ nova rodada aguarde o host ele pode levar todos de volta para o lobby ← voltar ao menu principal",
+      "interactive_elements": [
+        {
+          "tag": "button",
+          "id": "whoami-new-round",
+          "classes": [
+            "retro-button",
+            "primary",
+            "hidden"
+          ],
+          "type": null,
+          "text": "↻ nova rodada",
+          "aria_label": null
+        },
+        {
+          "tag": "button",
+          "id": null,
+          "classes": [
+            "text-button",
+            "whoami-menu-button"
+          ],
+          "type": null,
+          "text": "← voltar ao menu principal",
+          "aria_label": null
+        }
+      ],
+      "dom_nodes": [
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "game-page-shell",
+            "whoami-winner-shell"
+          ]
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "classes": [
+            "retro-window",
+            "whoami-winner-window"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-bar",
+            "whoami-bar"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-dots"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-actions"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "whoami-winner-content"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "whoami-classic-result",
+          "classes": null
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "winner-sparkles"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "whoami-winner-avatar",
+          "classes": [
+            "winner-avatar-slot"
+          ]
+        },
+        {
+          "tag": "h2",
+          "id": "whoami-winner-name",
+          "classes": null
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "winner-character-card"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "whoami-winner-image-wrap",
+          "classes": [
+            "character-photo-wrap",
+            "winner-photo",
+            "hidden"
+          ]
+        },
+        {
+          "tag": "section",
+          "id": "whoami-all-finish-result",
+          "classes": [
+            "whoami-all-finish-result",
+            "hidden"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "whoami-ranking",
+          "classes": [
+            "whoami-ranking"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "winner-roster-panel"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "panel-title",
+            "compact-title"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "whoami-final-results",
+          "classes": [
+            "whoami-final-results"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "whoami-winner-actions"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "whoami-round-waiting",
+          "classes": [
+            "waiting-box",
+            "centered",
+            "compact-waiting"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trivia-home-screen",
+      "tag": "section",
+      "classes": [
+        "screen",
+        "hidden"
+      ],
+      "first_visible_text": "← voltar para a biblioteca corrida_do_conhecimento.exe — □ × JOGO 03 · MULTIPLAYER Corrida do Conhecimento Responda, suba sua torre e chegue primeiro ao nível 10. Seu nome e avatar VISITANTE Trocar Clique no avatar para escolher outro animal. Áreas do conhecimento carregando... Clique nas tags para incluir ou remover assuntos. Selecionar todas Limpar MULTIPLAYER Entrar em uma corrida Entrar CONFIGURAR A CORRIDA Dificuldade Aleatória Fácil Média Difícil Tempo por pergunta − + segundos 0 = sem cronômetro • até 30 segundos Sala privada (senha) ＋ Criar corrida MULTIPLAYER Corridas abertas ↻ atuali",
+      "interactive_elements": [
+        {
+          "tag": "button",
+          "id": null,
+          "classes": [
+            "nav-back"
+          ],
+          "type": null,
+          "text": "← voltar para a biblioteca",
+          "aria_label": null
+        },
+        {
+          "tag": "button",
+          "id": "avatar-preview-button-trivia",
+          "classes": [
+            "guest-avatar-preview"
+          ],
+          "type": "button",
+          "text": "Trocar",
+          "aria_label": "Trocar avatar"
+        },
+        {
+          "tag": "input",
+          "id": "trivia-name",
+          "classes": null,
+          "type": "text",
+          "text": "",
+          "aria_label": null
+        },
+        {
+          "tag": "button",
+          "id": "trivia-select-all",
+          "classes": [
+            "mini-button"
+          ],
+          "type": "button",
+          "text": "Selecionar todas",
+          "aria_label": null
+        },
+        {
+          "tag": "button",
+          "id": "trivia-clear-all",
+          "classes": [
+            "mini-button"
+          ],
+          "type": "button",
+          "text": "Limpar",
+          "aria_label": null
+        },
+        {
+          "tag": "input",
+          "id": "trivia-room-code",
+          "classes": null,
+          "type": "text",
+          "text": "",
+          "aria_label": "Código da sala"
+        },
+        {
+          "tag": "input",
+          "id": "trivia-join-password",
+          "classes": null,
+          "type": "password",
+          "text": "",
+          "aria_label": "Senha da sala, se privada"
+        },
+        {
+          "tag": "button",
+          "id": "trivia-join-room",
+          "classes": [
+            "retro-button",
+            "secondary"
+          ],
+          "type": "button",
+          "text": "Entrar",
+          "aria_label": null
+        },
+        {
+          "tag": "select",
+          "id": "trivia-difficulty",
+          "classes": [
+            "retro-select"
+          ],
+          "type": null,
+          "text": "Aleatória Fácil Média Difícil",
+          "aria_label": null
+        },
+        {
+          "tag": "button",
+          "id": "trivia-time-minus",
+          "classes": [
+            "trivia-time-step"
+          ],
+          "type": "button",
+          "text": "−",
+          "aria_label": "Diminuir 1 segundo"
+        },
+        {
+          "tag": "input",
+          "id": "trivia-seconds",
+          "classes": [
+            "trivia-duration-input"
+          ],
+          "type": "number",
+          "text": "",
+          "aria_label": "Duração da pergunta em segundos"
+        },
+        {
+          "tag": "button",
+          "id": "trivia-time-plus",
+          "classes": [
+            "trivia-time-step"
+          ],
+          "type": "button",
+          "text": "+",
+          "aria_label": "Aumentar 1 segundo"
+        },
+        {
+          "tag": "input",
+          "id": "trivia-private",
+          "classes": null,
+          "type": "checkbox",
+          "text": "",
+          "aria_label": null
+        },
+        {
+          "tag": "input",
+          "id": "trivia-create-password",
+          "classes": [
+            "retro-select"
+          ],
+          "type": "password",
+          "text": "",
+          "aria_label": null
+        },
+        {
+          "tag": "button",
+          "id": "trivia-create-room",
+          "classes": [
+            "retro-button",
+            "primary"
+          ],
+          "type": "button",
+          "text": "＋ Criar corrida",
+          "aria_label": null
+        },
+        {
+          "tag": "button",
+          "id": "trivia-refresh-rooms",
+          "classes": [
+            "refresh-rooms"
+          ],
+          "type": "button",
+          "text": "↻ atualizar",
+          "aria_label": null
+        }
+      ],
+      "dom_nodes": [
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "game-page-shell",
+            "trivia-home-shell"
+          ]
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "classes": [
+            "retro-window",
+            "game-window",
+            "trivia-window"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-bar",
+            "trivia-bar"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-dots"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-actions"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "game-intro",
+            "trivia-intro"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "game-icon-large",
+            "trivia-icon"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "trivia-home-content"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "guest-identity-field",
+            "trivia-identity"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "guest-identity-heading"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "guest-name-row"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "retro-input-wrap",
+            "guest-name-input"
+          ]
+        },
+        {
+          "tag": "p",
+          "id": null,
+          "classes": [
+            "avatar-help"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "trivia-config"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "trivia-main-settings"
+          ]
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "classes": [
+            "trivia-categories-card"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "trivia-settings-heading"
+          ]
+        },
+        {
+          "tag": "p",
+          "id": null,
+          "classes": [
+            "trivia-help"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "trivia-category-tags",
+          "classes": [
+            "trivia-tags"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "trivia-inline-actions"
+          ]
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "classes": [
+            "trivia-join-section"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "trivia-section-heading"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "trivia-join-grid"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "retro-input-wrap"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "retro-input-wrap"
+          ]
+        },
+        {
+          "tag": "aside",
+          "id": null,
+          "classes": [
+            "trivia-side-settings"
+          ]
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "classes": [
+            "trivia-create-settings"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "trivia-options-grid"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "setting-field"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "setting-field"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "trivia-time"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "trivia-privacy",
+            "setting-check-field"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "trivia-private-fields",
+          "classes": [
+            "hidden"
+          ]
+        },
+        {
+          "tag": "p",
+          "id": "trivia-home-error",
+          "classes": [
+            "error"
+          ]
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "classes": [
+            "open-rooms-section",
+            "trivia-open-rooms"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "open-rooms-heading"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "trivia-rooms",
+          "classes": [
+            "open-rooms-list"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trivia-lobby-screen",
+      "tag": "section",
+      "classes": [
+        "screen",
+        "hidden"
+      ],
+      "first_visible_text": "← sair da sala sala_da_corrida.exe — □ × CÓDIGO DA SALA ---- Copiar Jogadores 0 CONFIRMAÇÃO 0/0 prontos ✓ Estou pronto ▶ Iniciar corrida ⌛ Aguardando o anfitrião Todos precisam confirmar presença.",
+      "interactive_elements": [
+        {
+          "tag": "button",
+          "id": null,
+          "classes": [
+            "nav-back"
+          ],
+          "type": null,
+          "text": "← sair da sala",
+          "aria_label": null
+        },
+        {
+          "tag": "button",
+          "id": "trivia-copy-code",
+          "classes": [
+            "mini-button"
+          ],
+          "type": null,
+          "text": "Copiar",
+          "aria_label": null
+        },
+        {
+          "tag": "button",
+          "id": "trivia-ready",
+          "classes": [
+            "retro-button",
+            "ready-button"
+          ],
+          "type": null,
+          "text": "✓ Estou pronto",
+          "aria_label": null
+        },
+        {
+          "tag": "button",
+          "id": "trivia-start",
+          "classes": [
+            "retro-button",
+            "primary",
+            "hidden"
+          ],
+          "type": null,
+          "text": "▶ Iniciar corrida",
+          "aria_label": null
+        }
+      ],
+      "dom_nodes": [
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "game-page-shell"
+          ]
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "classes": [
+            "retro-window",
+            "lobby-window",
+            "trivia-window"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-bar"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-dots"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-actions"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "lobby-content"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "room-code-panel"
+          ]
+        },
+        {
+          "tag": "h2",
+          "id": "trivia-lobby-code",
+          "classes": null
+        },
+        {
+          "tag": "div",
+          "id": "trivia-lobby-settings",
+          "classes": [
+            "trivia-room-summary"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "players-panel"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "panel-title"
+          ]
+        },
+        {
+          "tag": "ul",
+          "id": "trivia-players",
+          "classes": [
+            "trivia-lobby-players"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "ready-summary"
+          ]
+        },
+        {
+          "tag": "p",
+          "id": "trivia-lobby-error",
+          "classes": [
+            "error"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "trivia-wait-host",
+          "classes": [
+            "waiting-box"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trivia-game-screen",
+      "tag": "section",
+      "classes": [
+        "screen",
+        "hidden"
+      ],
+      "first_visible_text": "← sair da corrida corrida_em_andamento.exe — □ × CORRIDA DO CONHECIMENTO Rodada 1 15s Preparando... Aguardando a pergunta... Corrida até 10 0 respostas ↻ Voltar ao lobby para outra corrida",
+      "interactive_elements": [
+        {
+          "tag": "button",
+          "id": null,
+          "classes": [
+            "nav-back"
+          ],
+          "type": null,
+          "text": "← sair da corrida",
+          "aria_label": null
+        },
+        {
+          "tag": "button",
+          "id": "trivia-return-lobby",
+          "classes": [
+            "retro-button",
+            "secondary",
+            "hidden"
+          ],
+          "type": "button",
+          "text": "↻ Voltar ao lobby para outra corrida",
+          "aria_label": null
+        }
+      ],
+      "dom_nodes": [
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "game-page-shell",
+            "trivia-playing"
+          ]
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "classes": [
+            "retro-window",
+            "trivia-window"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-bar"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-dots"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-actions"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "trivia-play-header"
+          ]
+        },
+        {
+          "tag": "h2",
+          "id": "trivia-round",
+          "classes": null
+        },
+        {
+          "tag": "div",
+          "id": "trivia-timer",
+          "classes": [
+            "trivia-timer"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "trivia-play-grid"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "trivia-question-panel"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "trivia-question-meta"
+          ]
+        },
+        {
+          "tag": "h3",
+          "id": "trivia-question-text",
+          "classes": null
+        },
+        {
+          "tag": "div",
+          "id": "trivia-answers",
+          "classes": [
+            "trivia-answers"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "trivia-result",
+          "classes": [
+            "trivia-result"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "trivia-progress-message",
+          "classes": [
+            "trivia-play-hint"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "trivia-towers-panel"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "trivia-towers-heading"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "trivia-towers",
+          "classes": [
+            "trivia-towers"
+          ]
+        },
+        {
+          "tag": "p",
+          "id": "trivia-game-error",
+          "classes": [
+            "error"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trivia-winner-screen",
+      "tag": "section",
+      "classes": [
+        "screen",
+        "hidden"
+      ],
+      "first_visible_text": "campeao_da_corrida.exe — □ × ✦ ★ ✦ CORRIDA DO CONHECIMENTO · RESULTADO FINAL Temos um campeão! ♛ 1º LUGAR · CAMPEÃO Campeão Chegou ao nível 10 e conquistou a vitória! Rodadas: — Vitória no desempate PLACAR DA PARTIDA Classificação final ↻ Jogar novamente ⌛ Aguardando o anfitrião Ele pode levar todos de volta para o lobby. ← Voltar à biblioteca",
+      "interactive_elements": [
+        {
+          "tag": "button",
+          "id": "trivia-winner-replay",
+          "classes": [
+            "retro-button",
+            "primary",
+            "hidden"
+          ],
+          "type": "button",
+          "text": "↻ Jogar novamente",
+          "aria_label": null
+        },
+        {
+          "tag": "button",
+          "id": null,
+          "classes": [
+            "retro-button",
+            "secondary"
+          ],
+          "type": "button",
+          "text": "← Voltar à biblioteca",
+          "aria_label": null
+        }
+      ],
+      "dom_nodes": [
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "game-page-shell",
+            "trivia-winner-shell"
+          ]
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "classes": [
+            "retro-window",
+            "trivia-window",
+            "trivia-winner-window"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-bar"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-dots"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-actions"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "trivia-winner-content"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "trivia-winner-heading"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "trivia-winner-hero"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "trivia-winner-avatar-frame"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "trivia-winner-details"
+          ]
+        },
+        {
+          "tag": "h3",
+          "id": "trivia-winner-name",
+          "classes": null
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "trivia-winner-stats"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "trivia-ranking-panel"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "trivia-ranking-heading"
+          ]
+        },
+        {
+          "tag": "ol",
+          "id": "trivia-final-ranking",
+          "classes": [
+            "trivia-final-ranking"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "trivia-winner-actions"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "trivia-winner-wait-host",
+          "classes": [
+            "waiting-box",
+            "centered",
+            "compact-waiting",
+            "hidden"
+          ]
+        },
+        {
+          "tag": "p",
+          "id": "trivia-winner-error",
+          "classes": [
+            "error"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "spectator-screen",
+      "tag": "section",
+      "classes": [
+        "screen",
+        "hidden"
+      ],
+      "first_visible_text": "← sair da sala espectador.exe 👁 ASSISTINDO MODO ESPECTADOR Acompanhe a partida Esta partida já começou. Você pode assistir agora e participar quando o host voltar ao lobby. SALA — FASE ATUAL AGUARDANDO PARTICIPANTES 0 ESPECTADORES 0 JOGADORES NA PARTIDA ⌛ Você poderá confirmar presença na próxima partida. Seu lugar ainda depende das vagas disponíveis.",
+      "interactive_elements": [
+        {
+          "tag": "button",
+          "id": "spectator-leave",
+          "classes": [
+            "nav-back"
+          ],
+          "type": "button",
+          "text": "← sair da sala",
+          "aria_label": null
+        }
+      ],
+      "dom_nodes": [
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "game-page-shell",
+            "spectator-shell"
+          ]
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "classes": [
+            "retro-window",
+            "spectator-window"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-bar"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "window-dots"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "spectator-content"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "spectator-intro"
+          ]
+        },
+        {
+          "tag": "h2",
+          "id": "spectator-game-title",
+          "classes": null
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "spectator-metrics"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "spectator-game-info",
+          "classes": [
+            "spectator-game-info"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "classes": [
+            "spectator-roster"
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "spectator-roster-list",
+          "classes": null
+        },
+        {
+          "tag": "p",
+          "id": null,
+          "classes": [
+            "spectator-waiting-message"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6181 @@
+:root {
+  --bg: #ead7e2;
+  --grid: rgba(116, 84, 92, 0.10);
+
+  --cream: #f7f1df;
+  --cream-2: #fff9e9;
+  --cream-3: #eadfbe;
+
+  --ink: #2e2524;
+  --muted: #786a65;
+  --line: #2f2927;
+
+  --pink: #f3a6b9;
+  --pink-deep: #df7f9a;
+  --orange: #ef9c63;
+  --lime: #d8e87e;
+  --yellow: #f2d36f;
+  --mint: #91c9b6;
+
+  --shadow: #2e2524;
+  --soft-shadow: rgba(46, 37, 36, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(var(--grid) 1.5px, transparent 1.5px),
+    linear-gradient(90deg, var(--grid) 1.5px, transparent 1.5px);
+  background-size: 42px 42px;
+  font-family: "Nunito", sans-serif;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+}
+
+.app {
+  width: min(1180px, 92vw);
+  margin: 0 auto;
+  padding: 58px 0 72px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.screen {
+  width: 100%;
+}
+
+.bg-decoration {
+  position: fixed;
+  z-index: -1;
+  pointer-events: none;
+  color: rgba(255, 249, 233, 0.55);
+  font-family: "Chakra Petch", sans-serif;
+  text-shadow: 3px 3px 0 rgba(46, 37, 36, 0.08);
+}
+
+.deco-star {
+  top: 8%;
+  left: 4%;
+  font-size: 70px;
+}
+
+.deco-heart {
+  right: 5%;
+  bottom: 10%;
+  font-size: 76px;
+  color: rgba(243, 166, 185, 0.45);
+}
+
+.deco-spark {
+  right: 11%;
+  top: 18%;
+  font-size: 54px;
+  color: rgba(216, 232, 126, 0.58);
+}
+
+/* ===== Cabeçalho ===== */
+
+.site-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 38px;
+}
+
+.brand-kicker,
+.tiny-label,
+.toolbar-label {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.brand-kicker {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 5px 9px;
+  border: 2px solid var(--line);
+  background: var(--lime);
+  box-shadow: 3px 3px 0 var(--line);
+  font-size: 12px;
+}
+
+.brand h1 {
+  margin: 0;
+  max-width: 720px;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: clamp(58px, 10vw, 112px);
+  line-height: 0.72;
+  letter-spacing: -0.045em;
+}
+
+.brand h1 span {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--pink-deep);
+  text-shadow: 4px 4px 0 var(--cream-2);
+}
+
+.brand p {
+  margin: 28px 0 0;
+  max-width: 520px;
+  color: var(--muted);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* ===== Janela retrô ===== */
+
+.retro-window,
+.desktop-widget {
+  overflow: hidden;
+  border: 3px solid var(--line);
+  border-radius: 16px;
+  background: var(--cream);
+  box-shadow: 8px 9px 0 var(--shadow);
+}
+
+.desktop-widget {
+  width: 230px;
+  flex: 0 0 230px;
+  margin-top: 8px;
+}
+
+.window-bar {
+  min-height: 42px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 0 14px;
+  border-bottom: 3px solid var(--line);
+  background: var(--pink);
+}
+
+.window-bar.compact {
+  min-height: 34px;
+}
+
+.window-bar.impostor-bar {
+  background: var(--yellow);
+}
+
+.window-dots {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+
+.dot {
+  display: block;
+  width: 11px;
+  height: 11px;
+  border: 2px solid var(--line);
+  border-radius: 50%;
+}
+
+.dot.pink { background: #f58da7; }
+.dot.orange { background: #f07d4f; }
+.dot.lime { background: #bdda69; }
+
+.window-title {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.window-actions {
+  justify-self: end;
+  display: flex;
+  gap: 12px;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.widget-content {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 3px 9px;
+  align-items: center;
+  padding: 18px;
+}
+
+.online-dot {
+  grid-row: span 2;
+  width: 13px;
+  height: 13px;
+  border: 2px solid var(--line);
+  border-radius: 50%;
+  background: var(--mint);
+}
+
+.widget-content strong {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 15px;
+}
+
+.widget-content small {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+/* ===== Biblioteca ===== */
+
+.library-window {
+  width: 100%;
+}
+
+.library-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 24px 18px;
+  border-bottom: 2px dashed #c8bca3;
+}
+
+.toolbar-label {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.library-toolbar h2 {
+  margin: 1px 0 0;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 31px;
+}
+
+.toolbar-search {
+  min-width: 250px;
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  padding: 9px 12px;
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  background: var(--cream-2);
+  color: #93847e;
+  font-size: 13px;
+  box-shadow: 3px 3px 0 #cabda5;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  padding: 26px;
+}
+
+.game-card-menu {
+  min-height: 270px;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  border: 3px solid var(--line);
+  border-radius: 13px;
+  background: var(--cream-2);
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 5px 6px 0 #b6a994;
+  transition:
+    transform 0.16s ease,
+    box-shadow 0.16s ease;
+}
+
+.game-card-menu.available:hover {
+  transform: translate(-2px, -3px);
+  box-shadow: 8px 9px 0 #b6a994;
+}
+
+.game-card-menu.locked {
+  cursor: default;
+  opacity: 0.72;
+}
+
+.game-card-menu.locked:hover {
+  transform: none;
+}
+
+.game-card-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 34px;
+  padding: 0 10px;
+  border-bottom: 3px solid var(--line);
+  background: var(--lime);
+}
+
+.game-card-menu:nth-child(2n) .game-card-topbar {
+  background: var(--pink);
+}
+
+.game-card-menu:nth-child(3n) .game-card-topbar {
+  background: var(--yellow);
+}
+
+.card-dots {
+  display: flex;
+  gap: 5px;
+}
+
+.card-dot {
+  width: 8px;
+  height: 8px;
+  border: 1.8px solid var(--line);
+  border-radius: 50%;
+  background: var(--cream-2);
+}
+
+.game-state {
+  padding: 3px 7px;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  background: var(--cream-2);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.game-card-body {
+  padding: 22px;
+}
+
+.game-emoji {
+  min-height: 74px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+  font-size: 54px;
+  filter: drop-shadow(3px 3px 0 rgba(46, 37, 36, 0.12));
+}
+
+.game-card-menu h3 {
+  margin: 0 0 7px;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 28px;
+}
+
+.game-card-menu p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.game-number {
+  display: block;
+  margin-top: 15px;
+  color: #9b8b82;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 11px;
+}
+
+.library-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 13px 22px;
+  border-top: 3px solid var(--line);
+  background: var(--cream-3);
+  color: var(--muted);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 12px;
+}
+
+.toast-message {
+  min-height: 24px;
+  margin: 22px 0 0;
+  text-align: center;
+  color: var(--ink);
+  font-weight: 800;
+}
+
+/* ===== Telas internas ===== */
+
+.game-page-shell {
+  width: min(620px, 100%);
+  margin: 0 auto;
+}
+
+.nav-back,
+.text-button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: var(--ink);
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 700;
+}
+
+.nav-back {
+  margin-bottom: 20px;
+  padding: 0;
+  font-size: 15px;
+}
+
+.game-window,
+.lobby-window,
+.role-window {
+  width: 100%;
+}
+
+.game-intro {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 28px 28px 18px;
+}
+
+.game-icon-large {
+  display: grid;
+  width: 88px;
+  height: 88px;
+  flex: 0 0 88px;
+  place-items: center;
+  border: 3px solid var(--line);
+  border-radius: 18px;
+  background: var(--pink);
+  box-shadow: 5px 5px 0 var(--line);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 46px;
+}
+
+.tiny-label {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.game-intro h2 {
+  margin: 3px 0 5px;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 46px;
+  line-height: 1;
+}
+
+.game-intro p {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.mini-rule-card {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin: 8px 28px 4px;
+  padding: 14px 16px;
+  border: 2px dashed var(--line);
+  border-radius: 10px;
+  background: #fff7cf;
+}
+
+.mini-rule-card span {
+  font-size: 20px;
+}
+
+.mini-rule-card p {
+  margin: 0;
+  color: #6e604f;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.form-area,
+.lobby-content,
+.role-content {
+  padding: 24px 28px 30px;
+}
+
+label {
+  display: block;
+  margin: 14px 0 7px;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.retro-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 12px;
+  border: 3px solid var(--line);
+  border-radius: 9px;
+  background: var(--cream-2);
+  box-shadow: 3px 4px 0 #c8b99c;
+}
+
+.retro-input-wrap span {
+  color: var(--muted);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 17px;
+}
+
+input {
+  width: 100%;
+  padding: 13px 3px;
+  border: 0;
+  outline: 0;
+  color: var(--ink);
+  background: transparent;
+  font-weight: 800;
+}
+
+input::placeholder {
+  color: #a3978f;
+}
+
+#room-code {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.retro-button,
+.mini-button {
+  border: 3px solid var(--line);
+  cursor: pointer;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 700;
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.12s ease;
+}
+
+.retro-button {
+  width: 100%;
+  margin-top: 16px;
+  padding: 13px 16px;
+  border-radius: 10px;
+  font-size: 16px;
+  box-shadow: 4px 5px 0 var(--line);
+}
+
+.retro-button:hover,
+.mini-button:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 3px 0 var(--line);
+}
+
+.retro-button.primary {
+  background: var(--lime);
+}
+
+.retro-button.secondary {
+  background: var(--pink);
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 24px 0 3px;
+  color: #8f8178;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 11px;
+}
+
+.separator::before,
+.separator::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background: #cbbda5;
+}
+
+.error {
+  min-height: 20px;
+  margin: 12px 0 0;
+  color: #a8474e;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* ===== Lobby ===== */
+
+.room-code-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 18px;
+  border: 3px solid var(--line);
+  border-radius: 11px;
+  background: var(--yellow);
+  box-shadow: 4px 5px 0 #bea95c;
+}
+
+.room-code-panel h2 {
+  margin: 1px 0 0;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 44px;
+  letter-spacing: 0.11em;
+}
+
+.mini-button {
+  padding: 8px 11px;
+  border-radius: 8px;
+  background: var(--cream-2);
+  box-shadow: 3px 3px 0 var(--line);
+  font-size: 12px;
+}
+
+.players-panel {
+  margin-top: 24px;
+}
+
+.panel-title {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.panel-title h3 {
+  margin: 1px 0 0;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 27px;
+}
+
+.count-badge {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border: 2px solid var(--line);
+  border-radius: 50%;
+  background: var(--pink);
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 700;
+}
+
+#players {
+  margin: 0 0 20px;
+  padding: 0;
+  list-style: none;
+  border: 3px solid var(--line);
+  border-radius: 10px;
+  background: var(--cream-2);
+}
+
+#players li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 13px 14px;
+  border-bottom: 2px dashed #d0c3aa;
+  font-weight: 800;
+}
+
+#players li:last-child {
+  border-bottom: 0;
+}
+
+.host-badge {
+  padding: 4px 8px;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  background: var(--lime);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 10px;
+}
+
+.waiting-box {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-top: 17px;
+  padding: 13px 14px;
+  border: 2px dashed var(--line);
+  border-radius: 9px;
+  background: #f4ead7;
+}
+
+.waiting-box.centered {
+  justify-content: center;
+}
+
+.waiting-box strong,
+.waiting-box small {
+  display: block;
+}
+
+.waiting-box strong {
+  font-family: "Chakra Petch", sans-serif;
+}
+
+.waiting-box small {
+  margin-top: 2px;
+  color: var(--muted);
+}
+
+.hourglass {
+  font-size: 24px;
+}
+
+/* ===== Tela de papel ===== */
+
+.role-content {
+  text-align: center;
+}
+
+.secret-stamp {
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 6px 9px;
+  border: 2px solid var(--line);
+  border-radius: 5px;
+  background: var(--lime);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  transform: rotate(-2deg);
+}
+
+.secret-stamp.danger {
+  background: var(--pink);
+}
+
+.role-icon {
+  margin: 4px 0 10px;
+  font-size: 67px;
+}
+
+.role-caption {
+  margin: 0;
+  color: var(--muted);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 15px;
+}
+
+.secret-word,
+.impostor-title {
+  margin: 6px 0 17px;
+  font-family: "Chakra Petch", sans-serif;
+  line-height: 0.95;
+}
+
+.secret-word {
+  font-size: clamp(46px, 10vw, 72px);
+}
+
+.impostor-title {
+  color: #b44d59;
+  font-size: clamp(44px, 10vw, 68px);
+}
+
+.danger-text {
+  color: #b44d59;
+}
+
+.role-description {
+  max-width: 430px;
+  margin: 0 auto 18px;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.text-button {
+  margin-top: 22px;
+  padding: 4px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ===== Responsivo ===== */
+
+@media (max-width: 900px) {
+  .games-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .app {
+    width: min(94vw, 620px);
+    padding-top: 30px;
+  }
+
+  .site-header {
+    display: block;
+  }
+
+  .desktop-widget {
+    width: 100%;
+    margin-top: 28px;
+  }
+
+  .brand h1 {
+    font-size: clamp(56px, 18vw, 88px);
+  }
+
+  .games-grid {
+    grid-template-columns: 1fr;
+    padding: 18px;
+  }
+
+  .library-toolbar {
+    display: block;
+  }
+
+  .toolbar-search {
+    min-width: 0;
+    margin-top: 14px;
+  }
+
+  .library-footer {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .game-intro {
+    align-items: flex-start;
+    padding-inline: 20px;
+  }
+
+  .game-icon-large {
+    width: 68px;
+    height: 68px;
+    flex-basis: 68px;
+    font-size: 34px;
+  }
+
+  .game-intro h2 {
+    font-size: 37px;
+  }
+
+  .form-area,
+  .lobby-content,
+  .role-content {
+    padding-inline: 20px;
+  }
+
+  .room-code-panel {
+    align-items: flex-start;
+  }
+
+  .room-code-panel h2 {
+    font-size: 36px;
+  }
+}
+
+
+/* ===== Dica do impostor ===== */
+
+.impostor-hint-box {
+  width: min(420px, 100%);
+  margin: 0 auto 20px;
+  padding: 15px 18px;
+  border: 3px dashed var(--line);
+  border-radius: 10px;
+  background: #fff4c8;
+  box-shadow: 4px 4px 0 #d6c07c;
+  text-align: center;
+}
+
+.impostor-hint-box .hint-label {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--muted);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.10em;
+}
+
+.impostor-hint-box strong {
+  display: block;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: clamp(22px, 5vw, 30px);
+  line-height: 1.1;
+}
+
+
+/* ===== V6: Configurações + salas abertas ===== */
+
+.room-settings {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.setting-field label {
+  margin-top: 10px;
+}
+
+.retro-select {
+  width: 100%;
+  min-height: 48px;
+  padding: 10px 44px 10px 12px;
+  border: 3px solid var(--line);
+  border-radius: 9px;
+  outline: none;
+  color: var(--ink);
+  background-color: var(--cream-2);
+  /* Mantém somente o chevron retrô, sem a faixa rosa lateral. */
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--line) 50%),
+    linear-gradient(135deg, var(--line) 50%, transparent 50%);
+  background-position:
+    calc(100% - 18px) 20px,
+    calc(100% - 12px) 20px;
+  background-size: 7px 7px, 7px 7px;
+  background-repeat: no-repeat;
+  box-shadow: 3px 4px 0 #c8b99c;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: .01em;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: transform .14s ease, box-shadow .14s ease, background-color .14s ease;
+}
+
+.retro-select:hover {
+  background-color: #fff9e7;
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 5px 0 #c8b99c;
+}
+
+.retro-select:focus {
+  background-color: #fffdf3;
+  box-shadow: 3px 4px 0 #c8b99c, 0 0 0 3px rgba(255, 144, 178, .22);
+}
+
+.retro-select option {
+  color: var(--ink);
+  background: #fffaf0;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.word-bank-status {
+  margin-top: 12px;
+  color: var(--muted);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 11px;
+  text-align: center;
+}
+
+.open-rooms-section {
+  margin-top: 30px;
+  padding-top: 24px;
+  border-top: 3px dashed #cdbfa8;
+}
+
+.open-rooms-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.open-rooms-heading h3 {
+  margin: 2px 0 0;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 25px;
+}
+
+.refresh-rooms {
+  width: auto !important;
+  margin: 0 !important;
+  padding: 7px 10px !important;
+  border: 2px solid var(--line) !important;
+  border-radius: 8px !important;
+  background: var(--cream-2) !important;
+  box-shadow: 2px 3px 0 var(--line) !important;
+  cursor: pointer;
+  font-family: "Chakra Petch", sans-serif !important;
+  font-size: 11px !important;
+}
+
+.open-rooms-list {
+  display: grid;
+  gap: 10px;
+}
+
+.room-list-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+  padding: 13px 14px;
+  border: 3px solid var(--line);
+  border-radius: 10px;
+  background: var(--cream-2);
+  box-shadow: 3px 4px 0 #c9bba3;
+}
+
+.room-list-card.in-game {
+  opacity: 0.65;
+}
+
+.room-list-main {
+  min-width: 0;
+}
+
+.room-list-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
+}
+
+.room-list-code {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.room-status-badge {
+  padding: 3px 7px;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  background: var(--lime);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.room-list-card.in-game .room-status-badge {
+  background: var(--pink);
+}
+
+.room-list-meta {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.room-list-settings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 7px;
+}
+
+.room-setting-chip {
+  padding: 3px 7px;
+  border: 1.8px solid var(--line);
+  border-radius: 999px;
+  background: #f6eacb;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.room-list-join {
+  width: auto !important;
+  min-width: 82px;
+  margin: 0 !important;
+  padding: 9px 10px !important;
+  border: 2px solid var(--line) !important;
+  border-radius: 8px !important;
+  background: var(--pink) !important;
+  box-shadow: 2px 3px 0 var(--line) !important;
+  cursor: pointer;
+  font-family: "Chakra Petch", sans-serif !important;
+  font-size: 12px !important;
+}
+
+.room-list-join:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.empty-rooms {
+  padding: 20px 14px;
+  border: 2px dashed var(--line);
+  border-radius: 9px;
+  color: var(--muted);
+  background: rgba(255, 249, 233, 0.45);
+  text-align: center;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 12px;
+}
+
+.lobby-settings-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.lobby-settings-summary > div {
+  padding: 10px 12px;
+  border: 2px dashed var(--line);
+  border-radius: 9px;
+  background: #fff5d7;
+}
+
+.lobby-settings-summary strong {
+  display: block;
+  margin-top: 3px;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 16px;
+}
+
+@media (max-width: 700px) {
+  .room-settings,
+  .lobby-settings-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .room-list-card {
+    grid-template-columns: 1fr;
+  }
+
+  .room-list-join {
+    width: 100% !important;
+  }
+}
+
+
+/* ===== V7: Sistema de pronto ===== */
+
+.ready-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 12px;
+  padding: 10px 12px;
+  border: 2px dashed var(--line);
+  border-radius: 9px;
+  background: #f6edd7;
+}
+
+.ready-summary span {
+  color: var(--muted);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.ready-summary strong {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 14px;
+}
+
+.player-statuses {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.ready-badge {
+  padding: 4px 8px;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  background: #e8dfcf;
+  color: #756960;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.ready-badge.is-ready {
+  background: var(--lime);
+  color: var(--ink);
+}
+
+.ready-button {
+  background: #fff4c8;
+}
+
+.ready-button.is-ready {
+  background: var(--lime);
+}
+
+.retro-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+  filter: grayscale(0.25);
+  transform: none !important;
+  box-shadow: 4px 5px 0 var(--line) !important;
+}
+
+@media (max-width: 520px) {
+  #players li {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .player-statuses {
+    justify-content: flex-start;
+  }
+}
+
+
+/* ===== V8: reconexão após F5 ===== */
+
+.reconnect-badge {
+  padding: 4px 8px;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  background: var(--yellow);
+  color: var(--ink);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  animation: reconnect-pulse 1.2s ease-in-out infinite;
+}
+
+.player-disconnected {
+  opacity: 0.68;
+}
+
+@keyframes reconnect-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+
+/* ===== V9: transferência de host + status de conexão ===== */
+
+.global-toast {
+  position: fixed;
+  z-index: 2000;
+  top: 22px;
+  left: 50%;
+  width: min(92vw, 520px);
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 13px 16px;
+  border: 3px solid var(--line);
+  border-radius: 12px;
+  background: var(--cream-2);
+  box-shadow: 6px 7px 0 var(--line);
+  transform: translateX(-50%);
+  animation: global-toast-in 0.22s ease-out;
+}
+
+.global-toast-icon {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  place-items: center;
+  border: 2px solid var(--line);
+  border-radius: 9px;
+  background: var(--lime);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.global-toast strong,
+.global-toast span {
+  display: block;
+}
+
+.global-toast strong {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 15px;
+}
+
+.global-toast span {
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+@keyframes global-toast-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+.connection-overlay {
+  position: fixed;
+  z-index: 3000;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    rgba(46, 37, 36, 0.46);
+  backdrop-filter: blur(4px);
+}
+
+.connection-window {
+  width: min(94vw, 480px);
+}
+
+.connection-content {
+  padding: 30px 28px 32px;
+  text-align: center;
+}
+
+.connection-icon {
+  display: grid;
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 18px;
+  place-items: center;
+  border: 3px solid var(--line);
+  border-radius: 18px;
+  background: var(--pink);
+  box-shadow: 5px 5px 0 var(--line);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.connection-content h2 {
+  margin: 5px 0 9px;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 34px;
+  line-height: 1;
+}
+
+.connection-content p {
+  max-width: 360px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.connection-loader {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 25px 0 3px;
+}
+
+.connection-loader span {
+  width: 11px;
+  height: 11px;
+  border: 2px solid var(--line);
+  border-radius: 50%;
+  background: var(--lime);
+  animation: connection-bounce 1s infinite ease-in-out;
+}
+
+.connection-loader span:nth-child(2) {
+  animation-delay: 0.14s;
+  background: var(--yellow);
+}
+
+.connection-loader span:nth-child(3) {
+  animation-delay: 0.28s;
+  background: var(--pink);
+}
+
+@keyframes connection-bounce {
+  0%, 60%, 100% {
+    transform: translateY(0);
+  }
+
+  30% {
+    transform: translateY(-9px);
+  }
+}
+
+/* ===== Scrollbar sem setas — correção Chrome/Edge ===== */
+
+/*
+  Não usar scrollbar-width / scrollbar-color no Chrome/Edge aqui,
+  pois versões recentes podem priorizar a scrollbar nativa do sistema.
+*/
+
+::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  min-height: 42px;
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background: var(--pink-deep);
+  box-shadow: inset 0 0 0 2px var(--line);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--pink);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: var(--yellow);
+}
+
+/* Remove TODOS os botões/setas da scrollbar */
+::-webkit-scrollbar-button,
+::-webkit-scrollbar-button:single-button,
+::-webkit-scrollbar-button:double-button,
+::-webkit-scrollbar-button:vertical:start:decrement,
+::-webkit-scrollbar-button:vertical:end:increment,
+::-webkit-scrollbar-button:vertical:start:increment,
+::-webkit-scrollbar-button:vertical:end:decrement,
+::-webkit-scrollbar-button:horizontal:start:decrement,
+::-webkit-scrollbar-button:horizontal:end:increment,
+::-webkit-scrollbar-button:horizontal:start:increment,
+::-webkit-scrollbar-button:horizontal:end:decrement {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Firefox: mantém apenas cor, sem interferir no Chromium */
+@supports not selector(::-webkit-scrollbar) {
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--pink-deep) var(--cream-3);
+  }
+}
+
+/* ===== Créditos ===== */
+
+.site-credit {
+  width: 100%;
+  margin-top: 34px;
+  padding: 10px 0 2px;
+  color: rgba(46, 37, 36, 0.52);
+  text-align: center;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  user-select: none;
+}
+
+.site-credit span {
+  color: rgba(46, 37, 36, 0.72);
+  font-weight: 700;
+}
+
+.site-credit::before {
+  content: "✦";
+  margin-right: 6px;
+  color: var(--pink-deep);
+  opacity: 0.55;
+}
+
+.site-credit::after {
+  content: "✦";
+  margin-left: 6px;
+  color: var(--pink-deep);
+  opacity: 0.55;
+}
+
+
+/* ===== JOGO 02: QUEM SOU EU ===== */
+
+.whoami-bar {
+  background: var(--lime);
+}
+
+.whoami-icon {
+  background: var(--yellow);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 58px;
+  font-weight: 700;
+}
+
+.whoami-rule {
+  background: #f8efd6;
+}
+
+.whoami-code-panel {
+  background: var(--pink);
+  box-shadow: 4px 5px 0 #c48297;
+}
+
+.whoami-game-shell {
+  width: min(760px, 100%);
+}
+
+.whoami-game-content {
+  padding-top: 28px;
+}
+
+.whoami-stamp {
+  background: var(--yellow);
+}
+
+.whoami-self-card {
+  width: min(520px, 100%);
+  margin: 0 auto 18px;
+  padding: 22px 20px;
+  border: 3px solid var(--line);
+  border-radius: 14px;
+  background: var(--cream-2);
+  box-shadow: 5px 6px 0 #c8b99c;
+}
+
+.whoami-self-card h2 {
+  margin: 5px 0 8px;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: clamp(34px, 8vw, 52px);
+  line-height: 1;
+}
+
+.whoami-self-card p {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.whoami-question {
+  display: grid;
+  width: 90px;
+  height: 90px;
+  margin: 12px auto;
+  place-items: center;
+  border: 3px solid var(--line);
+  border-radius: 50%;
+  background: var(--pink);
+  box-shadow: 5px 5px 0 var(--line);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 62px;
+  font-weight: 700;
+  transform: rotate(-3deg);
+}
+
+.whoami-examples {
+  margin: 18px 0 28px;
+  padding: 13px 15px;
+  border: 2px dashed var(--line);
+  border-radius: 10px;
+  background: #fff4c8;
+}
+
+.whoami-examples span {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--muted);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.whoami-examples p {
+  margin: 0;
+  color: #6d6159;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.whoami-others-section {
+  margin-top: 22px;
+  text-align: left;
+}
+
+.whoami-character-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.whoami-character-card {
+  position: relative;
+  min-width: 0;
+  padding: 16px;
+  border: 3px solid var(--line);
+  border-radius: 11px;
+  background: var(--cream-2);
+  box-shadow: 4px 5px 0 #c4b59d;
+  overflow: hidden;
+}
+
+.whoami-character-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: var(--pink);
+  border-bottom: 2px solid var(--line);
+}
+
+.whoami-character-card:nth-child(even)::before {
+  background: var(--lime);
+}
+
+.whoami-player-label {
+  display: block;
+  margin-top: 6px;
+  margin-bottom: 5px;
+  color: var(--muted);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.whoami-character-card strong {
+  display: block;
+  overflow-wrap: anywhere;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: clamp(21px, 4vw, 28px);
+  line-height: 1.05;
+}
+
+.reveal-button {
+  margin-top: 24px;
+  background: var(--pink);
+}
+
+.whoami-reveal-box {
+  width: min(480px, 100%);
+  margin: 22px auto 0;
+  padding: 18px;
+  border: 3px dashed var(--line);
+  border-radius: 11px;
+  background: var(--yellow);
+  text-align: center;
+}
+
+.whoami-reveal-box strong {
+  display: block;
+  margin-top: 5px;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: clamp(32px, 7vw, 48px);
+  line-height: 1;
+}
+
+@media (max-width: 620px) {
+  .whoami-character-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== V11: reconexão com escolha e tempo limite ===== */
+
+.connection-countdown {
+  margin: 18px auto 2px;
+  color: var(--muted);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 13px;
+}
+
+.connection-countdown strong {
+  color: var(--ink);
+  font-size: 18px;
+}
+
+.connection-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.connection-actions .retro-button {
+  margin-top: 0;
+}
+
+.connection-actions .secondary {
+  background: var(--pink);
+}
+
+@media (max-width: 520px) {
+  .connection-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ===== V12: conjunto visual único de ícones ===== */
+
+.retro-icon-sprite {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.site-icon {
+  width: 1em;
+  height: 1em;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+  vertical-align: -0.15em;
+}
+
+.toolbar-icon,
+.input-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.hero-icon {
+  width: 48px;
+  height: 48px;
+}
+
+.role-svg {
+  width: 58px;
+  height: 58px;
+}
+
+.game-menu-svg {
+  width: 52px;
+  height: 52px;
+}
+
+.game-emoji {
+  color: var(--ink);
+}
+
+.player-name,
+.whoami-player-label,
+.room-setting-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.player-mini-icon {
+  width: 15px;
+  height: 15px;
+}
+
+.character-person-icon,
+.chip-mini-icon {
+  width: 12px;
+  height: 12px;
+}
+
+.hourglass .site-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.global-toast-icon .site-icon,
+.connection-icon .site-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* ===== V12: Quem Sou Eu usa a viewport inteira no desktop ===== */
+
+body.whoami-game-active {
+  overflow: hidden;
+}
+
+body.whoami-game-active .app {
+  width: min(1180px, 96vw);
+  height: 100dvh;
+  padding: 10px 0;
+  display: grid;
+  place-items: center;
+}
+
+body.whoami-game-active .site-credit {
+  display: none;
+}
+
+body.whoami-game-active #whoami-game-screen {
+  width: 100%;
+  height: calc(100dvh - 20px);
+}
+
+.whoami-game-shell {
+  width: min(1100px, 100%);
+  height: 100%;
+}
+
+.whoami-play-window {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.whoami-play-window > .window-bar {
+  flex: 0 0 42px;
+}
+
+.whoami-game-content {
+  flex: 1;
+  min-height: 0;
+  padding: 14px 18px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.whoami-game-topline {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.whoami-game-topline .secret-stamp {
+  margin: 0;
+}
+
+.whoami-mode-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  background: var(--cream-2);
+  color: var(--muted);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.chip-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.whoami-play-grid {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(290px, 0.8fr) minmax(390px, 1.35fr);
+  gap: 15px;
+}
+
+.whoami-left-pane {
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.whoami-right-pane {
+  min-height: 0;
+  display: flex;
+}
+
+.whoami-self-card {
+  width: 100%;
+  margin: 0;
+  padding: 13px 15px;
+}
+
+.whoami-self-card h2 {
+  margin: 3px 0 5px;
+  font-size: clamp(29px, 4vw, 42px);
+}
+
+.whoami-self-card p {
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+.whoami-question {
+  width: 64px;
+  height: 64px;
+  margin: 5px auto;
+  box-shadow: 4px 4px 0 var(--line);
+}
+
+.question-svg {
+  width: 38px;
+  height: 38px;
+}
+
+.whoami-examples {
+  margin: 0;
+  padding: 9px 11px;
+}
+
+.whoami-examples p {
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+.whoami-left-pane .reveal-button {
+  margin-top: auto;
+}
+
+.whoami-reveal-box {
+  width: 100%;
+  margin: auto 0 0;
+  padding: 11px 13px;
+}
+
+.whoami-reveal-box strong {
+  font-size: clamp(27px, 4vw, 39px);
+}
+
+.whoami-others-section {
+  width: 100%;
+  min-height: 0;
+  margin: 0;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  border: 3px dashed var(--line);
+  border-radius: 12px;
+  background: rgba(255, 249, 233, 0.46);
+}
+
+.whoami-others-title {
+  flex: 0 0 auto;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.whoami-others-title h3 {
+  margin: 1px 0 0;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 23px;
+}
+
+.whoami-visibility-icon {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 2px solid var(--line);
+  border-radius: 9px;
+  background: var(--pink);
+}
+
+.whoami-visibility-icon .site-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.whoami-character-grid {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  align-content: start;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 0;
+  padding: 2px 5px 5px 2px;
+}
+
+.whoami-character-card {
+  padding: 11px 12px;
+  box-shadow: 3px 4px 0 #c4b59d;
+}
+
+.whoami-character-card::before {
+  height: 6px;
+}
+
+.whoami-character-card strong {
+  font-size: clamp(18px, 2vw, 24px);
+}
+
+.whoami-player-label {
+  margin-top: 4px;
+  margin-bottom: 3px;
+  font-size: 10px;
+}
+
+.whoami-bottom-actions {
+  flex: 0 0 auto;
+  display: grid;
+  grid-template-columns: minmax(250px, 1fr) auto;
+  gap: 9px 12px;
+  align-items: center;
+}
+
+.whoami-bottom-actions > .retro-button {
+  margin: 0;
+}
+
+.compact-waiting {
+  min-width: 310px;
+  margin: 0;
+  padding: 8px 11px;
+}
+
+.whoami-menu-button {
+  grid-column: 1 / -1;
+  justify-self: center;
+  margin: -2px 0 0;
+}
+
+.whoami-game-error {
+  min-height: 0;
+  margin: 0;
+}
+
+@media (min-width: 721px) and (max-height: 760px) {
+  .whoami-game-content {
+    gap: 7px;
+    padding-top: 9px;
+    padding-bottom: 8px;
+  }
+
+  .whoami-self-card {
+    padding: 9px 12px;
+  }
+
+  .whoami-question {
+    width: 52px;
+    height: 52px;
+    margin: 3px auto;
+  }
+
+  .question-svg {
+    width: 31px;
+    height: 31px;
+  }
+
+  .whoami-self-card h2 {
+    font-size: 30px;
+  }
+
+  .whoami-examples {
+    padding: 6px 9px;
+  }
+
+  .whoami-others-section {
+    padding: 9px;
+  }
+}
+
+@media (max-width: 720px) {
+  body.whoami-game-active {
+    overflow-y: auto;
+  }
+
+  body.whoami-game-active .app {
+    display: block;
+    height: auto;
+    padding: 20px 0 40px;
+  }
+
+  body.whoami-game-active #whoami-game-screen,
+  .whoami-game-shell,
+  .whoami-play-window {
+    height: auto;
+  }
+
+  .whoami-game-topline {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .whoami-play-grid {
+    display: block;
+  }
+
+  .whoami-right-pane {
+    margin-top: 14px;
+  }
+
+  .whoami-character-grid {
+    max-height: none;
+    overflow: visible;
+    grid-template-columns: 1fr;
+  }
+
+  .whoami-bottom-actions {
+    grid-template-columns: 1fr;
+    margin-top: 12px;
+  }
+
+  .compact-waiting {
+    min-width: 0;
+  }
+
+  .whoami-menu-button {
+    grid-column: auto;
+  }
+}
+
+
+/* =========================================================
+   V13 — todas as telas cabem na viewport em desktop
+   ========================================================= */
+
+@media (min-width: 721px) {
+  body.app-screen-active {
+    overflow: hidden;
+  }
+
+  body.app-screen-active .app {
+    width: min(1240px, 96vw);
+    height: 100dvh;
+    padding: 8px 0;
+    display: grid;
+    place-items: center;
+  }
+
+  body.app-screen-active .site-credit {
+    display: none;
+  }
+
+  body.app-screen-active .screen:not(.hidden) {
+    width: 100%;
+    max-height: calc(100dvh - 16px);
+  }
+
+  /* Menu: 4 colunas, duas linhas, sem rolar a página */
+  .screen-mode-menu-screen #menu-screen {
+    height: calc(100dvh - 16px);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .screen-mode-menu-screen .site-header {
+    flex: 0 0 auto;
+    margin-bottom: 10px;
+  }
+
+  .screen-mode-menu-screen .brand-kicker {
+    margin-bottom: 5px;
+  }
+
+  .screen-mode-menu-screen .brand h1 {
+    font-size: clamp(48px, 6vw, 74px);
+    line-height: 0.75;
+  }
+
+  .screen-mode-menu-screen .brand p {
+    margin-top: 14px;
+    font-size: 14px;
+  }
+
+  .screen-mode-menu-screen .desktop-widget {
+    margin-top: 0;
+  }
+
+  .screen-mode-menu-screen .library-window {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .screen-mode-menu-screen .library-toolbar {
+    flex: 0 0 auto;
+    padding: 10px 16px;
+  }
+
+  .screen-mode-menu-screen .library-toolbar h2 {
+    font-size: 24px;
+  }
+
+  .screen-mode-menu-screen .games-grid {
+    flex: 1;
+    min-height: 0;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    padding: 12px;
+    overflow: hidden;
+  }
+
+  .screen-mode-menu-screen .game-card-menu {
+    min-height: 0;
+    height: 100%;
+  }
+
+  .screen-mode-menu-screen .game-card-body {
+    padding: 12px 14px;
+  }
+
+  .screen-mode-menu-screen .game-emoji {
+    min-height: 42px;
+    margin-bottom: 8px;
+  }
+
+  .screen-mode-menu-screen .game-menu-svg {
+    width: 38px;
+    height: 38px;
+  }
+
+  .screen-mode-menu-screen .game-card-menu h3 {
+    font-size: 21px;
+  }
+
+  .screen-mode-menu-screen .game-card-menu p {
+    font-size: 11px;
+    line-height: 1.3;
+  }
+
+  .screen-mode-menu-screen .game-number {
+    margin-top: 7px;
+    font-size: 9px;
+  }
+
+  .screen-mode-menu-screen .toast-message {
+    margin: 4px 0 0;
+    min-height: 16px;
+  }
+
+  /* Entrada dos jogos: apresentação à esquerda, formulário à direita */
+  .screen-mode-impostor-home-screen .game-page-shell,
+  .screen-mode-whoami-home-screen .game-page-shell {
+    width: min(1040px, 100%);
+    height: calc(100dvh - 16px);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .screen-mode-impostor-home-screen .nav-back,
+  .screen-mode-whoami-home-screen .nav-back {
+    flex: 0 0 auto;
+    margin-bottom: 7px;
+  }
+
+  .screen-mode-impostor-home-screen .game-window,
+  .screen-mode-whoami-home-screen .game-window {
+    flex: 1;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 0.78fr 1.22fr;
+    grid-template-rows: 42px auto 1fr;
+  }
+
+  .screen-mode-impostor-home-screen .game-window > .window-bar,
+  .screen-mode-whoami-home-screen .game-window > .window-bar {
+    grid-column: 1 / -1;
+  }
+
+  .screen-mode-impostor-home-screen .game-intro,
+  .screen-mode-whoami-home-screen .game-intro {
+    grid-column: 1;
+    grid-row: 2;
+    padding: 24px 22px 12px;
+  }
+
+  .screen-mode-impostor-home-screen .mini-rule-card,
+  .screen-mode-whoami-home-screen .mini-rule-card {
+    grid-column: 1;
+    grid-row: 3;
+    align-self: start;
+    margin: 8px 22px;
+  }
+
+  .screen-mode-impostor-home-screen .form-area,
+  .screen-mode-whoami-home-screen .form-area {
+    grid-column: 2;
+    grid-row: 2 / 4;
+    min-height: 0;
+    overflow-y: auto;
+    padding: 16px 22px 18px;
+    border-left: 2px dashed #c8bca3;
+  }
+
+  .screen-mode-impostor-home-screen .open-rooms-list,
+  .screen-mode-whoami-home-screen .open-rooms-list {
+    max-height: 150px;
+    overflow-y: auto;
+  }
+
+  /* Lobbies: dados à esquerda, jogadores à direita */
+  .screen-mode-lobby-screen .game-page-shell,
+  .screen-mode-whoami-lobby-screen .game-page-shell {
+    width: min(980px, 100%);
+    height: calc(100dvh - 16px);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .screen-mode-lobby-screen .nav-back,
+  .screen-mode-whoami-lobby-screen .nav-back {
+    margin-bottom: 7px;
+  }
+
+  .screen-mode-lobby-screen .lobby-window,
+  .screen-mode-whoami-lobby-screen .lobby-window {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .screen-mode-lobby-screen .lobby-content,
+  .screen-mode-whoami-lobby-screen .lobby-content {
+    flex: 1;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 0.82fr 1.18fr;
+    grid-template-areas:
+      "code players"
+      "settings players"
+      "ready players"
+      "action players"
+      "error players";
+    grid-template-rows: auto auto auto auto 1fr;
+    gap: 10px 16px;
+    padding: 18px;
+  }
+
+  .screen-mode-lobby-screen .room-code-panel,
+  .screen-mode-whoami-lobby-screen .room-code-panel {
+    grid-area: code;
+  }
+
+  .screen-mode-lobby-screen .lobby-settings-summary,
+  .screen-mode-whoami-lobby-screen .lobby-settings-summary {
+    grid-area: settings;
+    margin-top: 0;
+  }
+
+  .screen-mode-lobby-screen .players-panel,
+  .screen-mode-whoami-lobby-screen .players-panel {
+    grid-area: players;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .screen-mode-lobby-screen #players,
+  .screen-mode-whoami-lobby-screen #whoami-players {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    margin-bottom: 8px;
+  }
+
+  .screen-mode-lobby-screen #ready-toggle,
+  .screen-mode-whoami-lobby-screen #whoami-ready-toggle {
+    grid-area: ready;
+    margin-top: 0;
+  }
+
+  .screen-mode-lobby-screen #start-game,
+  .screen-mode-whoami-lobby-screen #start-whoami-game,
+  .screen-mode-lobby-screen #waiting-host,
+  .screen-mode-whoami-lobby-screen #whoami-waiting-host {
+    grid-area: action;
+    margin-top: 0;
+  }
+
+  .screen-mode-lobby-screen #lobby-error,
+  .screen-mode-whoami-lobby-screen #whoami-lobby-error {
+    grid-area: error;
+    margin: 0;
+  }
+
+  /* Impostor em uma única tela */
+  .screen-mode-game-screen .game-page-shell {
+    width: min(760px, 100%);
+  }
+
+  .screen-mode-game-screen .role-window {
+    max-height: calc(100dvh - 20px);
+  }
+
+  .screen-mode-game-screen .role-content {
+    padding: 22px 26px;
+  }
+
+  /* Conferência do Quem Sou Eu */
+  .screen-mode-whoami-review-screen #whoami-review-screen {
+    height: calc(100dvh - 16px);
+  }
+
+  .review-page-shell {
+    width: min(1120px, 100%);
+    height: 100%;
+  }
+
+  .whoami-review-window {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* =========================================================
+   V13 — conferência do Quem Sou Eu
+   ========================================================= */
+
+.whoami-review-content {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  padding: 18px;
+}
+
+.whoami-draw-animation,
+.whoami-launch-overlay {
+  position: absolute;
+  inset: 18px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 14px;
+  text-align: center;
+  border: 3px dashed var(--line);
+  border-radius: 14px;
+  background: var(--cream-2);
+}
+
+.whoami-draw-animation h2,
+.whoami-launch-overlay h2 {
+  margin: 0;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: clamp(34px, 6vw, 58px);
+}
+
+.draw-card-row {
+  display: flex;
+  gap: 14px;
+  margin: 10px 0;
+}
+
+.draw-card {
+  display: grid;
+  width: 86px;
+  height: 112px;
+  place-items: center;
+  border: 3px solid var(--line);
+  border-radius: 12px;
+  background: var(--pink);
+  box-shadow: 5px 6px 0 var(--line);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 46px;
+  animation: draw-shuffle 0.55s ease-in-out infinite alternate;
+}
+
+.draw-card:nth-child(2) {
+  background: var(--lime);
+  animation-delay: 0.12s;
+}
+
+.draw-card:nth-child(3) {
+  background: var(--yellow);
+  animation-delay: 0.24s;
+}
+
+@keyframes draw-shuffle {
+  from { transform: translateY(0) rotate(-2deg); }
+  to { transform: translateY(-12px) rotate(2deg); }
+}
+
+.whoami-review-main {
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.review-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.review-header h2 {
+  margin: 2px 0 5px;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 31px;
+}
+
+.review-header p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.review-progress-box {
+  min-width: 118px;
+  padding: 10px 12px;
+  border: 3px solid var(--line);
+  border-radius: 10px;
+  background: var(--lime);
+  text-align: center;
+  box-shadow: 3px 4px 0 var(--line);
+}
+
+.review-progress-box span,
+.review-progress-box strong {
+  display: block;
+  font-family: "Chakra Petch", sans-serif;
+}
+
+.review-progress-box span { font-size: 9px; }
+.review-progress-box strong { font-size: 25px; }
+
+.self-review-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 13px;
+  border: 2px dashed var(--line);
+  border-radius: 9px;
+  background: #fff4c8;
+}
+
+.self-review-status strong,
+.self-review-status span {
+  display: block;
+}
+
+.self-review-status strong {
+  font-family: "Chakra Petch", sans-serif;
+}
+
+.self-review-status span {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.whoami-review-grid {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-content: start;
+  gap: 10px;
+  padding: 2px 5px 5px 2px;
+}
+
+.review-character-card {
+  padding: 12px;
+  border: 3px solid var(--line);
+  border-radius: 11px;
+  background: var(--cream-2);
+  box-shadow: 3px 4px 0 #c4b59d;
+}
+
+.review-character-card.approved {
+  background: #eff5c9;
+}
+
+.review-card-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.review-character-name {
+  display: block;
+  margin: 9px 0 7px;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.review-vote-counts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.review-card-status {
+  min-height: 18px;
+  margin-top: 8px;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 10px;
+}
+
+.review-card-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px;
+  margin-top: 9px;
+}
+
+.review-vote-button {
+  padding: 8px 7px;
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  cursor: pointer;
+  background: var(--cream);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.review-vote-button.approve.selected,
+.review-vote-button.approve:hover {
+  background: var(--lime);
+}
+
+.review-vote-button.reroll.selected,
+.review-vote-button.reroll:hover {
+  background: var(--pink);
+}
+
+.review-rule-note {
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.whoami-launch-overlay strong {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 86px;
+  line-height: 1;
+  color: var(--pink-deep);
+}
+
+/* =========================================================
+   V13 — saída consciente do host
+   ========================================================= */
+
+.host-exit-overlay {
+  position: fixed;
+  z-index: 3200;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(46, 37, 36, 0.46);
+  backdrop-filter: blur(4px);
+}
+
+.host-exit-window {
+  width: min(94vw, 500px);
+}
+
+.host-exit-content {
+  padding: 26px;
+  text-align: center;
+}
+
+.host-exit-content h2 {
+  margin: 5px 0 8px;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 30px;
+}
+
+.host-exit-content > p {
+  margin: 0 auto 18px;
+  max-width: 380px;
+  color: var(--muted);
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.host-exit-content .retro-button {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.host-exit-content .retro-button small {
+  font-family: "Nunito", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  opacity: 0.72;
+}
+
+.host-exit-content .text-button {
+  margin-top: 18px;
+}
+
+@media (max-width: 900px) {
+  .whoami-review-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  body.app-screen-active {
+    overflow-y: auto;
+  }
+
+  body.app-screen-active .app {
+    display: block;
+    width: min(94vw, 620px);
+    height: auto;
+    padding: 20px 0 40px;
+  }
+
+  body.app-screen-active .site-credit {
+    display: block;
+  }
+
+  .whoami-review-content {
+    min-height: 640px;
+  }
+
+  .whoami-review-grid {
+    grid-template-columns: 1fr;
+    overflow: visible;
+  }
+
+  .review-header,
+  .self-review-status {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+
+/* =========================================================
+   V13.1 — Lobby mais definido
+   ========================================================= */
+
+/* A área inteira de jogadores agora funciona como um painel próprio. */
+.players-panel {
+  padding: 14px;
+  border: 2px dashed var(--line);
+  border-radius: 12px;
+  background: rgba(255, 249, 233, 0.42);
+}
+
+/* Evita uma caixa sólida dentro da caixa pontilhada. */
+#players,
+#whoami-players {
+  margin: 0 0 10px;
+  padding: 0;
+  list-style: none;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+#players li,
+#whoami-players li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px 10px;
+  border-bottom: 2px dashed #d0c3aa;
+  font-weight: 800;
+}
+
+#players li:last-child,
+#whoami-players li:last-child {
+  border-bottom: 0;
+}
+
+.players-panel .ready-summary {
+  margin-top: auto;
+}
+
+/* Mantém o painel confortável nas telas menores. */
+@media (max-width: 720px) {
+  .players-panel {
+    padding: 12px;
+  }
+}
+
+/* =========================================================
+   V15 — seletor de avatar em modal + correção real dos cards
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   Cards do menu
+   --------------------------------------------------------- */
+
+.game-card-menu {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  justify-content: flex-start !important;
+  box-sizing: border-box !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  line-height: normal !important;
+  vertical-align: top !important;
+  background-clip: padding-box;
+}
+
+.game-card-menu > .game-card-topbar {
+  box-sizing: border-box;
+  width: 100%;
+  height: 34px;
+  min-height: 34px;
+  flex: 0 0 34px;
+  margin: 0 !important;
+  padding: 0 10px;
+  border-radius: 9px 9px 0 0;
+}
+
+.game-card-menu > .game-card-body {
+  width: 100%;
+  flex: 1 1 auto;
+  box-sizing: border-box;
+  margin: 0 !important;
+}
+
+/* ---------------------------------------------------------
+   Identidade visitante
+   --------------------------------------------------------- */
+
+.guest-identity-field {
+  margin-top: 10px;
+  padding: 10px;
+  border: 2px dashed var(--line);
+  border-radius: 10px;
+  background: rgba(255, 249, 233, 0.42);
+}
+
+.guest-identity-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.guest-identity-heading label {
+  margin: 0;
+}
+
+.guest-identity-heading > span {
+  padding: 3px 7px;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  background: var(--yellow);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.guest-name-row {
+  display: grid;
+  grid-template-columns: 66px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+}
+
+.guest-avatar-preview {
+  position: relative;
+  width: 66px;
+  height: 66px;
+  padding: 3px;
+  border: 3px solid var(--line);
+  border-radius: 50%;
+  background: var(--cream-2);
+  box-shadow: 3px 4px 0 #c4b59d;
+  cursor: pointer;
+  overflow: visible;
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.12s ease;
+}
+
+.guest-avatar-preview:hover {
+  transform: translateY(-2px);
+  box-shadow: 4px 6px 0 #c4b59d;
+}
+
+.guest-avatar-preview img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avatar-change-badge {
+  position: absolute;
+  right: -7px;
+  bottom: -4px;
+  padding: 2px 5px;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  background: var(--pink);
+  color: var(--ink);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.guest-name-input {
+  min-width: 0;
+}
+
+.avatar-help {
+  margin: 7px 0 0 76px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.25;
+}
+
+/* ---------------------------------------------------------
+   Modal de avatar
+   --------------------------------------------------------- */
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.avatar-modal {
+  position: fixed;
+  z-index: 3500;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(46, 37, 36, 0.44);
+  backdrop-filter: blur(4px);
+}
+
+.avatar-modal-window {
+  width: min(650px, 94vw);
+  max-height: min(720px, 92dvh);
+  display: flex;
+  flex-direction: column;
+  animation: avatar-modal-in 0.16s ease-out;
+}
+
+.avatar-modal-bar {
+  flex: 0 0 auto;
+}
+
+.window-close-button {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.window-close-button:hover {
+  transform: scale(1.08);
+}
+
+.avatar-modal-content {
+  padding: 22px;
+  overflow-y: auto;
+}
+
+.avatar-modal-content h2 {
+  margin: 3px 0 5px;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 31px;
+}
+
+.avatar-modal-content > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.avatar-modal-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.avatar-modal-option {
+  min-width: 0;
+  padding: 9px 7px 8px;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  transition:
+    transform 0.12s ease,
+    background 0.12s ease;
+}
+
+.avatar-modal-option:hover {
+  transform: translateY(-3px);
+  background: rgba(239, 157, 181, 0.18);
+}
+
+.avatar-modal-option.selected {
+  border-color: var(--line);
+  background: var(--pink);
+  box-shadow: 3px 4px 0 var(--line);
+}
+
+.avatar-modal-image-wrap {
+  position: relative;
+  display: block;
+  width: min(92px, 100%);
+  aspect-ratio: 1;
+  margin: 0 auto 7px;
+}
+
+.avatar-modal-image-wrap img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 3px solid var(--line);
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--cream-2);
+}
+
+.avatar-modal-option strong {
+  display: block;
+  overflow: hidden;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 13px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.avatar-modal-check {
+  position: absolute;
+  right: -3px;
+  bottom: -2px;
+  display: none;
+  width: 25px;
+  height: 25px;
+  place-items: center;
+  border: 2px solid var(--line);
+  border-radius: 50%;
+  background: var(--lime);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.avatar-modal-option.selected .avatar-modal-check {
+  display: grid;
+}
+
+.avatar-modal-cancel {
+  display: flex;
+  margin: 20px auto 0;
+}
+
+@keyframes avatar-modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ---------------------------------------------------------
+   Avatares dentro das salas
+   --------------------------------------------------------- */
+
+.player-avatar {
+  display: block;
+  flex: 0 0 auto;
+  border: 2px solid var(--line);
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--cream-2);
+}
+
+.lobby-player-avatar {
+  width: 34px;
+  height: 34px;
+  box-shadow: 2px 2px 0 #c4b59d;
+}
+
+.room-host-avatar {
+  width: 23px;
+  height: 23px;
+  border-width: 1.5px;
+}
+
+.room-list-host-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.review-player-avatar {
+  width: 28px;
+  height: 28px;
+}
+
+.character-player-avatar {
+  width: 25px;
+  height: 25px;
+}
+
+.review-card-title,
+.whoami-player-label {
+  min-height: 28px;
+}
+
+@media (max-width: 700px) {
+  .avatar-modal-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .guest-name-row {
+    grid-template-columns: 58px minmax(0, 1fr);
+  }
+
+  .guest-avatar-preview {
+    width: 58px;
+    height: 58px;
+  }
+
+  .avatar-help {
+    margin-left: 68px;
+  }
+}
+
+@media (max-width: 430px) {
+  .avatar-modal-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* =========================================================
+   V17 — Ordem de fala + Quem Sou Eu completo
+   ========================================================= */
+
+.speaking-order-panel {
+  border: 3px solid var(--line);
+  border-radius: 11px;
+  background: #fff9e9;
+  box-shadow: 3px 4px 0 #c4b59d;
+  overflow: hidden;
+}
+
+.speaking-order-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 7px 10px;
+  border-bottom: 2px dashed var(--line);
+  background: #fff1bd;
+}
+
+.speaking-order-heading strong {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 14px;
+}
+
+.speaking-order-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 8px;
+}
+
+.speaking-order-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  padding: 5px 8px;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  background: var(--cream-2);
+  font-size: 11px;
+  font-weight: 800;
+  transition: opacity .2s ease, filter .2s ease, transform .2s ease;
+}
+
+.speaking-order-item.is-me {
+  background: var(--lime);
+  transform: translateY(-1px);
+}
+
+.speaking-order-item.eliminated {
+  opacity: .48;
+  filter: grayscale(1);
+  text-decoration: line-through;
+}
+
+.speaking-position {
+  display: inline-grid;
+  place-items: center;
+  min-width: 27px;
+  height: 23px;
+  padding: 0 5px;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  background: var(--pink);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 10px;
+}
+
+.speaking-avatar {
+  width: 25px !important;
+  height: 25px !important;
+  border-width: 2px !important;
+}
+
+.speaking-name {
+  overflow: hidden;
+  max-width: 115px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.speaking-me {
+  padding: 2px 5px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--yellow);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 8px;
+}
+
+.impostor-speaking-panel {
+  width: min(640px, 100%);
+  margin: 12px auto 16px;
+  text-align: left;
+}
+
+/* Fotos externas de personagens */
+.character-photo-wrap {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border: 2px solid var(--line);
+  border-radius: 9px;
+  background: #eadfbe;
+}
+
+.character-photo-wrap.small {
+  width: 92px;
+  margin: 8px auto 4px;
+  aspect-ratio: 1 / 1;
+}
+
+.character-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.character-photo-wrap.is-placeholder {
+  display: grid;
+  place-items: center;
+  background:
+    linear-gradient(135deg, rgba(243,166,185,.42), transparent 55%),
+    var(--cream-3);
+}
+
+.character-photo-placeholder {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border: 3px solid var(--line);
+  border-radius: 50%;
+  background: var(--cream-2);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 33px;
+  font-weight: 800;
+}
+
+.review-character-photo {
+  margin: 8px 0 7px;
+  aspect-ratio: 16 / 8.5;
+}
+
+.review-character-card .review-character-name {
+  margin-top: 6px;
+}
+
+/* Tela principal do Quem Sou Eu */
+.whoami-play-grid-v17 {
+  grid-template-columns: minmax(320px, .92fr) minmax(440px, 1.4fr);
+}
+
+.whoami-left-pane {
+  overflow-y: auto;
+  padding-right: 3px;
+}
+
+.whoami-left-pane::-webkit-scrollbar,
+.whoami-character-grid::-webkit-scrollbar,
+.whoami-final-results::-webkit-scrollbar {
+  width: 7px;
+}
+
+.whoami-left-pane::-webkit-scrollbar-thumb,
+.whoami-character-grid::-webkit-scrollbar-thumb,
+.whoami-final-results::-webkit-scrollbar-thumb {
+  border-radius: 99px;
+  background: var(--pink-deep);
+}
+
+.whoami-self-card.eliminated {
+  filter: grayscale(1);
+  opacity: .62;
+}
+
+.compact-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.compact-title h3 {
+  margin: 1px 0 0;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 17px;
+}
+
+.whoami-guess-panel,
+.whoami-notes-panel {
+  padding: 10px;
+  border: 3px solid var(--line);
+  border-radius: 11px;
+  background: var(--cream-2);
+  box-shadow: 3px 4px 0 #c4b59d;
+}
+
+.whoami-guess-panel {
+  background: #fff4c8;
+}
+
+.whoami-attempts {
+  white-space: nowrap;
+  color: var(--pink-deep);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.whoami-attempts[data-left="0"] {
+  color: var(--muted);
+}
+
+.whoami-guess-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 7px;
+  margin-top: 8px;
+}
+
+.whoami-guess-row .retro-input {
+  min-width: 0;
+  height: 39px;
+}
+
+.compact-button {
+  width: auto !important;
+  min-width: 86px;
+  margin: 0 !important;
+  padding: 8px 13px !important;
+}
+
+.whoami-guess-feedback {
+  min-height: 17px;
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.notes-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.whoami-notes {
+  width: 100%;
+  height: 88px;
+  margin-top: 8px;
+  padding: 8px 9px;
+  resize: vertical;
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  outline: none;
+  background: #fffdf6;
+  color: var(--ink);
+  font: 700 12px/1.4 "Nunito", sans-serif;
+}
+
+.whoami-notes:focus {
+  box-shadow: 0 0 0 3px rgba(243, 166, 185, .35);
+}
+
+.whoami-notes-panel small,
+.whoami-reveal-box small {
+  display: block;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.whoami-right-pane {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 9px;
+}
+
+.whoami-speaking-panel {
+  min-height: 0;
+}
+
+.whoami-speaking-panel .speaking-order-list {
+  max-height: 83px;
+  overflow-y: auto;
+}
+
+.whoami-character-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.whoami-character-card {
+  position: relative;
+  transition: filter .2s ease, opacity .2s ease;
+}
+
+.whoami-character-card.eliminated {
+  filter: grayscale(1);
+  opacity: .52;
+  background: #d8d2c9;
+}
+
+.game-character-photo {
+  margin: 7px 0 6px;
+  aspect-ratio: 16 / 8.3;
+}
+
+.eliminated-tag {
+  margin-left: auto;
+  padding: 2px 5px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #c9c2bb;
+  color: var(--ink);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 7px;
+}
+
+.whoami-bottom-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.whoami-left-pane .reveal-button {
+  margin-top: 0;
+  font-size: 11px;
+}
+
+/* Tela final */
+body.whoami-winner-active {
+  overflow: hidden;
+}
+
+body.whoami-winner-active .app {
+  width: min(1180px, 96vw);
+  height: 100dvh;
+  padding: 10px 0;
+  display: grid;
+  place-items: center;
+}
+
+body.whoami-winner-active .site-credit {
+  display: none;
+}
+
+body.whoami-winner-active #whoami-winner-screen {
+  width: 100%;
+  height: calc(100dvh - 20px);
+}
+
+.whoami-winner-shell {
+  width: min(1050px, 100%);
+  height: 100%;
+}
+
+.whoami-winner-window {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.whoami-winner-content {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 18px 12px;
+  text-align: center;
+}
+
+.winner-sparkles {
+  color: var(--pink-deep);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 23px;
+  letter-spacing: 6px;
+}
+
+.winner-avatar-slot {
+  margin-top: 5px;
+}
+
+.winner-player-avatar {
+  width: 68px !important;
+  height: 68px !important;
+  border: 3px solid var(--line) !important;
+  box-shadow: 4px 4px 0 var(--line);
+}
+
+.winner-no-one {
+  display: grid;
+  width: 66px;
+  height: 66px;
+  place-items: center;
+  border: 3px solid var(--line);
+  border-radius: 50%;
+  background: var(--cream-3);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 36px;
+}
+
+.whoami-winner-content > h2 {
+  margin: 6px 0 0;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: clamp(34px, 5vw, 52px);
+  line-height: 1;
+}
+
+.whoami-winner-content > p {
+  margin: 3px 0 8px;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.winner-character-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 10px 14px;
+  min-width: min(460px, 90%);
+  padding: 9px 14px;
+  border: 3px solid var(--line);
+  border-radius: 12px;
+  background: var(--yellow);
+  box-shadow: 5px 6px 0 var(--line);
+}
+
+.winner-character-card > span {
+  grid-column: 2;
+  align-self: end;
+  color: var(--muted);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 10px;
+}
+
+.winner-character-card > strong {
+  grid-column: 2;
+  align-self: start;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: clamp(23px, 3vw, 34px);
+  line-height: 1;
+}
+
+.winner-photo {
+  grid-row: 1 / span 2;
+  width: 92px;
+  aspect-ratio: 1 / 1;
+}
+
+.winner-roster-panel {
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  margin-top: 12px;
+  padding: 10px;
+  border: 3px dashed var(--line);
+  border-radius: 12px;
+  background: rgba(255,249,233,.62);
+  text-align: left;
+}
+
+.whoami-final-results {
+  height: calc(100% - 42px);
+  min-height: 0;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 8px;
+  padding: 2px 4px 4px 2px;
+}
+
+.final-character-card {
+  display: grid;
+  grid-template-columns: 82px 1fr;
+  gap: 9px;
+  align-items: center;
+  min-height: 88px;
+  padding: 7px;
+  border: 2px solid var(--line);
+  border-radius: 9px;
+  background: var(--cream-2);
+}
+
+.final-character-card.winner {
+  background: #fff0a6;
+  box-shadow: 3px 3px 0 var(--line);
+}
+
+.final-character-card.eliminated:not(.winner) {
+  opacity: .64;
+  filter: grayscale(.8);
+}
+
+.final-photo {
+  width: 82px;
+  aspect-ratio: 1 / 1;
+}
+
+.final-player-line {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.final-player-avatar {
+  width: 27px !important;
+  height: 27px !important;
+}
+
+.winner-tag {
+  margin-left: auto;
+  padding: 3px 5px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--lime);
+  color: var(--ink);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 7px;
+}
+
+.final-character-name {
+  display: block;
+  margin-top: 5px;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 19px;
+  line-height: 1.05;
+}
+
+.whoami-winner-actions {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.whoami-winner-actions .retro-button,
+.whoami-winner-actions .waiting-box,
+.whoami-winner-actions .text-button {
+  margin: 0;
+}
+
+@media (min-width: 721px) and (max-height: 820px) {
+  .whoami-game-content {
+    padding: 9px 12px 8px;
+    gap: 7px;
+  }
+
+  .whoami-self-card {
+    padding: 8px 10px;
+  }
+
+  .whoami-question {
+    width: 44px;
+    height: 44px;
+  }
+
+  .whoami-question .site-icon {
+    width: 27px;
+    height: 27px;
+  }
+
+  .whoami-self-card h2 {
+    font-size: 27px;
+  }
+
+  .whoami-self-card p {
+    font-size: 11px;
+  }
+
+  .whoami-notes {
+    height: 66px;
+  }
+
+  .whoami-guess-panel,
+  .whoami-notes-panel {
+    padding: 7px 8px;
+  }
+
+  .game-character-photo {
+    aspect-ratio: 16 / 7.3;
+  }
+
+  .whoami-character-card {
+    padding: 8px 9px;
+  }
+
+  .whoami-speaking-panel .speaking-order-list {
+    max-height: 67px;
+  }
+
+  .whoami-winner-content {
+    padding-top: 8px;
+  }
+
+  .winner-player-avatar {
+    width: 55px !important;
+    height: 55px !important;
+  }
+
+  .whoami-winner-content > h2 {
+    font-size: 35px;
+  }
+
+  .winner-character-card {
+    padding: 6px 10px;
+  }
+
+  .winner-photo {
+    width: 70px;
+  }
+}
+
+@media (max-width: 900px) {
+  .whoami-play-grid-v17 {
+    grid-template-columns: minmax(280px, .9fr) minmax(360px, 1.2fr);
+  }
+
+  .whoami-character-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .speaking-order-list {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .speaking-order-item {
+    width: 100%;
+  }
+
+  .whoami-play-grid-v17 {
+    display: block;
+  }
+
+  .whoami-left-pane {
+    overflow: visible;
+  }
+
+  .whoami-right-pane {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .whoami-speaking-panel .speaking-order-list {
+    max-height: none;
+    overflow: visible;
+  }
+
+  .whoami-notes {
+    height: 110px;
+  }
+
+  body.whoami-winner-active {
+    overflow-y: auto;
+  }
+
+  body.whoami-winner-active .app {
+    display: block;
+    height: auto;
+    padding: 20px 0 40px;
+  }
+
+  body.whoami-winner-active #whoami-winner-screen,
+  .whoami-winner-shell,
+  .whoami-winner-window {
+    height: auto;
+  }
+
+  .winner-character-card {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .whoami-final-results {
+    height: auto;
+    max-height: none;
+    overflow: visible;
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   V18 — Retratos, bloco de notas expandido e votação Impostor
+   ========================================================= */
+
+/* Quem Sou Eu: imagens de personagem em formato retrato. */
+.character-photo-wrap {
+  aspect-ratio: 3 / 4;
+  background: #eadfbe;
+}
+
+.character-photo {
+  object-fit: cover;
+  object-position: 50% 18%;
+}
+
+.review-character-photo {
+  width: min(220px, 100%);
+  margin: 8px auto 7px;
+  aspect-ratio: 3 / 4;
+}
+
+.game-character-photo {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  margin: 7px 0 7px;
+}
+
+.character-photo-wrap.small,
+.winner-photo,
+.final-photo {
+  aspect-ratio: 1 / 1;
+}
+
+/* Faz o bloco de notas aproveitar a altura que antes ficava vazia. */
+@media (min-width: 721px) {
+  .whoami-left-pane {
+    overflow-y: auto;
+    padding-right: 3px;
+  }
+
+  .whoami-notes-panel {
+    flex: 1 1 0;
+    min-height: 145px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .whoami-notes {
+    flex: 1 1 auto;
+    min-height: 105px;
+    height: auto;
+    resize: none;
+  }
+}
+
+.whoami-guess-feedback[data-state="close"] {
+  color: #9a6500;
+}
+
+.whoami-guess-feedback[data-state="correct"] {
+  color: #376c18;
+}
+
+.whoami-guess-feedback[data-state="wrong"] {
+  color: #a94444;
+}
+
+/* Revelação final: cards compactos e centralizados, sem "outdoors". */
+.whoami-final-results {
+  grid-template-columns: repeat(auto-fit, minmax(145px, 180px));
+  justify-content: center;
+  align-content: start;
+  align-items: start;
+}
+
+.final-character-card {
+  width: 100%;
+  max-width: 180px;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  align-items: stretch;
+  padding: 7px;
+}
+
+.final-photo {
+  width: 100%;
+}
+
+.final-character-info {
+  min-width: 0;
+}
+
+.final-player-line {
+  min-width: 0;
+  flex-wrap: wrap;
+}
+
+.final-player-line > span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.final-character-name {
+  margin-top: 6px;
+  text-align: center;
+  font-size: 17px;
+  overflow-wrap: anywhere;
+}
+
+.winner-tag {
+  margin-left: 0;
+}
+
+/* ---------- Impostor: fase de desempate ---------- */
+.impostor-phase-banner {
+  width: min(640px, 100%);
+  margin: 4px auto 10px;
+  padding: 9px 12px;
+  border: 3px dashed var(--line);
+  border-radius: 11px;
+  background: #fff0a6;
+  text-align: center;
+}
+
+.impostor-phase-banner strong,
+.impostor-phase-banner small {
+  display: block;
+}
+
+.impostor-phase-banner strong {
+  margin-top: 2px;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 16px;
+}
+
+.impostor-phase-banner small {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+#start-impostor-vote,
+#impostor-vote-waiting {
+  width: min(640px, 100%);
+  margin: 10px auto 12px;
+}
+
+/* ---------- Impostor: tela de votação ---------- */
+.impostor-vote-shell,
+.impostor-result-shell {
+  width: min(900px, 100%);
+}
+
+.impostor-vote-window,
+.impostor-result-window {
+  overflow: hidden;
+}
+
+.impostor-vote-content,
+.impostor-result-content {
+  padding: 20px;
+}
+
+.impostor-vote-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.impostor-vote-heading h2,
+.impostor-result-content > h2 {
+  margin: 2px 0 4px;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: clamp(29px, 5vw, 46px);
+  line-height: 1;
+}
+
+.impostor-vote-heading p,
+.impostor-result-content > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.vote-progress-box {
+  flex: 0 0 auto;
+  min-width: 92px;
+  padding: 8px 10px;
+  border: 2px solid var(--line);
+  border-radius: 10px;
+  background: var(--lime);
+  text-align: center;
+}
+
+.vote-progress-box span,
+.vote-progress-box strong {
+  display: block;
+}
+
+.vote-progress-box span {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 9px;
+}
+
+.vote-progress-box strong {
+  margin-top: 2px;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 22px;
+}
+
+.impostor-vote-candidates {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+  gap: 10px;
+  margin: 18px 0 12px;
+}
+
+.impostor-vote-card {
+  min-width: 0;
+  padding: 14px 10px 11px;
+  border: 3px solid var(--line);
+  border-radius: 12px;
+  background: var(--cream-2);
+  color: var(--ink);
+  box-shadow: 4px 5px 0 #c4b59d;
+  cursor: pointer;
+  font: inherit;
+  transition: transform .12s ease, box-shadow .12s ease, opacity .15s ease;
+}
+
+.impostor-vote-card:not(:disabled):hover {
+  transform: translateY(-2px);
+  box-shadow: 5px 7px 0 var(--line);
+}
+
+.impostor-vote-card:disabled {
+  cursor: default;
+  opacity: .58;
+}
+
+.impostor-vote-card.is-self {
+  filter: grayscale(.45);
+}
+
+.impostor-vote-card.selected {
+  background: var(--pink);
+  opacity: 1;
+  box-shadow: 4px 5px 0 var(--line);
+}
+
+.impostor-vote-avatar {
+  width: 72px !important;
+  height: 72px !important;
+  margin: 0 auto 8px;
+  border-width: 3px !important;
+}
+
+.impostor-vote-card strong,
+.impostor-vote-card > span {
+  display: block;
+  text-align: center;
+}
+
+.impostor-vote-card strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 18px;
+}
+
+.impostor-vote-card > span {
+  margin-top: 4px;
+  color: var(--muted);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 9px;
+}
+
+.impostor-vote-feedback {
+  min-height: 22px;
+  margin: 6px 0 12px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+/* ---------- Impostor: resultado ---------- */
+.impostor-result-content {
+  text-align: center;
+}
+
+.impostor-result-symbol {
+  display: grid;
+  place-items: center;
+  width: 66px;
+  height: 66px;
+  margin: 0 auto 8px;
+  border: 3px solid var(--line);
+  border-radius: 50%;
+  background: var(--yellow);
+  box-shadow: 4px 4px 0 var(--line);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 38px;
+}
+
+.impostor-result-symbol.success {
+  background: var(--lime);
+}
+
+.impostor-result-symbol.failure {
+  background: var(--pink);
+}
+
+.impostor-result-reveal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  width: min(620px, 100%);
+  margin: 16px auto 10px;
+}
+
+.impostor-result-card {
+  padding: 11px;
+  border: 3px solid var(--line);
+  border-radius: 11px;
+  background: var(--cream-2);
+  box-shadow: 4px 5px 0 #c4b59d;
+}
+
+.impostor-result-card.impostor-card {
+  background: #ffd8df;
+}
+
+.impostor-result-avatar {
+  min-height: 76px;
+  display: grid;
+  place-items: center;
+  margin: 6px 0;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 30px;
+}
+
+.impostor-result-player-avatar {
+  width: 76px !important;
+  height: 76px !important;
+  border-width: 3px !important;
+}
+
+.impostor-result-card > strong {
+  display: block;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 22px;
+  overflow-wrap: anywhere;
+}
+
+.impostor-word-reveal {
+  width: min(620px, 100%);
+  margin: 12px auto;
+  padding: 9px 12px;
+  border: 3px solid var(--line);
+  border-radius: 11px;
+  background: #fff0a6;
+}
+
+.impostor-word-reveal span,
+.impostor-word-reveal strong {
+  display: block;
+}
+
+.impostor-word-reveal span {
+  color: var(--muted);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 9px;
+}
+
+.impostor-word-reveal strong {
+  margin-top: 2px;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: clamp(22px, 4vw, 31px);
+}
+
+.impostor-vote-count-panel {
+  width: min(620px, 100%);
+  margin: 12px auto 0;
+  padding: 10px;
+  border: 3px dashed var(--line);
+  border-radius: 11px;
+  background: rgba(255, 249, 233, .68);
+  text-align: left;
+}
+
+.impostor-result-counts {
+  display: grid;
+  gap: 5px;
+  margin-top: 7px;
+}
+
+.impostor-result-count-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 6px 8px;
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  background: var(--cream-2);
+  font-size: 11px;
+}
+
+.impostor-result-count-row > span {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 900;
+}
+
+.vote-count-avatar {
+  width: 28px !important;
+  height: 28px !important;
+}
+
+.impostor-result-count-row > strong {
+  flex: 0 0 auto;
+  font-family: "Chakra Petch", sans-serif;
+}
+
+.impostor-result-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 9px 12px;
+  margin-top: 14px;
+}
+
+.impostor-result-actions .retro-button,
+.impostor-result-actions .waiting-box,
+.impostor-result-actions .text-button {
+  margin: 0;
+}
+
+@media (min-width: 721px) {
+  body.screen-mode-impostor-vote-screen,
+  body.screen-mode-impostor-result-screen {
+    overflow: hidden;
+  }
+
+  .screen-mode-impostor-vote-screen .app,
+  .screen-mode-impostor-result-screen .app {
+    min-height: 100dvh;
+    display: grid;
+    place-items: center;
+  }
+
+  #impostor-vote-screen,
+  #impostor-result-screen {
+    width: 100%;
+  }
+
+  .impostor-vote-window,
+  .impostor-result-window {
+    max-height: calc(100dvh - 24px);
+  }
+
+  .impostor-vote-content,
+  .impostor-result-content {
+    overflow-y: auto;
+    max-height: calc(100dvh - 68px);
+  }
+}
+
+@media (max-width: 720px) {
+  .impostor-vote-heading {
+    flex-direction: column;
+  }
+
+  .vote-progress-box {
+    width: 100%;
+  }
+
+  .impostor-vote-candidates {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .impostor-result-reveal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .whoami-final-results {
+    grid-template-columns: repeat(2, minmax(130px, 1fr));
+  }
+
+  .final-character-card {
+    max-width: none;
+  }
+}
+
+@media (max-width: 430px) {
+  .impostor-vote-candidates,
+  .whoami-final-results {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 721px) and (max-height: 820px) {
+  .whoami-notes-panel {
+    min-height: 105px;
+  }
+
+  .whoami-notes {
+    min-height: 64px;
+  }
+}
+
+/* ===== V18.1: cards compactos + preview de foto no hover/tap ===== */
+@media (min-width: 721px) {
+  body.whoami-game-active .app {
+    width: min(1320px, 98vw);
+  }
+
+  .whoami-game-shell {
+    width: min(1260px, 100%);
+  }
+
+  .whoami-play-grid-v17 {
+    grid-template-columns: minmax(300px, .72fr) minmax(610px, 1.72fr);
+    gap: 14px;
+  }
+
+  .whoami-character-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 9px;
+  }
+
+  .whoami-character-card {
+    min-height: 86px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 52px minmax(0, 1fr);
+    grid-template-rows: auto minmax(44px, 1fr);
+    column-gap: 9px;
+    row-gap: 5px;
+    align-items: center;
+    overflow: hidden;
+    cursor: zoom-in;
+    transition:
+      transform .18s ease,
+      box-shadow .18s ease,
+      background-color .18s ease,
+      filter .2s ease,
+      opacity .2s ease;
+  }
+
+  .whoami-character-card:hover,
+  .whoami-character-card:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 5px 7px 0 #b9aa93;
+    outline: none;
+  }
+
+  .whoami-player-label {
+    grid-column: 1 / -1;
+    min-width: 0;
+    margin: 4px 0 0;
+  }
+
+  .whoami-player-label > span:not(.eliminated-tag) {
+    overflow: hidden;
+    min-width: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .game-character-photo {
+    grid-column: 1;
+    grid-row: 2;
+    width: 52px;
+    height: 52px;
+    margin: 0;
+    aspect-ratio: 1 / 1;
+    border-radius: 8px;
+  }
+
+  .game-character-photo .character-photo-placeholder,
+  .whoami-character-card .character-photo-placeholder {
+    width: 31px;
+    height: 31px;
+    border-width: 2px;
+    font-size: 21px;
+  }
+
+  .whoami-character-copy {
+    grid-column: 2;
+    grid-row: 2;
+    min-width: 0;
+    align-self: center;
+  }
+
+  .whoami-character-card strong {
+    display: -webkit-box;
+    overflow: hidden;
+    margin: 0;
+    font-size: clamp(15px, 1.15vw, 19px);
+    line-height: 1.05;
+    overflow-wrap: anywhere;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .whoami-photo-hint {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 5px;
+    color: var(--muted);
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: .02em;
+  }
+
+  .whoami-photo-hint .site-icon {
+    width: 11px;
+    height: 11px;
+  }
+}
+
+.whoami-character-floating-preview {
+  position: fixed;
+  z-index: 9999;
+  width: min(245px, calc(100vw - 20px));
+  padding: 10px;
+  border: 3px solid var(--line);
+  border-radius: 13px;
+  background: var(--cream-2);
+  box-shadow: 8px 9px 0 rgba(54, 47, 42, .45);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(7px) scale(.94);
+  transform-origin: center;
+  transition:
+    opacity .18s ease,
+    transform .2s cubic-bezier(.2,.8,.2,1),
+    visibility 0s linear .2s;
+}
+
+.whoami-character-floating-preview::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  border-bottom: 2px solid var(--line);
+  border-radius: 9px 9px 0 0;
+  background: var(--pink);
+}
+
+.whoami-character-floating-preview.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  transition-delay: 0s;
+}
+
+.whoami-character-floating-preview.eliminated {
+  filter: grayscale(1);
+  opacity: .78;
+}
+
+.floating-preview-photo {
+  width: 100%;
+  margin: 8px 0 9px;
+  aspect-ratio: 3 / 4;
+  border-radius: 9px;
+  background: #eadfbe;
+}
+
+.floating-preview-photo .character-photo {
+  object-fit: cover;
+  object-position: center 28%;
+}
+
+.floating-preview-meta {
+  min-width: 0;
+}
+
+.floating-preview-player {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.floating-preview-player span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.floating-preview-avatar {
+  width: 27px !important;
+  height: 27px !important;
+  border-width: 2px !important;
+}
+
+.floating-preview-character {
+  display: block;
+  margin-top: 6px;
+  overflow-wrap: anywhere;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.floating-preview-tip {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 8px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 721px) and (max-width: 1120px) {
+  .whoami-play-grid-v17 {
+    grid-template-columns: minmax(285px, .82fr) minmax(460px, 1.45fr);
+  }
+
+  .whoami-character-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .whoami-character-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .whoami-character-card {
+    padding: 9px;
+    cursor: pointer;
+  }
+
+  .game-character-photo {
+    width: 100%;
+    margin: 6px 0;
+    aspect-ratio: 1 / 1;
+  }
+
+  .whoami-photo-hint {
+    display: block;
+    margin-top: 4px;
+    color: var(--muted);
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 8px;
+  }
+
+  .whoami-character-floating-preview {
+    left: 50% !important;
+    top: 50% !important;
+    width: min(280px, calc(100vw - 28px));
+    transform: translate(-50%, calc(-50% + 8px)) scale(.94);
+  }
+
+  .whoami-character-floating-preview.is-visible {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@media (max-width: 430px) {
+  .whoami-character-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   V19 — CONTAS, PERFIL E ESTATÍSTICAS
+   ========================================================= */
+
+.header-side {
+  position: relative;
+  width: 270px;
+  flex: 0 0 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 9px;
+}
+
+.header-side .desktop-widget {
+  width: 100%;
+  flex: 0 0 auto;
+  margin-top: 8px;
+}
+
+.account-guest-controls,
+.account-user-controls {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  min-height: 34px;
+}
+
+.account-guest-chip {
+  padding: 6px 8px;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  background: var(--cream-2);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.account-mini-button,
+.account-profile-button,
+.account-dropdown button,
+.account-tab {
+  color: var(--ink);
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.account-mini-button {
+  padding: 7px 9px;
+  border: 2px solid var(--line);
+  border-radius: 9px;
+  background: var(--cream);
+  box-shadow: 2px 3px 0 var(--line);
+  font-size: 10px;
+}
+
+.account-mini-button.accent {
+  background: var(--pink);
+}
+
+.account-mini-button:hover,
+.account-profile-button:hover {
+  transform: translateY(-1px);
+}
+
+.account-profile-button {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 9px;
+  border: 2px solid var(--line);
+  border-radius: 11px;
+  background: var(--cream);
+  box-shadow: 3px 4px 0 var(--line);
+  font-size: 13px;
+  text-align: left;
+}
+
+.account-profile-button img {
+  width: 34px;
+  height: 34px;
+  border: 2px solid var(--line);
+  border-radius: 50%;
+  background: var(--mint);
+  object-fit: cover;
+}
+
+.account-profile-button span:nth-child(2) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.account-dropdown {
+  position: absolute;
+  z-index: 1200;
+  top: calc(100% + 7px);
+  right: 0;
+  width: 190px;
+  padding: 7px;
+  border: 2px solid var(--line);
+  border-radius: 10px;
+  background: var(--cream-2);
+  box-shadow: 5px 6px 0 rgba(54, 47, 42, .35);
+}
+
+.account-dropdown button {
+  width: 100%;
+  padding: 9px 10px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  font-size: 12px;
+  text-align: left;
+}
+
+.account-dropdown button:hover {
+  background: rgba(239, 157, 181, .25);
+}
+
+.account-dropdown .danger-text {
+  color: #9e3f4f;
+}
+
+.account-modal {
+  position: fixed;
+  z-index: 4200;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  background: rgba(46, 37, 36, .48);
+  backdrop-filter: blur(5px);
+}
+
+.account-modal-window {
+  width: min(520px, 95vw);
+  max-height: min(760px, 94dvh);
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-modal-window {
+  width: min(850px, 96vw);
+  max-height: min(800px, 94dvh);
+  display: flex;
+  flex-direction: column;
+}
+
+.account-modal-content,
+.profile-modal-content {
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.account-tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 2px dashed var(--line);
+}
+
+.account-tab {
+  flex: 1;
+  padding: 8px 7px;
+  border: 2px solid var(--line);
+  border-radius: 9px;
+  background: var(--cream);
+  font-size: 10px;
+}
+
+.account-tab.active {
+  background: var(--lime);
+  box-shadow: 2px 3px 0 var(--line);
+}
+
+.auth-panel h2,
+.profile-panel h2 {
+  margin: 5px 0 14px;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 30px;
+}
+
+.auth-panel label,
+.profile-setting-card label {
+  display: block;
+  margin: 12px 0 5px;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.account-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 11px;
+  border: 2px solid var(--line);
+  border-radius: 9px;
+  outline: none;
+  background: #fffaf0;
+  color: var(--ink);
+  font: inherit;
+}
+
+.account-input:focus {
+  box-shadow: 0 0 0 3px rgba(239, 157, 181, .35);
+}
+
+.auth-panel .retro-button {
+  width: 100%;
+  margin-top: 16px;
+}
+
+.account-help {
+  display: block;
+  margin: 4px 0 8px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.account-message {
+  min-height: 18px;
+  margin: 12px 0 0;
+  color: #9b3348;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.account-message.success {
+  color: #41734f;
+}
+
+.account-success-note {
+  margin-bottom: 12px;
+  padding: 9px 10px;
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  background: var(--lime);
+  font-weight: 800;
+}
+
+.profile-hero {
+  display: grid;
+  grid-template-columns: 105px minmax(0, 1fr);
+  gap: 18px;
+  align-items: center;
+  margin-bottom: 18px;
+  padding: 14px;
+  border: 2px dashed var(--line);
+  border-radius: 12px;
+  background: rgba(255, 249, 233, .55);
+}
+
+.profile-hero h2 {
+  margin: 4px 0 3px;
+}
+
+.profile-hero p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.profile-avatar-button {
+  position: relative;
+  width: 96px;
+  height: 96px;
+  padding: 4px;
+  border: 3px solid var(--line);
+  border-radius: 50%;
+  background: var(--cream-2);
+  cursor: pointer;
+  box-shadow: 4px 5px 0 var(--line);
+}
+
+.profile-avatar-button img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-avatar-button span {
+  position: absolute;
+  right: -9px;
+  bottom: 3px;
+  padding: 3px 7px;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  background: var(--pink);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.profile-settings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.profile-setting-card {
+  padding: 14px;
+  border: 2px solid var(--line);
+  border-radius: 12px;
+  background: var(--cream-2);
+}
+
+.profile-setting-card h3 {
+  margin: 4px 0 10px;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 20px;
+}
+
+.profile-setting-card small {
+  display: block;
+  margin: 6px 0 10px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.3;
+}
+
+.profile-setting-card .account-input + .account-input {
+  margin-top: 7px;
+}
+
+.profile-setting-card .retro-button {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.stats-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 9px;
+  margin: 12px 0 14px;
+}
+
+.stats-summary-grid article {
+  padding: 12px 8px;
+  border: 2px solid var(--line);
+  border-radius: 10px;
+  background: var(--yellow);
+  text-align: center;
+}
+
+.stats-summary-grid strong {
+  display: block;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 25px;
+}
+
+.stats-summary-grid span {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.stats-games-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.stats-game-card {
+  padding: 14px;
+  border: 2px solid var(--line);
+  border-radius: 12px;
+}
+
+.stats-game-card.pink-card { background: rgba(239, 157, 181, .24); }
+.stats-game-card.lime-card { background: rgba(216, 232, 126, .35); }
+
+.stats-game-card h3 {
+  margin: 5px 0 12px;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 22px;
+}
+
+.stats-game-card p {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 7px 0;
+  padding-bottom: 6px;
+  border-bottom: 1px dashed rgba(54, 47, 42, .35);
+  font-size: 11px;
+}
+
+.avatar-account-upload {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.avatar-upload-divider {
+  position: relative;
+  margin: 6px 0 14px;
+  border-top: 2px dashed var(--line);
+}
+
+.avatar-upload-divider span {
+  position: relative;
+  top: -9px;
+  padding: 0 9px;
+  background: var(--cream);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.avatar-account-upload .retro-button {
+  width: min(320px, 100%);
+  margin: 0 auto;
+}
+
+.avatar-account-upload small {
+  display: block;
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.guest-identity-field.account-identity {
+  background: rgba(216, 232, 126, .16);
+}
+
+.guest-identity-field.account-identity .guest-identity-heading > span {
+  background: var(--lime);
+}
+
+.guest-identity-field.account-identity input[readonly] {
+  opacity: .85;
+  cursor: default;
+}
+
+.registered-mark {
+  display: inline-grid;
+  width: 16px;
+  height: 16px;
+  place-items: center;
+  margin-left: 3px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--lime);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  vertical-align: middle;
+}
+
+@media (min-width: 721px) {
+  .screen-mode-menu-screen .header-side .desktop-widget {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 820px) {
+  .site-header {
+    gap: 16px;
+  }
+
+  .header-side {
+    width: 235px;
+    flex-basis: 235px;
+  }
+
+  .account-guest-controls {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 720px) {
+  .header-side {
+    width: 100%;
+    flex-basis: auto;
+  }
+
+  .account-guest-controls,
+  .account-user-controls {
+    justify-content: flex-start;
+  }
+
+  .account-profile-button {
+    max-width: 280px;
+  }
+
+  .account-dropdown {
+    left: 0;
+    right: auto;
+  }
+
+  .profile-settings-grid,
+  .stats-games-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 470px) {
+  .account-tabs {
+    flex-direction: column;
+  }
+
+  .profile-hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .profile-avatar-button {
+    margin: 0 auto;
+  }
+}
+
+.impostor-final-secret-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.impostor-final-secret-grid > div {
+  min-width: 0;
+}
+
+.impostor-final-secret-grid > div + div {
+  border-left: 2px dashed var(--line);
+  padding-left: 10px;
+}
+
+@media (max-width: 560px) {
+  .impostor-final-secret-grid {
+    grid-template-columns: 1fr;
+  }
+  .impostor-final-secret-grid > div + div {
+    border-left: 0;
+    border-top: 2px dashed var(--line);
+    padding: 9px 0 0;
+  }
+}
+
+/* O seletor de avatar também é usado de dentro do perfil. */
+.avatar-modal {
+  z-index: 4700;
+}
+
+/* =========================================================
+   V19.1 — POLIMENTO DE CONTA / FORMULÁRIOS
+   ========================================================= */
+
+/* O antigo status.exe virou um indicador discreto no topo. */
+.server-online-mini {
+  align-self: flex-end;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 28px;
+  padding: 5px 9px;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  background: var(--cream-2);
+  box-shadow: 2px 3px 0 var(--line);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 10px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.server-online-mini .online-dot {
+  width: 10px;
+  height: 10px;
+  border-width: 2px;
+  flex: 0 0 10px;
+}
+
+/* Inputs da conta seguem a mesma linguagem visual pixel/retro do site. */
+.account-input,
+.account-input::placeholder {
+  font-family: "Chakra Petch", sans-serif;
+}
+
+.account-input {
+  min-height: 46px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: .01em;
+}
+
+.account-input::placeholder {
+  color: #9a8d86;
+  opacity: 1;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* Campo de senha com botão de olho embutido. */
+.password-field {
+  position: relative;
+  width: 100%;
+}
+
+.password-field .account-input {
+  padding-right: 49px;
+}
+
+.password-toggle {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  right: 7px;
+  width: 34px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  transform: translateY(-50%);
+  border: 2px solid transparent;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.password-toggle:hover,
+.password-toggle:focus-visible {
+  border-color: var(--line);
+  background: var(--pink);
+  outline: none;
+  box-shadow: 2px 2px 0 var(--line);
+}
+
+.password-toggle:active {
+  transform: translateY(calc(-50% + 1px));
+  box-shadow: 1px 1px 0 var(--line);
+}
+
+.password-toggle .site-icon {
+  width: 19px;
+  height: 19px;
+  stroke-width: 2.2;
+}
+
+@media (max-width: 820px) {
+  .server-online-mini {
+    align-self: flex-start;
+  }
+}
+
+.profile-setting-card .password-field + .password-field {
+  margin-top: 7px;
+}
+
+/* V19.2 — jogadores já eliminados no Impostor */
+.player-eliminated {
+  opacity: .5;
+  filter: grayscale(1);
+}
+
+.player-eliminated .player-name > span:not(.registered-mark) {
+  text-decoration: line-through;
+}
+
+/* =========================================================
+   V20.11 — Salas privadas, entrada por link e modo espectador
+   ========================================================= */
+.room-privacy-field {
+  margin: 10px 0 13px;
+  padding: 11px 12px;
+  background: #f6efd6;
+  border: 2px dashed #988b77;
+  border-radius: 10px;
+}
+.room-privacy-check { display:flex; align-items:center; gap:10px; cursor:pointer; font:700 14px/1.2 "Chakra Petch",sans-serif; }
+.room-privacy-check input { width:18px; height:18px; accent-color:#b7d45b; cursor:pointer; }
+.room-privacy-fields { padding-top:10px; display:grid; gap:6px; }
+.room-privacy-fields label, .room-join-password label { font:700 12px/1.15 "Chakra Petch",sans-serif; }
+.room-privacy-fields input, .room-join-password input {
+  width:100%; min-height:42px; padding:9px 12px;
+  border:2px solid var(--line); border-radius:9px;
+  background:#fff9e9; color:var(--line); font:600 13px/1.3 "Chakra Petch",sans-serif;
+  box-shadow:2px 3px 0 rgba(46,37,36,.19);
+}
+.room-privacy-fields small { color:var(--muted); font-size:11px; line-height:1.35; }
+.room-join-password { margin:9px 0 14px; display:grid; gap:6px; }
+.room-direct-link-notice {
+  margin:6px 0 13px; padding:10px 12px; background:#eef6cd;
+  border:2px dashed #a2b96b; border-radius:8px; font-size:12px; line-height:1.4;
+}
+.spectator-shell { max-width:1080px; margin:0 auto; }
+.spectator-window { overflow:hidden; }
+.spectator-badge {
+  font:700 11px/1.2 "Chakra Petch",sans-serif;
+  border:2px solid var(--line); border-radius:6px;
+  background:#fff1b8; padding:3px 8px;
+}
+.spectator-content { padding:24px; display:grid; gap:16px; }
+.spectator-intro { display:flex; justify-content:space-between; align-items:center; gap:16px; }
+.spectator-intro h2 { margin:4px 0 6px; font:800 28px/1.1 "Chakra Petch",sans-serif; }
+.spectator-intro p { margin:0; font-size:13px; line-height:1.4; max-width:650px; }
+#spectator-room-code {
+  padding:8px 12px; border:2px solid var(--line); border-radius:8px;
+  white-space:nowrap; background:#d9e885; font:700 14px/1.2 "Chakra Petch",sans-serif;
+}
+.spectator-metrics { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; }
+.spectator-metrics > div {
+  display:grid; gap:5px; background:#fff6db; border:2px solid var(--line); border-radius:10px;
+  padding:12px; box-shadow:2px 3px 0 #b7a785;
+}
+.spectator-metrics strong { font:800 19px/1 "Chakra Petch",sans-serif; }
+.spectator-game-info { display:grid; gap:10px; }
+.spectator-info-line, .spectator-question {
+  background:#ecf1d1; padding:12px; border:2px solid var(--line); border-radius:10px;
+  line-height:1.4; font-size:13px;
+}
+.spectator-question { background:#fff0cb; display:grid; gap:7px; }
+.spectator-question small { font-size:12px; color:#63554d; }
+.spectator-question em { color:#35573b; font-weight:800; }
+
+
+
+
+
+
+
+
+
+.spectator-roster { display:grid; gap:10px; }
+#spectator-roster-list { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:8px; }
+.spectator-person {
+  display:flex; align-items:center; gap:8px; min-width:0; padding:9px;
+  background:#fff8e7; border:2px solid var(--line); border-radius:10px;
+}
+.spectator-person strong { font:700 14px/1.1 "Chakra Petch",sans-serif; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.spectator-person span { margin-left:auto; white-space:nowrap; font:700 9px/1 "Chakra Petch",sans-serif; }
+.spectator-waiting-message {
+  margin:0; padding:11px; border:2px dashed #b2a17e; border-radius:10px;
+  background:#ffedb6; font-size:12px; text-align:center;
+}
+@media(max-width:700px) {
+  .spectator-content { padding:12px; }
+  .spectator-intro { flex-direction:column; align-items:flex-start; }
+  .spectator-metrics { grid-template-columns:1fr 1fr; }
+  
+  .spectator-game-info { overflow-x:auto; }
+}
+
+/* Avatar compacto do espectador — independente dos peões removidos. */
+.spectator-avatar { width:27px; height:27px; flex-shrink:0; border-radius:50%; object-fit:cover; border:1px solid var(--line); }
+
+/* V20.14 — Quem Sou Eu?: modo Todos até o fim e placar retrô */
+.whoami-finish-setting {
+  margin-top: 10px;
+  background: #f8f3d9;
+  border: 2px solid var(--line);
+  border-radius: 10px;
+  padding: 9px 12px;
+}
+.whoami-finish-setting .room-privacy-check { font-family: "Chakra Petch", sans-serif; font-size: 15px; }
+.whoami-finish-setting > small { display: block; margin-top: 5px; color: var(--muted); font-size: 11px; line-height: 1.4; }
+.whoami-lobby-mode-line {
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  border: 2px solid var(--line); border-radius: 8px;
+  padding: 9px 12px; background: #e8f3c3; margin-bottom: 12px;
+}
+.whoami-lobby-mode-line strong { font: 700 14px/1.2 "Chakra Petch", sans-serif; text-align: right; }
+.whoami-progress-board {
+  display: grid; grid-template-columns: 1fr auto; gap: 5px 9px;
+  margin: 10px 0; padding: 11px; background: #e6f2ce;
+  border: 2px solid var(--line); border-radius: 10px;
+  box-shadow: 2px 3px 0 #c2c99f;
+}
+.whoami-progress-board > strong { font: 700 14px/1.15 "Chakra Petch", sans-serif; }
+.whoami-progress-board > small { color: var(--muted); font-size: 10px; justify-self: end; }
+.whoami-progress-line {
+  grid-column: 1/-1; padding: 4px 7px; border-radius: 6px;
+  background: rgba(255,255,255,.67); font-size: 12px;
+}
+.whoami-progress-line b { margin-right: 5px; font-family: "Chakra Petch", sans-serif; }
+.whoami-character-card.solved { border-color: #719c63; }
+.whoami-character-card.solved .eliminated-tag { background: #d4efac; color: #31481f; }
+.whoami-all-finish-result { text-align: center; margin-bottom: 16px; }
+.whoami-all-finish-result h2 { margin: 4px 0; font: 800 clamp(24px,3vw,34px)/1.1 "Chakra Petch",sans-serif; }
+.whoami-all-finish-result p { margin: 0 0 13px; font-size: 12px; color: var(--muted); }
+.whoami-ranking { display: grid; gap: 8px; text-align: left; }
+.whoami-rank-entry {
+  display: flex; align-items: center; gap: 10px;
+  border: 2px solid var(--line); border-radius: 10px;
+  padding: 8px 11px; background: #f7f2e4;
+  box-shadow: 2px 3px 0 #d7c9a5;
+}
+.whoami-rank-entry.rank-correct { background: #e7f3c6; }
+.whoami-rank-entry.rank-correct:first-child { background: #fff0b0; border-width: 3px; }
+.whoami-rank-place { width: 27px; flex-shrink: 0; font-size: 20px; text-align: center; }
+.whoami-rank-entry > div { flex: 1; min-width: 0; }
+.whoami-rank-entry > div strong, .whoami-rank-entry > div small { display: block; }
+.whoami-rank-entry > div strong { font: 700 15px/1.2 "Chakra Petch", sans-serif; overflow-wrap: anywhere; }
+.whoami-rank-entry > div small { color: var(--muted); font-size: 11px; }
+.whoami-rank-status {
+  padding: 4px 7px; border-radius: 7px; white-space: nowrap;
+  border: 2px solid var(--line); background: #fff9e6;
+  font: 700 10px/1 "Chakra Petch", sans-serif;
+}
+@media (max-width: 560px) {
+  .whoami-rank-entry { gap: 6px; padding: 7px; }
+  .whoami-rank-status { font-size: 9px; white-space: normal; text-align:center; }
+}
+
+
+/* V20.14.1 — Opções padronizadas com os selects retro (sem emojis ou cards extras) */
+.room-extra-settings {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 14px;
+  margin: 8px 0 18px;
+}
+.room-extra-settings-single { grid-template-columns: minmax(0, 1fr); }
+.setting-check-field { min-width: 0; }
+.room-option-title {
+  display: block;
+  margin: 10px 0 7px;
+  font: 700 14px/1.2 "Chakra Petch", sans-serif;
+}
+.retro-check-option {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 48px;
+  margin: 0;
+  padding: 9px 14px;
+  border: 3px solid var(--line);
+  border-radius: 9px;
+  background: var(--cream-2);
+  box-shadow: 3px 4px 0 #c8b99c;
+  color: var(--ink);
+  font: 700 16px/1.15 "Chakra Petch", sans-serif;
+  cursor: pointer;
+  transition: transform .14s ease, background-color .14s ease, box-shadow .14s ease;
+}
+/* A listra lateral decorativa era confundida com falha de renderização. */
+.retro-check-option:hover {
+  background: #fff9e7;
+  transform: translate(-1px,-1px);
+  box-shadow: 4px 5px 0 #c8b99c;
+}
+.retro-check-option:focus-within {
+  background: #fffdf3;
+  outline: 3px solid rgba(255, 144, 178, .30);
+  outline-offset: 2px;
+}
+.retro-check-option input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  display: grid;
+  place-items: center;
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  border: 2px solid var(--line);
+  border-radius: 4px;
+  background: #fffdf1;
+  cursor: pointer;
+}
+.retro-check-option input[type="checkbox"]:checked { background: var(--lime); }
+.retro-check-option input[type="checkbox"]:checked::before {
+  content: "";
+  width: 5px;
+  height: 9px;
+  border: solid var(--line);
+  border-width: 0 3px 3px 0;
+  transform: translateY(-2px) rotate(45deg);
+}
+.room-option-help {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.35;
+}
+.setting-check-field .room-privacy-fields {
+  margin-top: 10px;
+  padding-top: 11px;
+  border-top: 2px dashed #c8b99c;
+}
+.setting-check-field .room-privacy-fields > label {
+  margin: 0;
+}
+@media (max-width: 700px) {
+  .room-extra-settings { grid-template-columns: 1fr; gap: 12px; }
+}
+
+/* V20.15 — Notificações públicas de palpites (Quem Sou Eu?) */
+.whoami-guess-notices {
+  position: fixed;
+  z-index: 11000;
+  top: max(15px, env(safe-area-inset-top));
+  right: max(16px, env(safe-area-inset-right));
+  width: min(420px, calc(100vw - 32px));
+  pointer-events: none;
+}
+
+.whoami-guess-notice {
+  --notice-accent: #bd5a75;
+  --notice-bg: #f8d6e0;
+  position: relative;
+  display: grid;
+  grid-template-columns: 40px 37px minmax(0, 1fr);
+  align-items: center;
+  gap: 9px;
+  min-height: 100px;
+  padding: 11px 12px 17px;
+  border: 3px solid var(--line, #2e2524);
+  border-radius: 12px;
+  background: #fff8e9;
+  box-shadow: 5px 6px 0 var(--line, #2e2524);
+  color: var(--line, #2e2524);
+  animation: whoami-notice-enter .18s ease-out both;
+  overflow: hidden;
+}
+.whoami-guess-notice.is-wrong { --notice-accent: #bb5371; --notice-bg: #f9d7e1; }
+.whoami-guess-notice.is-close { --notice-accent: #c18e35; --notice-bg: #fff0ba; }
+.whoami-guess-notice.is-correct { --notice-accent: #6a9b57; --notice-bg: #dff0ae; }
+.whoami-guess-notice.is-gave_up { --notice-accent: #8d89b6; --notice-bg: #e8e2f8; }
+
+.whoami-guess-notice-stamp {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--line, #2e2524);
+  border-radius: 8px;
+  color: var(--notice-accent);
+  background: var(--notice-bg);
+  box-shadow: 0 3px 0 rgba(46,37,36,.25);
+}
+.whoami-notice-pixel-icon {
+  width: 23px;
+  height: 23px;
+  shape-rendering: crispEdges;
+}
+.whoami-guess-notice-avatar {
+  width: 36px;
+  height: 36px;
+  border: 2px solid var(--line, #2e2524);
+  border-radius: 50%;
+  background: #dce8af;
+  overflow: hidden;
+  box-shadow: 0 2px 0 rgba(46,37,36,.22);
+}
+.whoami-guess-notice-avatar .whoami-toast-avatar {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+.whoami-guess-notice-content { min-width: 0; }
+.whoami-guess-notice-title {
+  display: block;
+  font: 800 17px/1.05 "Chakra Petch", sans-serif;
+  overflow-wrap: anywhere;
+}
+.whoami-guess-notice-guess {
+  margin: 5px 0 2px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.22;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.whoami-guess-notice-guess b { font-weight: 800; }
+.whoami-guess-notice-detail {
+  display: block;
+  font-size: 11px;
+  font-weight: 650;
+  color: #746462;
+  line-height: 1.3;
+}
+.whoami-guess-notice-progress {
+  position: absolute;
+  bottom: 7px;
+  left: 12px;
+  right: 12px;
+  height: 5px;
+  border-radius: 10px;
+  background: rgba(46,37,36,.12);
+  overflow: hidden;
+}
+.whoami-guess-notice-meter {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--notice-accent);
+  transform-origin: left center;
+  animation: whoami-notice-countdown var(--whoami-notice-duration, 4600ms) linear forwards;
+}
+@keyframes whoami-notice-enter {
+  from { opacity: 0; transform: translateX(18px) scale(.98); }
+  to { opacity: 1; transform: translateX(0) scale(1); }
+}
+@keyframes whoami-notice-countdown {
+  from { transform: scaleX(1); }
+  to { transform: scaleX(0); }
+}
+@media (max-width: 600px) {
+  .whoami-guess-notices { top: max(8px, env(safe-area-inset-top)); right: 8px; width: min(370px, calc(100vw - 16px)); }
+  .whoami-guess-notice { gap: 7px; grid-template-columns: 35px 31px minmax(0,1fr); min-height: 90px; padding: 9px 9px 16px; }
+  .whoami-guess-notice-stamp { width: 35px; height: 35px; }
+  .whoami-guess-notice-avatar { width: 31px; height: 31px; }
+  .whoami-guess-notice-title { font-size: 14px; }
+  .whoami-guess-notice-progress { left: 9px; right: 9px; }
+}
+
+
+/* V20.17: retratos de personagens e créditos dos provedores. */
+.character-photo-wrap { position: relative; overflow: hidden; }
+.character-photo-wrap.is-placeholder {
+  background: repeating-linear-gradient(0deg, rgba(46,37,36,.035) 0 6px, transparent 6px 12px),
+    linear-gradient(145deg, #e1f1cc 0%, #f9dce6 100%);
+}
+.character-photo-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: clamp(66px, 65%, 140px);
+  height: auto;
+  aspect-ratio: 1;
+  padding: 8px;
+  border: 3px solid var(--line);
+  border-radius: 10px;
+  background: #fff7df;
+  box-shadow: 4px 4px 0 #d6b6a4;
+  color: var(--line);
+}
+.character-photo-placeholder svg { width: 58%; max-height: 64%; }
+.character-photo-placeholder small {
+  white-space: nowrap;
+  font: 700 clamp(8px, .85vw, 12px)/1.1 "Chakra Petch", sans-serif;
+  letter-spacing: .04em;
+}
+.character-image-source {
+  position: absolute;
+  z-index: 5;
+  right: 4px;
+  bottom: 4px;
+  padding: 3px 5px;
+  color: #2e2524;
+  background: rgba(255,247,223,.94);
+  border: 1px solid #2e2524;
+  border-radius: 4px;
+  font: 700 9px/1 "Chakra Petch", sans-serif;
+  text-decoration: none;
+}
+.character-image-source:hover { background: #f7ceda; }
+.image-sources-credit { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 5px 8px; margin-top: 6px; }
+.image-sources-credit a { color: #785d55; text-decoration: underline; }
+.image-sources-credit small { flex-basis: 100%; font-size: 8px; font-family: Nunito, sans-serif; letter-spacing: 0; }
+.site-credit .tmdb-credit-logo { width: 28px; height: 28px; object-fit: contain; vertical-align: middle; }
+
+/* V20.19: etiquetas de fonte só nas fotos ampliadas.
+   Esconde também qualquer selo de miniatura proveniente de cache antigo. */
+.character-photo-wrap.game-character-photo .character-image-source,
+.character-photo-wrap.small .character-image-source,
+.character-photo-wrap.final-photo .character-image-source,
+.character-photo-wrap.winner-photo .character-image-source {
+  display: none;
+}
+/* Prévia ampliada e carta grande de aprovação mantêm o link clicável. */
+.whoami-character-floating-preview .character-image-source,
+.character-photo-wrap.review-character-photo .character-image-source {
+  display: inline-block;
+}
+
+/* =========================================================
+  V20.20.2 — Corrida do Conhecimento. Componentes do Caroninhas Party
+  Estilos limitados às telas trivia, sem modificar os outros jogos.
+========================================================= */
+.trivia-window { background: var(--cream); color:var(--ink); border-color:var(--line); }
+.trivia-window .window-bar {background:var(--pink);border-color:var(--line);}
+.trivia-window .trivia-icon {background:var(--mint);}
+.trivia-window .game-intro {padding:15px 24px 10px;gap:15px;}
+.trivia-window .game-icon-large {width:62px;height:62px;flex-basis:62px;font-size:34px;border-radius:13px;}
+.trivia-window .trivia-intro h2 {font:700 clamp(28px,3vw,39px)/1 "Chakra Petch",sans-serif; margin:4px 0 6px;letter-spacing:-.03em;}
+.trivia-window .trivia-intro h2 span {color:var(--pink-deep);}
+.trivia-window .trivia-intro p {font:700 13px/1.35 "Nunito",sans-serif;color:var(--muted);margin:0;}
+.trivia-window .tiny-label {color:var(--muted);}
+.trivia-window .trivia-home-content {padding:4px 24px 20px;}
+.trivia-window .guest-identity-field {margin:0 0 16px;}
+.trivia-window .guest-name-row {grid-template-columns:54px minmax(0,1fr);gap:12px;}
+.trivia-window .guest-avatar-preview {width:54px;height:54px;}
+.trivia-window .avatar-help {margin:5px 0 0 66px;}
+.trivia-window .guest-name-row .retro-input-wrap {min-height:46px;}
+.trivia-window .trivia-config {display:grid;grid-template-columns:minmax(0,1.2fr) minmax(310px,.8fr);gap:22px;align-items:start;}
+.trivia-window .trivia-main-settings,.trivia-window .trivia-side-settings {display:flex;flex-direction:column;gap:14px;min-width:0;}
+.trivia-window .trivia-categories-card,.trivia-window .trivia-create-settings {min-width:0;}
+.trivia-window .trivia-settings-heading,.trivia-window .trivia-inline-actions {display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+.trivia-window .trivia-settings-heading strong {font:700 16px/1.15 "Chakra Petch",sans-serif;}
+.trivia-window .trivia-settings-heading .tiny-label {font-size:10px;}
+.trivia-window .trivia-help {font:700 12px/1.25 "Nunito",sans-serif;color:var(--muted);margin:5px 0 10px;}
+.trivia-window .trivia-tags {display:flex;flex-wrap:wrap;gap:6px;align-content:start;}
+.trivia-window .trivia-tag {border:2px solid var(--line);border-radius:20px;background:var(--cream-2);color:var(--ink);font:800 11px/1.2 "Nunito",sans-serif;padding:6px 9px;min-height:27px;cursor:pointer;box-shadow:2px 2px 0 #cfbea6;transition:background .15s ease,transform .15s ease;}
+.trivia-window .trivia-tag.chosen {background:var(--pink);color:var(--ink);border-color:var(--line);}
+.trivia-window .trivia-tag:hover {transform:translateY(-1px);}
+.trivia-window .trivia-tag:focus-visible {outline:3px solid var(--pink-deep);outline-offset:2px;}
+.trivia-window .trivia-inline-actions {margin-top:10px;}
+.trivia-window .trivia-inline-actions .mini-button {padding:5px 10px;font:700 11px "Chakra Petch",sans-serif;}
+.trivia-window .trivia-create-settings {padding:0 0 13px;}
+.trivia-window .trivia-options-grid {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px;margin:6px 0 10px;}
+.trivia-window .trivia-options-grid label {margin:0 0 6px;font-size:12px;}
+.trivia-window .trivia-options-grid .retro-select {width:100%;min-width:0;min-height:41px;font-size:13px;}
+.trivia-window .trivia-time {display:flex;align-items:center;gap:6px;}
+.trivia-window .trivia-time input {min-width:0;max-width:80px;}
+.trivia-window .trivia-time span,.trivia-window .trivia-options-grid small {font:700 10px/1.15 "Nunito",sans-serif;color:var(--muted);}
+.trivia-window .trivia-options-grid small {display:block;margin-top:5px;}
+.trivia-window .trivia-privacy {margin:0 0 10px;}
+.trivia-window .trivia-privacy label {margin:0;font-size:13px;}
+.trivia-window .trivia-privacy .retro-check-option {width:100%;min-height:38px;}
+.trivia-window #trivia-private-fields {margin-top:5px;}
+.trivia-window #trivia-create-password {width:100%;min-height:40px;font-size:13px;}
+.trivia-window #trivia-create-room {width:100%;min-height:46px;margin:0;}
+.trivia-window #trivia-home-error {margin:5px 0 0;font-size:12px;min-height:0;}
+.trivia-window .trivia-join-section,.trivia-window .trivia-open-rooms {border-top:2px dashed #cbbba6;padding-top:11px;margin:0;}
+.trivia-window .trivia-section-heading .tiny-label {font-size:10px;}
+.trivia-window .trivia-section-heading h3 {font:700 19px/1.1 "Chakra Petch",sans-serif;margin:2px 0 8px;}
+.trivia-window .trivia-join-grid {display:grid;grid-template-columns:1fr 1fr auto;gap:7px;align-items:stretch;}
+.trivia-window .trivia-join-grid .retro-input-wrap {min-width:0;min-height:42px;}
+.trivia-window .trivia-join-grid .retro-input-wrap input {font-size:12px;min-width:0;}
+.trivia-window .trivia-join-grid .retro-button {width:auto;min-height:42px;padding:5px 12px;}
+.trivia-window .trivia-open-rooms .open-rooms-heading {margin-bottom:7px;}
+.trivia-window .trivia-open-rooms .open-rooms-heading h3 {font:700 19px/1 "Chakra Petch",sans-serif;margin:1px 0 0;}
+.trivia-window .trivia-open-rooms .refresh-rooms {min-height:30px;padding:4px 8px;font:700 10px "Chakra Petch",sans-serif;}
+.trivia-window #trivia-rooms {min-height:25px;max-height:80px;overflow-y:auto;font:700 12px/1.25 "Nunito",sans-serif;color:var(--muted);}
+.trivia-window .trivia-open-room {display:flex;justify-content:space-between;align-items:center;gap:8px;padding:6px;border:2px solid #d4c1ad;border-radius:9px;background:var(--cream-2);margin:5px 0;}
+.trivia-window .trivia-open-room>div {display:grid;gap:2px;}
+.trivia-window .trivia-open-room strong {color:var(--ink);}
+.trivia-window .trivia-open-room small {font-size:11px;color:var(--muted);}
+/* lobby: mantém os componentes do Impostor/Quem Sou Eu; adapta só dados do modo */
+.trivia-window .trivia-room-summary {background:var(--cream-2);border:2px solid #dcc8b3;border-radius:12px;padding:10px;text-align:center;font-weight:800;}
+.trivia-window .trivia-lobby-players {display:grid;gap:8px;list-style:none;padding:0;}
+.trivia-window .trivia-lobby-player {display:flex;gap:9px;align-items:center;padding:8px 10px;background:var(--cream-2);border:2px solid #dcc8b3;border-radius:10px;}
+.trivia-window .trivia-lobby-player img {width:36px;height:36px;border-radius:50%;object-fit:cover;}
+.trivia-window .trivia-lobby-player span {flex:1;}
+.trivia-window .trivia-lobby-player strong {font:700 11px "Chakra Petch",sans-serif;color:#9f526b;}
+/* jogo: perguntas e torres, preservando todas as fontes e cores do tema */
+.trivia-window .trivia-play-header {display:flex;align-items:center;justify-content:space-between;gap:12px;padding:17px 20px 10px;}
+.trivia-window .trivia-play-header h2 {font:700 clamp(23px,3vw,34px) "Chakra Petch",sans-serif;margin:3px 0 0;}
+.trivia-window .trivia-timer {min-width:80px;min-height:55px;display:grid;place-items:center;background:#fff4be;border:3px solid var(--line);border-radius:12px;font:700 26px "Chakra Petch",sans-serif;}
+.trivia-window .trivia-timer.urgent {background:#fbc2cb;}
+.trivia-window .trivia-play-grid {padding:0 16px 16px;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.8fr);gap:12px;}
+.trivia-window .trivia-question-panel,.trivia-window .trivia-towers-panel {min-width:0;padding:16px;border:2px solid #d9c7b0;background:var(--cream-2);border-radius:14px;}
+.trivia-window .trivia-question-meta,.trivia-window .trivia-towers-heading {display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:7px;}
+.trivia-window .trivia-question-meta {color:var(--muted);font:800 12px "Nunito",sans-serif;}
+.trivia-window .trivia-question-panel h3 {margin:14px 0;min-height:52px;font:900 clamp(17px,2vw,23px)/1.35 "Nunito",sans-serif;overflow-wrap:anywhere;}
+.trivia-window .trivia-answers {display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.trivia-window .trivia-answer {cursor:pointer;display:flex;align-items:center;gap:8px;text-align:left;border:2px solid var(--line);border-radius:12px;background:var(--cream);color:var(--ink);padding:10px;min-height:63px;font:800 13px/1.35 "Nunito",sans-serif;overflow-wrap:anywhere;}
+.trivia-window .trivia-answer b {flex:0 0 26px;height:26px;display:grid;place-items:center;border-radius:7px;background:var(--pink);}
+.trivia-window .trivia-answer:hover:not(:disabled) {background:#fffdf5;}
+.trivia-window .trivia-answer:disabled {cursor:default;opacity:.75;}
+.trivia-window .trivia-answer.correct {background:#d5f0db;border-color:#4e9373;opacity:1;}
+.trivia-window .trivia-result {margin-top:12px;min-height:20px;color:#3c8465;font-weight:900;}
+.trivia-window .trivia-play-hint {margin-top:8px;color:var(--muted);font-size:12px;}
+.trivia-window .trivia-towers-heading h3 {font:700 20px "Chakra Petch",sans-serif;margin:0;}
+.trivia-window .trivia-towers {display:flex;align-items:flex-end;justify-content:space-around;gap:9px;overflow-x:auto;min-height:275px;padding:18px 5px 3px;}
+.trivia-window .trivia-tower {flex:1 0 52px;max-width:90px;min-width:52px;display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center;}
+.trivia-window .trivia-avatar {width:36px;height:36px;border-radius:50%;border:2px solid var(--tower-color);object-fit:cover;}
+.trivia-window .trivia-tower-name {max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:11px;}
+.trivia-window .trivia-score {font:700 18px "Chakra Petch",sans-serif;color:var(--tower-color);}
+.trivia-window .trivia-tower-blocks {display:flex;flex-direction:column;gap:2px;width:min(55px,100%);}
+.trivia-window .trivia-tower-block {display:block;height:15px;border:1px solid #cbbba7;border-radius:4px;background:#e9dfca;transition:background .4s ease;}
+.trivia-window .trivia-tower-block.filled {background:var(--tower-color);border-color:var(--tower-color);}
+.trivia-window .trivia-tower.advanced .trivia-tower-block.filled {animation:trivia-level-up .5s ease;}
+.trivia-window .trivia-tower.offline {opacity:.5;}
+.trivia-window .trivia-tower.finalista .trivia-avatar {box-shadow:0 0 12px var(--tower-color);}
+@keyframes trivia-level-up {0%{transform:scaleX(.8)}50%{transform:scaleX(1.09)}100%{transform:scaleX(1)}}
+#trivia-game-error {padding:0 20px 10px;}
+/* desktop: evita recorte e dispensa rolagem na resolução convencional 1366x768 */
+@media (min-width:721px) {
+  body.screen-mode-trivia-home-screen .app,body.screen-mode-trivia-lobby-screen .app,body.screen-mode-trivia-game-screen .app {height:100dvh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:8px 0;}
+  body.screen-mode-trivia-home-screen .screen:not(.hidden),body.screen-mode-trivia-lobby-screen .screen:not(.hidden),body.screen-mode-trivia-game-screen .screen:not(.hidden) {max-height:calc(100dvh - 18px);overflow-y:auto;scrollbar-width:thin;}
+  body.screen-mode-trivia-home-screen .game-page-shell {width:min(1040px,100%);}
+  body.screen-mode-trivia-game-screen .game-page-shell {width:min(1120px,100%);}
+  body.screen-mode-trivia-home-screen .nav-back {margin-bottom:8px;font-size:13px;}
+  body.screen-mode-trivia-home-screen .window-bar {min-height:34px;}
+}
+@media(max-width:980px) {
+  .trivia-window .trivia-config {grid-template-columns:1fr;}
+  .trivia-window .trivia-main-settings,.trivia-window .trivia-side-settings {gap:12px;}
+  .trivia-window .trivia-join-grid {grid-template-columns:1fr 1fr auto;}
+}
+@media(max-width:720px) {
+  .trivia-window .game-intro {padding:16px;}
+  .trivia-window .trivia-home-content {padding:8px 16px 22px;}
+  .trivia-window .trivia-config {grid-template-columns:1fr;gap:15px;}
+  .trivia-window .trivia-join-grid {grid-template-columns:1fr;}
+  .trivia-window .trivia-play-grid {grid-template-columns:1fr;padding:0 12px 14px;}
+  .trivia-window .trivia-towers-panel {order:-1;}
+  .trivia-window .trivia-towers {min-height:160px;justify-content:flex-start;}
+  .trivia-window .trivia-tower-block {height:9px;}
+  .trivia-window .trivia-tower .trivia-avatar {width:30px;height:30px;}
+  .trivia-window .trivia-answers {grid-template-columns:1fr;}
+}
+@media(max-width:380px) {.trivia-window .trivia-options-grid {grid-template-columns:1fr;}}
+@media(prefers-reduced-motion:reduce) {.trivia-window .trivia-tower-block,.trivia-window .trivia-tag {transition:none;animation:none!important;}}
+
+
+/* =========================================================
+   V20.20.3 — Campo de tempo legível + tela de campeão
+   Apenas a Corrida do Conhecimento utiliza estas classes.
+========================================================= */
+.trivia-window .trivia-time {
+  display:flex;align-items:center;gap:7px;flex-wrap:wrap;
+}
+.trivia-window #trivia-seconds.trivia-duration-input {
+  display:block;
+  flex:0 0 58px;
+  width:58px;
+  min-width:58px;
+  max-width:58px;
+  height:42px;
+  min-height:42px;
+  margin:0;
+  padding:4px 2px;
+  box-sizing:border-box;
+  border:2px solid var(--line);
+  border-radius:9px;
+  background:var(--cream-2);
+  background-image:none;
+  color:var(--ink);
+  -webkit-text-fill-color:var(--ink);
+  font:700 21px/1 "Chakra Petch",sans-serif;
+  text-align:center;
+  opacity:1;
+  box-shadow:2px 3px 0 #c8b99c;
+  -moz-appearance:textfield;
+  appearance:textfield;
+}
+.trivia-window #trivia-seconds.trivia-duration-input::-webkit-inner-spin-button,
+.trivia-window #trivia-seconds.trivia-duration-input::-webkit-outer-spin-button {
+  -webkit-appearance:none;
+  margin:0;
+}
+.trivia-window #trivia-seconds.trivia-duration-input:focus-visible {
+  outline:3px solid var(--pink-deep);
+  outline-offset:2px;
+}
+.trivia-window .trivia-time-step {
+  flex:0 0 34px;
+  height:40px;
+  padding:0;
+  border:2px solid var(--line);
+  border-radius:9px;
+  color:var(--ink);
+  background:var(--pink);
+  box-shadow:2px 3px 0 #c8b99c;
+  font:700 23px/1 "Chakra Petch",sans-serif;
+  cursor:pointer;
+}
+.trivia-window .trivia-time-step:hover {background:#f8c5d1;}
+.trivia-window .trivia-time-step:focus-visible {outline:3px solid var(--pink-deep);outline-offset:2px;}
+.trivia-window .trivia-time span {font:700 11px "Nunito",sans-serif;color:var(--muted);}
+
+/* Uma tela final nativa: reaproveita janela, barra, botões e fontes do site. */
+.screen-mode-trivia-winner-screen .game-page-shell {
+  width:min(850px,100%);
+}
+.trivia-winner-window {width:100%;}
+.trivia-winner-content {
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  align-items:stretch;
+  padding:24px clamp(16px,3vw,32px) 25px;
+  text-align:center;
+}
+.trivia-winner-heading {display:flex;flex-direction:column;align-items:center;gap:4px;}
+.trivia-winner-heading .winner-sparkles {font-size:22px;letter-spacing:6px;}
+.trivia-winner-heading h2 {
+  margin:2px 0 0;
+  color:var(--ink);
+  font:700 clamp(30px,4.6vw,48px)/1.05 "Chakra Petch",sans-serif;
+}
+.trivia-winner-hero {
+  display:flex;
+  gap:20px;
+  align-items:center;
+  justify-content:center;
+  padding:14px 18px;
+  border:3px solid var(--line);
+  border-radius:14px;
+  background:#fff4d0;
+  box-shadow:4px 4px 0 #d9c6a8;
+  text-align:left;
+}
+.trivia-winner-avatar-frame {position:relative;flex:0 0 100px;}
+.trivia-winner-avatar-frame img {
+  display:block;
+  width:100px;
+  height:100px;
+  border:3px solid var(--line);
+  border-radius:50%;
+  background:var(--cream);
+  object-fit:cover;
+  box-shadow:4px 4px 0 #c6b7a3;
+}
+.trivia-winner-crown {
+  position:absolute;
+  top:-25px;
+  left:26px;
+  color:#c48b28;
+  font:700 36px "Chakra Petch",sans-serif;
+  text-shadow:1px 2px 0 var(--line);
+}
+.trivia-winner-details {min-width:0;}
+.trivia-winner-details h3 {
+  margin:5px 0;
+  overflow-wrap:anywhere;
+  font:700 clamp(24px,4vw,38px)/1 "Chakra Petch",sans-serif;
+  color:var(--pink-deep);
+}
+.trivia-winner-details p {margin:7px 0;color:var(--muted);font-weight:800;font-size:13px;}
+.trivia-winner-stats {display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;}
+.trivia-winner-stats span {
+  padding:5px 9px;
+  background:var(--cream);
+  border:2px solid #dfc5a8;
+  border-radius:50px;
+  font:700 11px "Chakra Petch",sans-serif;
+}
+.trivia-ranking-panel {
+  padding:12px 15px;
+  border:2px solid #dac7ae;
+  border-radius:13px;
+  background:var(--cream-2);
+}
+.trivia-ranking-heading {display:flex;gap:6px;align-items:baseline;justify-content:center;flex-wrap:wrap;}
+.trivia-ranking-heading h3 {margin:0 0 8px;font:700 21px "Chakra Petch",sans-serif;}
+.trivia-final-ranking {
+  list-style:none;
+  display:grid;
+  gap:7px;
+  max-height:min(230px,30dvh);
+  overflow-y:auto;
+  padding:0 3px;
+  margin:0;
+}
+.trivia-final-entry {
+  display:grid;
+  grid-template-columns:40px 38px minmax(0,1fr) auto;
+  align-items:center;
+  gap:10px;
+  padding:7px 13px;
+  border:2px solid #decbb4;
+  border-radius:10px;
+  background:var(--cream);
+  text-align:left;
+}
+.trivia-final-entry.is-champion {border-color:var(--line);background:#f8dee5;}
+.trivia-final-entry strong {font:700 15px "Chakra Petch",sans-serif;overflow-wrap:anywhere;}
+.trivia-final-place {font:700 19px "Chakra Petch",sans-serif;text-align:center;}
+.trivia-final-avatar {width:36px;height:36px;object-fit:cover;border:2px solid var(--line);border-radius:50%;}
+.trivia-final-score {font:700 17px "Chakra Petch",sans-serif;color:#97627a;white-space:nowrap;}
+.trivia-winner-actions {display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:10px;align-items:center;}
+.trivia-winner-actions>.retro-button {min-height:46px;}
+.trivia-winner-actions>.retro-button.secondary {background:var(--cream-2);}
+.trivia-winner-actions>.waiting-box {margin:0;min-height:46px;}
+.trivia-winner-actions>.error {grid-column:1/-1;margin:0;min-height:0;}
+@media(min-width:721px) {
+  body.screen-mode-trivia-winner-screen {
+    overflow:hidden;
+  }
+  body.screen-mode-trivia-winner-screen .app {
+    width:min(1200px,96vw);
+    height:100dvh;
+    display:grid;
+    place-items:center;
+    padding:9px 0;
+  }
+  body.screen-mode-trivia-winner-screen .screen:not(.hidden) {
+    max-height:calc(100dvh - 18px);
+    overflow-y:auto;
+    scrollbar-width:thin;
+  }
+  body.screen-mode-trivia-winner-screen .site-credit {display:none;}
+}
+@media(max-width:720px) {
+  .trivia-winner-content {padding:20px 14px;}
+  .trivia-winner-hero {gap:12px;padding:12px;}
+  .trivia-winner-avatar-frame {flex-basis:76px;}
+  .trivia-winner-avatar-frame img {width:76px;height:76px;}
+  .trivia-winner-crown {left:20px;top:-23px;font-size:30px;}
+  .trivia-winner-actions {grid-template-columns:1fr;}
+  .trivia-final-entry {grid-template-columns:28px 32px minmax(0,1fr) auto;gap:6px;padding:6px;}
+  .trivia-final-avatar {width:31px;height:31px;}
+}
+@media(prefers-reduced-motion:reduce) {
+  .trivia-window .trivia-winner-content *,
+  .trivia-window .trivia-time-step {transition:none!important;animation:none!important;}
+}
+
+/* Refinamento: o contador cabe na mesma linha sem comprimir o número. */
+.trivia-window .trivia-time {gap:5px;flex-wrap:nowrap;}
+.trivia-window .trivia-time-step {flex-basis:30px;height:40px;}
+.trivia-window #trivia-seconds.trivia-duration-input {flex-basis:54px;min-width:54px;max-width:54px;width:54px;}
+@media(max-width:720px) {
+  .trivia-window .trivia-options-grid {grid-template-columns:1fr;}
+}
+
+
+/* =========================================================
+   V20.20.4 — Refinamento de campos e botões (apenas Corrida)
+   Dimensões reais idênticas; nenhum efeito em regras/Socket.IO.
+========================================================= */
+.trivia-window .trivia-join-grid {
+  align-items: stretch;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+  gap: 10px;
+}
+.trivia-window .trivia-join-grid > .retro-input-wrap {
+  box-sizing: border-box;
+  width: 100%;
+  height: 52px;
+  min-height: 52px;
+  padding: 0 12px;
+  align-self: stretch;
+}
+.trivia-window .trivia-join-grid > .retro-input-wrap > input {
+  box-sizing: border-box;
+  height: 100%;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+  font-size: 13px;
+}
+.trivia-window .trivia-join-grid > .retro-button {
+  box-sizing: border-box;
+  width: auto;
+  height: 52px;
+  min-height: 52px;
+  margin: 0;
+  padding: 0 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+.trivia-window #trivia-seconds.trivia-duration-input {
+  font: 700 19px/1 "Chakra Petch", sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+.trivia-window .trivia-time-step {
+  font: 700 22px/1 "Chakra Petch", sans-serif;
+}
+/* Herança neutralizada apenas na entrada da Corrida, sem mudar os demais jogos. */
+@media (min-width: 721px) and (max-width: 980px) {
+  .trivia-window .trivia-join-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+  }
+}
+@media (max-width: 720px) {
+  .trivia-window .trivia-join-grid {
+    grid-template-columns: 1fr;
+  }
+  .trivia-window .trivia-join-grid > .retro-button {
+    width: 100%;
+  }
+}
